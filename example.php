@@ -12,7 +12,7 @@
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
             </div>
-         
+                  test
           
             <?php include('footer.php'); ?> 
         </div>
