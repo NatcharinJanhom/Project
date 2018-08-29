@@ -11,8 +11,7 @@
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
-            </div>
-                  test
+            </div>                
           
             <?php include('footer.php'); ?> 
         </div>
