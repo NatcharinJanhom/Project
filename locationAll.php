@@ -37,7 +37,7 @@
     $ans=locationAll();     
             for($k = 0;$k <=sizeof($ans);$k++)
             {
-                $la =0;
+                $la =0;//
                 $long =0;
                 $ch1=0;$ch2=0;$ch3=0;
                 $la_c =$ans[$k]['c_la'];
