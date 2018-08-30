@@ -5,7 +5,8 @@
             Tomato
           </a>
           <a class="navbar-brand brand-logo-mini" href="index.php">
-            <img src="theme/assets/images/tomato/tomato_logo.png" alt="logo" /> </a>
+            <img src="theme/assets/images/tomato/tomato_logo.png" alt="logo" /> 
+          </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -14,16 +15,23 @@
           <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <span class="badge badge-primary ml-1">New</span>
+                <img src="theme/assets/images/tomato/chilli2.png" alt="logo" />
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="mdi mdi-elevation-rise"></i></a>
+                <img src="theme/assets/images/tomato/cucumber2.png" alt="logo" />
+              </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="mdi mdi-bookmark-plus-outline"></i></a>
+                <img src="theme/assets/images/tomato/banana2.png" alt="logo" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <img src="theme/assets/images/tomato/eggplant2.png" alt="logo" />
+              </a>
             </li>
           </ul>
           <ul class="navbar-nav navbar-nav-right">

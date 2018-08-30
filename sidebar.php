@@ -5,7 +5,7 @@
           <!-- jump iconsidebar -->
 
             <li class="nav-item">
-              <a class="nav-link" href="index.php" >
+              <a class="nav-link" href="detail.php" >
                 <i class="menu-icon mdi mdi-home"></i>
                 <span class="menu-title">Gerenal Infomation</span>
                 <i class="menu-arrow"></i>
@@ -13,7 +13,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="detail.php" data-target="#test2" >
+              <a class="nav-link" href="#test1" data-target="#test2" >
                 <i class="menu-icon mdi mdi-leaf"></i>
                 <span class="menu-title">Physical Search</span>
                 <i class="menu-arrow"></i>
