@@ -47,8 +47,8 @@
                           <div class="tab-pane fade show active" id="details-5-1" role="tabpanel" aria-labelledby="tab-5-1">
                             <div class="row">
 
-                              <div class="col-md-8">
-                                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <div class="col-md-8" >
+                                <p style="padding: 10px 100px 10px 20px; "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                    Tomato plants are vines, initially decumbent, typically growing 180 cm (6 ft) or more above the ground 
                                   if supported, although erect bush varieties have been bred, generally 100 cm (3 ft) tall or shorter. Indeterminate types are "tender" perennials, dying annually in temperate climates (they are originally native to tropical highlands), although they can live up to three years in a greenhouse in some cases. Determinate types are annual in all climates.
                                 Tomato plants are dicots, and grow as a series of branching stems, with a terminal bud at the tip that does the actual growing. When that tip eventually stops growing, whether because of pruning or flowering, lateral buds take over and grow into other, fully functional, vines.</p>
