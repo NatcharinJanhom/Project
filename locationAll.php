@@ -1,38 +1,45 @@
+<html>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <meta name="viewport" content="initial-scale=1.0">
-  <?php include('head.php'); ?>
-  <script src="http://code.jquery.com/jquery-latest.min.js">   </script>
-  <style>
+<head>
+    <?php include('head.php'); ?>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="initial-scale=1.0">
+    </script>
+</head>
 
-  #idDIV{
-    align-content: center;
-  }
-  #title{
-    align-content: center;
-    margin-top: 30px;
-    
-    margin-right: 700px;
-    margin-left: 120px;
-    background-color: lightblue;
-  }
-  p{
-   
-    margin-left: 20px;
-  }
-  input { 
-    text-align: center; 
-  }
-  </style>
+<style>
+    #detail {
+        margin-top: 30px;
+    }
+
+    #title {
+        align-content: center;
+        margin-top: 30px;
+
+        margin-right: 700px;
+        margin-left: 120px;
+        background-color: lightblue;
+    }
+
+    p {
+
+        margin-left: 20px;
+    }
+
+    input {
+        text-align: center;
+    }
+</style>
+
 <body>
-<div class="container-scroller">
-    <?php include('navbar.php'); ?>   
-      <div class="container-fluid page-body-wrapper">        
-      <?php include('sidebar.php'); ?>  
-      <div class="main-panel">
-            <div class="content-wrapper"> 
-    <?php
+    <div class="container-scroller">
+        <?php include('navbar.php'); ?>
+        <div class="container-fluid page-body-wrapper">
+            <?php include('sidebar.php'); ?>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <?php
     error_reporting(E_ALL ^ E_NOTICE);
     $ans=locationAll();     
             for($k = 0;$k <=sizeof($ans);$k++)
@@ -101,7 +108,7 @@
                     for($m = 0;$m<= $k;$m++)
                    {
                            if($m == $k){
-                            $arr[] = array($la,$long,$detail,$acs);
+                            $arr[] = array($lFa,$long,$detail,$acs);
                            }
                            
                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
@@ -117,93 +124,134 @@
             echo " <script> var arrJ = ". $js_array . "; </script>";           
 
     ?>
-    <br>
-    <div id="myDIV" class="container" >
-        <h5><a  href="#" onclick='window.history.back();'><i class="fas fa-angle-left"></i>Back</a></h5>
-        <br>
-        <div id="map" style="width:100%; height: 300px;">
-        
-        </div>
-    </div>
-
-    <div id="title"  class="container" >         
-         <p>   Lat : <input type="text" id='lat'>  Lon : <input type="text" id='lon'  ></p> 
-          
-         <p>   จำนวณพันธ์ุที่พบ  : <input type="text" id='gene'></p>   
-
-    </div>
-    <div id="pic"  class="container" > 
-            
-      
-    
-    </div>
-    </div>
-         
-          
-            <?php include('footer.php'); ?> 
-        </div>
-        <!-- main-panel ends -->
-      </div>
-      <!-- page-body-wrapper ends -->
-    </div>
-    </body>
+                        <br>
 
 
-    
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="myDIV">
+                                    <h5>
+                                        <a href="#" onclick='window.history.back();'>
+                                            <i class="fas fa-angle-left"></i>Back</a>
+                                    </h5>
+                                    <br>
+                                    <div id="map" style="width:100%; height: 800;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="detail" class="form-group row">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Lat</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="lat">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <label class="col-sm-3 col-form-label">Lon</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="lon">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">จำนวณพันธ์ุที่พบ</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="gene">
+                            </div>
+                        </div>
+                        <div class="row">
+                                    <div class="col-lg-2">
+                                        <div id="pic"></div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div id="detailacs"></div>
+                                    </div>
+                        </div>
+                       
+
+
+
+
+                        
+
+                            <?php include('footer.php'); ?>
+                        </div>
+                        <!-- main-panel ends -->
+                </div>
+
+                <!-- page-body-wrapper ends -->
+            </div>
+</body>
+
+</html>
 
 <script>
 
-function showimg(acs)
-{
+    function showimg(acs) {
+        $("#pic").empty();
+        $(".remo").remove();
+        console.log(acs);
+        var sp = acs.split(",");
+        //var len = sp.length;
+        for (i = 0; i < sp.length; i++) {
+            var k = i + 1;
+            $("#pic").after('<img id="myImage' + k + '"  class="remo" style="width:100px" > ');
+            $('#myImage' + k + '').attr({ src: 'pic/t' + k + '.jpg' });
+            $("#detailacs").after("<p class='remo'>Accession Number :</p> <input type='text' id='acs" + k + "'  class='remo' >");
+            //$('#myImage' + k + '').after("<p class='remo'>Accession Number :</p> <input type='text' id='acs'" + k + "'  class='remo' >");
+            $('#acs'+k).val(sp[i]);
+            console.log(sp[i]);
+           
+            //document.getElementById('acs'+k+'').value = sp[i];
 
-     var sp = acs.split(",");
-     //var len = sp.length;
-     for (i = 0; i < sp.length; i++) {
-        var k = i+1;
-        $("#pic").after('<img id="myImage'+k+'" class="container" style="width:100px" <br> </br> ');
-        $('#myImage'+k+'').attr({src:'t'+k+'.jpg'});
-        $('#myImage'+k+'').after('Accession Number : <input type="text" id="acs'+k+'">');
-        document.getElementById('acs'+k+'').value = sp[i];
-       
 
-     }
-    
-}
-function asree() {
-  
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 13.7244416, lng: 100.3529157},
-      zoom: 5,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-    var infowindow = new google.maps.InfoWindow();
-    var marker, i;
-      
-     
-      for (i = 0; i < arrJ.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(arrJ[i][0],arrJ[i][1]),
-        map: map
-      });
-
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        
-        return function() {
-            var res = arrJ[i][3].split(",");
-            document.getElementById('lat').value=arrJ[i][0];
-            document.getElementById('lon').value=arrJ[i][1];
-            document.getElementById('gene').value=res.length; 
-            showimg(arrJ[i][3]);
-          infowindow.setContent(arrJ[i][2]);
-          infowindow.open(map, marker);
         }
-      })(marker, i));
+
     }
-} 
-    </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwVxLnsuNM9mJUqDFkj6r7FSxVcQCh4ic&callback=asree" async
-    defer></script>
-</body>
+    function asree() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 13.7244416, lng: 100.3529157 },
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var infowindow = new google.maps.InfoWindow();
+        var marker, i;
+
+
+        for (i = 0; i < arrJ.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(arrJ[i][0], arrJ[i][1]),
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+
+                return function () {
+                    var res = arrJ[i][3].split(",");
+                    document.getElementById('lat').value = arrJ[i][0];
+                    document.getElementById('lon').value = arrJ[i][1];
+                    document.getElementById('gene').value = res.length;
+                    showimg(arrJ[i][3]);
+                    infowindow.setContent(arrJ[i][2]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+    } 
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwVxLnsuNM9mJUqDFkj6r7FSxVcQCh4ic&callback=asree" async defer></script>
+
 <?php
 
  function location($id)
