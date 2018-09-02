@@ -171,6 +171,7 @@
    --danger: #ff6258;
    --light: #fbfbfb;
    --dark: #424964;
+   --orange: #fb9234;
    --breakpoint-xs: 0;
    --breakpoint-sm: 576px;
    --breakpoint-md: 768px;
@@ -8476,9 +8477,9 @@
      .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini {
        display: none; }
        .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini img {
-         width: 70px;
+         width: 60px;
          max-width: 100%;
-         height: 75px;
+         height: 65px;
          margin: auto; }
    .navbar.default-layout .navbar-menu-wrapper {
      transition: width 0.25s ease;
@@ -8551,7 +8552,7 @@
            .navbar.default-layout .navbar-menu-wrapper .navbar-nav.header-links .nav-item .nav-link {
              height: 63px;
              font-size: 12px;
-             padding: 16px 25px;
+             padding: 16px 16px;
              display: -webkit-box;
              display: -ms-flexbox;
              display: flex;
@@ -8686,7 +8687,7 @@
        .navbar.default-layout.navbar-info .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown .dropdown-item {
          color: #000; }
    .navbar.default-layout.navbar-danger .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-danger .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-dark .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-primary .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-success .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-warning .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-primary .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-success .navbar-brand-wrapper .navbar-brand, .navbar.default-layout.navbar-warning .navbar-brand-wrapper .navbar-brand {
-     color: #ffffff; }
+     }
    .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-danger .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-dark .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-primary .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-success .navbar-menu-wrapper .navbar-nav .nav-item .nav-link, .navbar.default-layout.navbar-warning .navbar-menu-wrapper .navbar-nav .nav-item .nav-link {
      color: #ffffff; }
  
@@ -16908,3 +16909,13 @@
  
  /*# sourceMappingURL=style.css.map */
  
+
+      .navbar.default-layout.navbar-orange {
+        background: #FE751A; }
+
+      .navbar.default-layout.navbar-yellow {
+        background: #FEDC01; }
+
+      .tooltip{
+        z-index: 10000;
+      }

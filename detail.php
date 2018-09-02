@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include('head.php'); ?>    
+    <?php include 'head.php'; ?>
   </head>
-
-<body class="sidebar-icon-only">
-    <div class="container-scroller"> 
-      <?php include('navbar.php'); ?>    
+  <body class="sidebar-icon-only">
+    <div class="container-scroller">
+    <?php include('navbar.php'); ?>   
       <div class="container-fluid page-body-wrapper">        
       <?php include('sidebar.php'); ?>    
         <div class="main-panel">
-          <div class="content-wrapper">
+            <div class="content-wrapper">
+            <!-- หน้าเว็บ -->
+              
             <div class="row">
 
                 <div class="col-md-12 grid-margin stretch-card">
@@ -67,9 +68,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              
             </div>
-          </div>
+         
+          
+            <?php include('footer.php'); ?> 
         </div>
-      </body>
-      </html>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    </body>
+</html>

@@ -2,8 +2,13 @@
 
           <ul class="nav">
 
-          <!-- jump iconsidebar -->
+          <!-- icon sidebar -->
 
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+            
+           
             <li class="nav-item">
               <a class="nav-link" href="detail.php" >
                 <i class="menu-icon mdi mdi-home"></i>
@@ -41,6 +46,7 @@
               <a class="nav-link" href="#test4" >
                 <i class="menu-icon mdi mdi-sitemap"></i>
                 <span class="menu-title">Ontology Search</span>
+                <i class="menu-arrow"></i>
               </a>
             </li>
 
