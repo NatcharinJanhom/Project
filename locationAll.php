@@ -2,33 +2,43 @@
 
 <head>
     <?php include('head.php'); ?>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta name="viewport" content="initial-scale=1.0">
-    </script>
 </head>
 
 <style>
     #bodypic1,#profile-5-2,#AA,#bodypic3 {
         margin-top: 20px;
     }
-
+    .form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .tt-hint, .tt-query, .typeahead  {
+    border: 1px solid #f2f2f2;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 0.56rem 0.75rem;
+    line-height: 14px;
+    font-weight: 300;
+    }
     .content-wrapper {
-        background: white;
         padding: 0rem 1.7rem;
         width: 100%;
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-    .tab-solid-danger .nav-link.active {
-            background: green;
+    #myDIV{
+        padding: 0px 20px 0px 29px;
     }
-    #detail,
-    #Sp {
+    #Sp{
+        margin-top: 12px;
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+    .col-form-label {
+        background-color: #ff9933;
+    }
+    #detail,#detail2
+     {
         margin-top: 30px;
+        margin-left: auto;
     }
-
     #title {
         align-content: center;
         margin-top: 30px;
@@ -42,14 +52,22 @@
         border-radius: 50%;
         align-content: center;
     }
-
-    p {
-       
+    hr {
+    margin-top: 1rem;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: #ff6258;
+}
+    .tab-basic {
+        border-bottom: none;
+        margin-bottom: -15px;
     }
-
+    .cc
+    {
+        margin-left: 12px;
+    }
     .card-body {
-        margin: auto;
-
         padding: 10px;
     }
 
@@ -57,10 +75,37 @@
       
         text-align: center;
     }
-
-    .card {
-        background-color: lightblue;
+    h1 {
+        font-size : 1.2rem;
+        font-weight:600;
+            text-align: left;
+            color: tomato;
     }
+    .tab-basic .nav-item {
+        margin-right: 5px;
+    }
+  
+    .tab-basic .nav-item .nav-link , .tab-basic .nav-item .nav-link.active {
+    color: tomato;
+    padding: 10px;
+    
+}
+.tab-basic .nav-item .nav-link.active{
+    
+    border-top: 1px solid #f12222;
+    border-right: 1px solid #f12222;
+    border-left: 1px solid #f12222;
+    border-bottom : none ;
+    color:red;
+    z-index : 999;
+}
+    .nav-pills .nav-item .nav-link, .nav-tabs .nav-item .nav-link {
+        line-height: 2;      
+}
+    .card .card-body {
+        padding: 1.88rem 1.81rem 0;
+    }
+    
 </style>
 
 <body>
@@ -156,15 +201,30 @@
 
     ?>
                         <br>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1>Location Search</h1>
+                            </div>
+                        </div>
 
-                        <ul class="nav nav-tabs tab-solid tab-solid-danger" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="false">แหล่งที่พบ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false">ศูนย์ปรับปรุงพันธ์ุ</a>
-                            </li>
+                        <div class="card">
+                        <div class="row">
+                            <div class="col-lg-12">
+                        <div class="card-body">
+                        
+                            <ul class="nav nav-tabs tab-basic" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true">Sources found</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false">Breeding center</a>
+                          </li>
                         </ul>
+                        <hr>
+                            </div>
+                        </div>
+
+                        </div>
 
                         <div class="row">
                             <div class="col-lg-12">
@@ -175,32 +235,24 @@
                                 </div>
                             </div>
                         </div>
+                       
                     <div class="tab-content tab-content-solid">
                         <div class="tab-pane fade active show" id="home-5-1" role="tabpanel" aria-labelledby="tab-5-1">
                             <div id="detail" class="form-group row">
-                                <div class="col-lg-6">
-                                    <div class="row">
-                                        <label class="col-sm-3 col-form-label">Lat</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="lat">
+                                <div class="col-lg-12">
+                                        <div class="col-sm-6">
+                                               <p > <i class="mdi mdi-map-marker-multiple" data-name="mdi-map-marker-multiple"></i>Target : <span id="lat"></span> </p>
                                         </div>
-                                    </div>
+                                        
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="row">
-                                        <label class="col-sm-3 col-form-label">Lon</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="lon">
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
 
                             </div>
 
-                            <div class="row">
-                                <label class="col-sm-2 col-form-label">จำนวณพันธ์ุที่พบ</label>
-                                <div class="col-sm-6">
+                            <div id="detail2" class="row">
+                                <p class="col-lg-3  bb">Number of varieties found</p>
+                                <div class="col-sm-2">
                                     <input type="text" class="form-control" id="gene">
                                 </div>
                             </div>
@@ -208,7 +260,9 @@
 
                             </div>
                             <div id="bodypic2">
-                                <p id="Sp">Species found nearby</p>
+                                <div class="row">
+                                        <p id="Sp" class="col-lg-3 ">Species found nearby</p>
+                                </div>
                                 <div class="row">
                                     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 grid-margin stretch-card">
                                         <div class="card card-statistics">
@@ -249,14 +303,14 @@
                         </div>
                         <div class="tab-pane fade" id="profile-5-2" role="tabpanel" aria-labelledby="tab-5-2">
                             <div class="row">
-                                <label class="col-sm-3 col-form-label">ศูนย์ปรับปรุงพันธุ์ </label>
-                                <div class="col-sm-3">
+                                <label class="col-sm-2 col-form-label cc"><center>Breeding center</center></label>
+                                <div class="col-sm-2">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="row" id="AA">
-                                <label class="col-sm-3 col-form-label">จำนวนพันธุ์ </label>
-                                <div class="col-sm-3">
+                                <label class="col-sm-2 col-form-label cc"><center>Number of varieties</center></label>
+                                <div class="col-sm-2">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
@@ -297,18 +351,16 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                         </div>
+                       
+                        
                     </div>
 
 
                 </div>
+               
 
-
-
+                </div>
 
 
 
@@ -362,9 +414,11 @@
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
 
                 return function () {
+                    $("#lat").empty();
+                    
                     var res = arrJ[i][3].split(",");
-                    document.getElementById('lat').value = arrJ[i][0];
-                    document.getElementById('lon').value = arrJ[i][1];
+                    document.getElementById('lat').append( arrJ[i][0]+' , '+arrJ[i][1]);
+                    //document.getElementById('lon').innerHTML = arrJ[i][1];
                     document.getElementById('gene').value = res.length;
                     showimg(arrJ[i][3]);
                     // findNearestMarker(arrJ[i][0],arrJ[i][1])
