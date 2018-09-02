@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="theme/assets/css/demo_1/style.css">
     <!-- End Layout styles -->
 
+    <!-- Nav image link -->
+    <link rel="stylesheet" href="theme/assets/css/imgLink.css">
+
 
     <!-- plugins:js -->
     <script src="theme/assets/vendors/js/vendor.bundle.base.js"></script>
@@ -31,10 +34,14 @@
     <script src="theme/assets/js/shared/misc.js"></script>
     <script src="theme/assets/js/shared/settings.js"></script>
     <script src="theme/assets/js/shared/todolist.js"></script>
+
+    <script src="theme/assets/js/shared/tooltips.js"></script>
+    <script src="theme/assets/js/shared/popover.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="theme/assets/js/demo_1/dashboard.js"></script>
     <!-- End custom js for this page-->
+
 
 
 

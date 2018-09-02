@@ -16,7 +16,7 @@
 
 
     //background constants
-    var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink";
+    var navbar_classes = "navbar-danger navbar-success navbar-warning navbar-dark navbar-light navbar-primary navbar-info navbar-pink navbar-orange navbar-yellow";
     var sidebar_classes = "sidebar-light sidebar-dark";
     var $body = $("body");
 
@@ -34,6 +34,36 @@
       $(this).addClass("selected");
     });
 
+
+
+    //jump
+    $("#chilli").on("click", function() {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-orange");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $("#cucumber").on("click", function() {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-success");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $("#banana").on("click", function() {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-warning");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+    $("#eggplant").on("click", function() {
+      $(".navbar").removeClass(navbar_classes);
+      $(".navbar").addClass("navbar-info");
+      $(".tiles").removeClass("selected");
+      $(this).addClass("selected");
+    });
 
     //Navbar Backgrounds
     $(".tiles.primary").on("click", function() {
