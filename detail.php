@@ -3,6 +3,17 @@
   <head>
     <?php include 'head.php'; ?>
   </head>
+  <style>
+  .breadcrumb
+{
+        margin-bottom: 0rem;
+}
+.card .card-body.top
+{
+    padding: 0rem;
+}
+  </style>
+
   <body class="sidebar-icon-only">
     <div class="container-scroller">
     <?php include('navbar.php'); ?>   
@@ -11,18 +22,28 @@
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
-            <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb bg-light">
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card" >
+                    <div class="card">
+                      <div class="card-body top">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
                           <li class="breadcrumb-item">
-                            <a href="#">Home</a>
+                            <a href="showdt.php" style="text-decoration: none; color: #f12222;">Home</a>
+                          </li>        
+                          <li class="breadcrumb-item">
+                            <a href="physical_search.php" style="text-decoration: none; color: #f12222;">Physical Search</a>
                           </li>
                           <li class="breadcrumb-item">
-                            <a href="#">Library</a>
+                            <a href="search_results.php" style="text-decoration: none; color: #f12222;">Search Result</a>
                           </li>
-                          <li class="breadcrumb-item active" aria-current="page">Data</li>
+                          <li class="breadcrumb-item active" aria-current="page" >Accession Number : LE001</li>
                         </ol>
                       </nav>
-              
+                      </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
 
                 <div class="col-md-12 grid-margin stretch-card">

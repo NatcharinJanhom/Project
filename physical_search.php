@@ -7,15 +7,18 @@
 <style>
   .card-body h5 {
     margin-bottom: 0;
+    color:#ff0017;
+    font-size: 1.2rem;
+    font-weight: 600;
   } 
   .card.item {
-     border: 1px solid #8ba2b5;
+     border: 1px solid #ff0017;
     
   }
   .accordion .card:first-of-type,
   .accordion .card:not(:first-of-type):not(:last-of-type)
   {
-    border-bottom: 1px solid #8ba2b5 ;
+    border-bottom: 1px solid #ff0017 ;
     border-bottom-right-radius: 4px ;
     border-bottom-left-radius: 4px ;
     border-top-right-radius:4px;
@@ -24,15 +27,20 @@
   .accordion .card .card-header a
   {
     font-size: 1.2rem;
+    color:#ff0017;
   }
   .accordion.basic-accordion .card .card-header a[aria-expanded="true"] ,
   .accordion.basic-accordion .card .card-header a[aria-expanded="false"] 
   {
     background: none;
+
+  }
+  .accordion .card .card-header a:before {
+    color: #ff0017;
   }
   .accordion .card .card-header
   {
-    border-bottom: 1px solid #e6eef2;
+    border-bottom: 1px solid #ff0017;
   }
   .form-control
   {
@@ -55,7 +63,7 @@
   {   
     background-image: url("pic/button1.png");   
     position: fixed;
-    top: 73%;
+    top: 75%;
     right: -10px;    
     margin:auto;
     -webkit-transition: all 0.5s ease-in-out;
@@ -75,6 +83,16 @@
     z-index: 1;   
     background-image: url("pic/button2.png");   
   }
+  .btn1:hover,
+  .btn2:active
+  {
+    background-image: url("pic/button1hover.png");   
+  }
+  .btn2:hover,
+  .btn2:active 
+  {
+    background-image: url("pic/button2hover.png");   
+  }
 </style>
 
 <body class="sidebar-icon-only">
@@ -86,9 +104,9 @@
         <div class="content-wrapper">
           <!-- หน้าเว็บ -->
           <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body bg-primary text-white">
+            <div class="col-lg-12 grid-margin">
+              <div class="">
+                <div class="card-body">
                   <h5>Physical Search</h5>
                 </div>
               </div>
