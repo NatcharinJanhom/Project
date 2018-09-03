@@ -29,7 +29,38 @@
                     <div class="form-group">
                             <label for="InputTitle">Title</label>
                             <input type="text" class="form-control" id="InputTitle" placeholder="Title"> </div>
-                 
+                          
+                                                <div class="card">
+                                                <div class="card-body">
+                                                <h4 class="card-title">Drag and drop files</h4>
+                                                <div class="dropify-wrapper">
+                                                    <div class="dropify-message">
+                                                    <span class="file-icon"></span>
+                                                    <p>Drag and drop a file here or click</p>
+                                                    <p class="dropify-error">Ooops, something wrong appended.</p>
+                                                    </div>
+                                                    <div class="dropify-loader" style="display: none;"></div>
+                                                    <div class="dropify-errors-container">
+                                                    <ul></ul>
+                                                    </div>
+                                                    <input type="file" class="dropify" data-height="300" >
+                                                    <button type="button" class="dropify-clear">Remove</button>
+                                                    <div class="dropify-preview">
+                                                    <span class="dropify-render"></span>
+                                                    <div class="dropify-infos">
+                                                        <div class="dropify-infos-inner">
+                                                        <p class="dropify-filename">
+                                                            <span class="file-icon"></span>
+                                                            <span class="dropify-filename-inner"></span>
+                                                        </p>
+                                                        <p class="dropify-infos-message">Drag and drop or click to replace</p>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+    
                             <button type="submit" class="btn btn-success mr-2">Submit</button>
                             <input type="button" value="Cancel" class="btn btn-light" onclick="goBack()">     
                 </form>
