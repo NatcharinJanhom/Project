@@ -16919,3 +16919,10 @@
       .tooltip{
         z-index: 10000;
       }
+      a{
+        color: #ff6258;
+      }
+
+     /* .card .physical{
+        margin: 10px;
+      }*/
