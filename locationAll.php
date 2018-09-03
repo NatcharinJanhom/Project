@@ -296,7 +296,7 @@
                                                 <div class="clearfix">
                                                     <center>
                                                         <img  src="pic/t1.jpg" >
-                                                        <p>Accession Number : LE042</p>
+                                                        <a href="index.php"> <p>Accession Number : LE042</p></a>
                                                     </center>
                                                 </div>
                                                 
@@ -309,7 +309,7 @@
                                             <div class="clearfix">
                                                 <center>
                                                 <img  src="pic/t2.jpg" >
-                                                <p>Accession Number : LE043</p>
+                                                <a href="index.php"><p>Accession Number : LE043</p></a>
                                                 </center>
                                             </div>
                                                
@@ -322,7 +322,7 @@
                                                 <div class="clearfix">
                                                 <center>
                                                     <img  src="pic/t3.jpg" >
-                                                    <p>Accession Number : LE044</p>
+                                                    <a href="index.php"><p>Accession Number : LE044</p></a>
                                                     </center>
                                                 </div>
                                                
@@ -352,7 +352,7 @@
                                                 <div class="clearfix">
                                                 <center>
                                                     <img class="nevber" src="pic/t1.jpg" >
-                                                <p class="clearfix2">Accession Number : LE042</p>
+                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE042</p></a>
                                                 </center>
                                                 </div>
                                             </div>
@@ -364,7 +364,7 @@
                                                 <div class="clearfix">
                                                 <center>
                                                     <img class="nevber" src="pic/t3.jpg" >
-                                                    <p class="clearfix2">Accession Number : LE043</p>
+                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE043</p></a>
                                                 </center>
                                                 </div>   
                                             </div>
@@ -376,7 +376,7 @@
                                                 <div class="clearfix">
                                                     <center>
                                                     <img class="nevber" src="pic/t2.jpg" >
-                                                    <p class="clearfix2">Accession Number : LE044</p>
+                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE044</p></a>
                                                     </center>
                                                 </div>
                                             </div>
@@ -419,7 +419,7 @@
         //var len = sp.length;
         var s = ""
         for (i = 1; i <= sp.length; i++) {
-            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i+1) + "'  class='remo'  ><p class='remo'>Accession Number &nbsp;:&nbsp; <span id='acs"+i+"' class='remo'> </span></p></center> </div></div></div></div>");
+            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i+1) + "'  class='remo'  ><a href='index.php'><p class='remo'>Accession Number &nbsp;:&nbsp; <span id='acs"+i+"' class='remo'> </span></p></a></center> </div></div></div></div>");
             $('#myImage'+(i+1)).attr({ src: 'pic/t' + i + '.jpg' });
             $('#acs' + (i)).append(sp[(i-1)]);
             
