@@ -3,6 +3,17 @@
   <head>
     <?php include 'head.php'; ?>
   </head>
+  <style>
+  .breadcrumb
+{
+        margin-bottom: 0rem;
+}
+.card .card-body.top
+{
+    padding: 0rem;
+}
+  </style>
+
   <body class="sidebar-icon-only">
     <div class="container-scroller">
     <?php include('navbar.php'); ?>   
@@ -11,7 +22,28 @@
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
-              
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card" >
+                    <div class="card">
+                      <div class="card-body top">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item">
+                            <a href="showdt.php" style="text-decoration: none; color: #f12222;">Home</a>
+                          </li>        
+                          <li class="breadcrumb-item">
+                            <a href="physical_search.php" style="text-decoration: none; color: #f12222;">Physical Search</a>
+                          </li>
+                          <li class="breadcrumb-item">
+                            <a href="search_results.php" style="text-decoration: none; color: #f12222;">Search Result</a>
+                          </li>
+                          <li class="breadcrumb-item active" aria-current="page" >Accession Number : LE001</li>
+                        </ol>
+                      </nav>
+                      </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
 
                 <div class="col-md-12 grid-margin stretch-card">
@@ -56,11 +88,101 @@
                               </div> 
                               <div class="col-md-4">
                                 <img class="img-fluid w-100 rounded" src="theme/assets/images/tomato/tomato_01.jpg" alt="Sample Image"> 
+                              </div>  
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="Physical-5-2" role="tabpanel" aria-labelledby="tab-5-2">
+
+                  <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <i class="card-icon mdi mdi-apple"></i>Product</a>
+                          </h6>
+                        </div>
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/loop4.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
                               </div>
                             </div>
-                            <p>Impedit dolores ea facere culpa numquam alias, reprehenderit iste corporis hic fugit sunt cum magni.</p>
                           </div>
-                          <div class="tab-pane fade" id="Physical-5-2" role="tabpanel" aria-labelledby="tab-5-2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eveniet, sapiente corrupti, vitae excepturi nulla soluta esse in ex, dignissimos velit rerum maiores asperiores! </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <i class="card-icon fa fa-leaf"></i>Leaf</a>
+                          </h6>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/leaf1.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <i class="card-icon fa fa-sun-o"></i>Flower</a>
+                          </h6>
+                        </div>
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/flower1.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <i class="card-icon fa fa-code-fork"></i>Root</a>
+                          </h6>
+                        </div>
+                        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/root.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
+
+                          </div>
                           <div class="tab-pane fade" id="Genome-5-8" role="tabpanel" aria-labelledby="tab-5-8"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam officia mollitia repudiandae, tempore provident omnis magnam deleniti obcaecati, non atque asperiores maiores sint! Officiis rerum quaerat perferendis adipisci aut pariatur.
                             </div>
                         </div>
