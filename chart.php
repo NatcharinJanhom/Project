@@ -10,6 +10,10 @@
         margin:20px;
         border-radius:10px;
     }
+    .text-right
+    {
+        text-align:right;
+    }
 </style>
   <body class="sidebar-icon-only">
     <div class="container-scroller">
@@ -175,7 +179,7 @@
                         tabledetail.remove();
                         $(".chart-data").append(' <br/><div id="table-data"></div>');
                         var tabledetail=$("#table-data");
-                        tabledetail.append('<table class="table table-bordered" id="row"><tr><th></th><th>Amount</th><th>Percent</th></tr>');
+                        tabledetail.append('<table class="table table-bordered" id="row"><tr><th>'+input_cha+'</th><th class="text-right">Amount</th><th class="text-right">Percent</th></tr>');
                         var sum =0;
                         for(i=0;i<data.length;i++)
                         {
@@ -186,7 +190,7 @@
                         {
                            
                             var x =(data[i].count_sum/sum)*100;
-                            $("#row").append('<tr><td>'+data[i].cha+'</td><td>'+data[i].count_sum+'</td><td>'+x.toFixed(2)+'%</td></tr>');
+                            $("#row").append('<tr><td>'+data[i].cha+'</td><td class="text-right">'+data[i].count_sum+'</td><td class="text-right">'+x.toFixed(2)+'%</td></tr>');
                         }
                         tabledetail.append('</table>');
                         console.log(data);
