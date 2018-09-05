@@ -57,6 +57,13 @@
                 <i class="menu-arrow"></i>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="upload.php" >
+                <i class="menu-icon mdi mdi-cloud-upload"></i>
+                <span class="menu-title">Upload File</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
 
           </ul>
 

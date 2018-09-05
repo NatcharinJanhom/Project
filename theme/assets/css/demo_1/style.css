@@ -84,7 +84,7 @@
         color: #2196f3; }
         .sidebar .nav .nav-item.active > .nav-link .menu-title,
         .sidebar .nav .nav-item.active > .nav-link i {
-          color: inherit; }
+          color: #ff6258; }
       .sidebar .nav .nav-item.nav-profile .nav-link {
         display: -webkit-box;
         display: -ms-flexbox;
