@@ -33,7 +33,6 @@
   .accordion.basic-accordion .card .card-header a[aria-expanded="false"] 
   {
     background: none;
-
   }
   .accordion .card .card-header a:before {
     color: #ff0017;
@@ -57,19 +56,16 @@
     max-height:100px;
     width:40%;
     height:20%;   
-    cursor: pointer;  
-    font-size: 25px; 
+    cursor: pointer;   
   }
   .btn1
-  {     
+  {   
+    background-image: url("pic/button1.png");   
     position: fixed;
     top: 75%;
     right: -10px;    
     margin:auto;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
     z-index: 1;
-
     text-align: center;
   }
   .btn2
@@ -78,26 +74,19 @@
     top: 65%;
     right: -10px;    
     margin:auto;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    z-index: 1;      
+    z-index: 1;   
+    background-image: url("pic/button2.png");   
   }
-  .btn-pill-left, .btn-pill-right {
-    width: 1000px;
-    height: 75px;
-    opacity: 0.5;
-}
-
-.btn-pill-left {
-    border-radius: 500px 0 0 500px;
-}
-.btn-primary {
-    color: #fff;
-    background-color: black;
-    border-color: black;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+  .btn1:hover,
+  .btn2:active
+  {
+    background-image: url("pic/button1hover.png");   
+  }
+  .btn2:hover,
+  .btn2:active 
+  {
+    background-image: url("pic/button2hover.png");   
+  }
 </style>
 
 <body class="sidebar-icon-only">
@@ -543,8 +532,8 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn1 btn-round btn-primary btn-pill-left">Search</button>
-          <button type="button" class="btn btn2 btn-round btn-primary btn-pill-left"">Clear</button>
+          <button type="submit" class="btn btn1"></button>
+          <button type="button" class="btn btn2"></button>
           </form>
         </div>
 
