@@ -58,24 +58,90 @@
     height:20%;   
     cursor: pointer;   
   }
-  .btn1
-  {   
-    background-image: url("pic/button1.png");   
-    position: fixed;
-    top: 75%;
-    right: -10px;    
-    margin:auto;
-    z-index: 1;
-    text-align: center;
+  @media only screen and (max-width: 420px) 
+  {
+        .btn1
+      {   
+        background-image: url("pic/button1.png");   
+        position: fixed;
+        top: 75%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;
+        text-align: center;
+      }
+      .btn2
+      {   
+        position: fixed;
+        top: 68%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;   
+        background-image: url("pic/button2.png");   
+      }
   }
-  .btn2
-  {   
-    position: fixed;
-    top: 65%;
-    right: -10px;    
-    margin:auto;
-    z-index: 1;   
-    background-image: url("pic/button2.png");   
+  @media only screen and (max-width: 768px) {
+    .btn1
+      {   
+        background-image: url("pic/button1.png");   
+        position: fixed;
+        top: 60%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;
+        text-align: center;
+      }
+      .btn2
+      {   
+        position: fixed;
+        top: 55%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;   
+        background-image: url("pic/button2.png");   
+      }
+  }
+  @media only screen and (max-width: 1024px) {
+    .btn1
+      {   
+        background-image: url("pic/button1.png");   
+        position: fixed;
+        top: 45%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;
+        text-align: center;
+      }
+      .btn2
+      {   
+        position: fixed;
+        top: 40%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;   
+        background-image: url("pic/button2.png");   
+      }
+  }
+  @media only screen and (max-width: 1368px) {
+    .btn1
+      {   
+        background-image: url("pic/button1.png");   
+        position: fixed;
+        top: 75%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;
+        text-align: center;
+      }
+      .btn2
+      {   
+        position: fixed;
+        top: 67%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;   
+        background-image: url("pic/button2.png");   
+      }
   }
   .btn1:hover,
   .btn2:active
