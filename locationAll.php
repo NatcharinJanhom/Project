@@ -5,17 +5,32 @@
 </head>
 
 <style>
-    #bodypic1,#profile-5-2,#AA,#bodypic3 {
+    #bodypic1,
+    #profile-5-2,
+    #AA,
+    #bodypic3 {
         margin-top: 20px;
     }
-    .form-control, .asColorPicker-input, .dataTables_wrapper select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text], .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .tt-hint, .tt-query, .typeahead  {
-    border: 1px solid #f2f2f2;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    padding: 0.56rem 0.75rem;
-    line-height: 14px;
-    font-weight: 300;
+
+    .form-control,
+    .asColorPicker-input,
+    .dataTables_wrapper select,
+    .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text],
+    .jsgrid .jsgrid-table .jsgrid-filter-row select,
+    .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number],
+    .select2-container--default .select2-selection--single,
+    .select2-container--default .select2-selection--single .select2-search__field,
+    .tt-hint,
+    .tt-query,
+    .typeahead {
+        border: 1px solid #f2f2f2;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        padding: 0.56rem 0.75rem;
+        line-height: 14px;
+        font-weight: 300;
     }
+
     .content-wrapper {
         padding: 0rem 1.7rem;
         width: 100%;
@@ -23,22 +38,27 @@
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-    #myDIV{
+
+    #myDIV {
         padding: 10px;
     }
-    #Sp{
+
+    #Sp {
         margin-top: 12px;
         margin-left: 25px;
         margin-bottom: 12px;
     }
+
     .col-form-label {
         background-color: #ff9933;
     }
-    #detail,#detail2
-     {
+
+    #detail,
+    #detail2 {
         margin-top: 30px;
         margin-left: auto;
     }
+
     #title {
         align-content: center;
         margin-top: 30px;
@@ -52,85 +72,107 @@
         align-content: center;
         max-width: 120px;
         max-height: 120px;
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
     }
+
     hr {
-    margin-top: 1rem;
-    margin-bottom: 0px;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    background: #ff6258;
-}
+        margin-top: 1rem;
+        margin-bottom: 0px;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        background: #ff6258;
+    }
+
     .tab-basic {
         border-bottom: none;
         margin-bottom: -15px;
     }
-    .cc
-    {
+
+    .cc {
         margin-left: 12px;
     }
-   
+
 
     input {
-      
+
         text-align: center;
     }
+
     h1 {
-        font-size : 1.2rem;
-        font-weight:600;
-            text-align: left;
-            color: tomato;
-            margin-bottom: 20px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: left;
+        color: tomato;
+        margin-bottom: 20px;
     }
+
     .tab-basic .nav-item {
         margin-right: 5px;
     }
-  
-    .tab-basic .nav-item .nav-link , .tab-basic .nav-item .nav-link.active {
-    color: red;
-    padding: 10px;
-    
-}
-.tab-basic .nav-item .nav-link.active{
-    
-    border-top: 1px solid #f12222;
-    border-right: 1px solid #f12222;
-    border-left: 1px solid #f12222;
-    border-bottom : none ;
-    color:red;
-    z-index : 999;
-}
-    .nav-pills .nav-item .nav-link, .nav-tabs .nav-item .nav-link {
-        line-height: 2;      
-}
+
+    .tab-basic .nav-item .nav-link,
+    .tab-basic .nav-item .nav-link.active {
+        color: red;
+        padding: 10px;
+
+    }
+
+    .tab-basic .nav-item .nav-link.active {
+
+        border-top: 1px solid #f12222;
+        border-right: 1px solid #f12222;
+        border-left: 1px solid #f12222;
+        border-bottom: none;
+        color: red;
+        z-index: 999;
+    }
+
+    .nav-pills .nav-item .nav-link,
+    .nav-tabs .nav-item .nav-link {
+        line-height: 2;
+    }
+
     .card .card-body {
         padding: 0rem 0rem;
     }
+
     .navv {
         background: none;
-        
+
     }
-    p{
+
+    p {
         margin-bottom: 0rem;
-        color : blue;
-        font-weight:600;
+        color: #f12222;
+        font-weight: 600;
     }
-    .img-card{
-       
-    }
-    .mdi{
+
+    .img-card {}
+
+    .mdi {
         font-size: 1.6rem;
     }
-    .card-pic1
-    { 
-        padding:  9px;
-        padding-top : 18px;
+
+    .card-pic1 {
+        padding: 9px;
+        padding-top: 18px;
         background: none;
     }
-    .x{
-        padding-top : 14px;
-        
+
+    .x {
+        padding-top: 14px;
+
+    }
+    #lat,#gene{
+        color: black;
+    }
+    .sli {
+        align-content: center;
+        max-width: 120px;
+        max-height: 120px;
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -175,7 +217,7 @@
                             
                             if($arr[$m][0] == $la && $arr[$m][1] == $long)
                             {
-                                $arr[$m][2] = $arr[$m][2]." ".$detail;
+                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
                                 $arr[$m][3] = $arr[$m][3].",".$acs;
                                 break;
                             }
@@ -195,7 +237,7 @@
                            
                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
                            {
-                                $arr[$m][2] = $arr[$m][2]." ".$detail;
+                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
                                 $arr[$m][3] = $arr[$m][3].",".$acs;
                                 break;
                            }
@@ -215,7 +257,7 @@
                            
                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
                            {
-                                $arr[$m][2] = $arr[$m][2]." ".$detail;
+                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
                                 $arr[$m][3] = $arr[$m][3].",".$acs;
                                 break;
                            }
@@ -234,178 +276,203 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                            <div class="card navv">    
-                            <div class=" card-body ">
-                        
-                                    <ul class="nav nav-tabs tab-basic" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true"><i class="mdi mdi-map-marker-radius"></i><span class="x">Sources found</span></a> 
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false"><i class="mdi mdi-bio"></i><span class="x">Breeding center</span></a>
-                                </li>
-                                </ul>
-                                <hr>
-                            </div>
-                            </div>
+                                <div class="card navv">
+                                    <div class=" card-body ">
+
+                                        <ul class="nav nav-tabs tab-basic" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true">
+                                                    <i class="mdi mdi-map-marker-radius"></i>
+                                                    <span class="x">Sources found</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false">
+                                                    <i class="mdi mdi-city"></i>
+                                                    <span class="x">Breeding center</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-lg-12">
-                            <div class="card">    
-                            <div class="card-body">
-                                <div id="myDIV">
-                                    <div id="map" style="width:100%; height: 400;">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id="myDIV">
+                                            <div id="map" style="width:100%; height: 400;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content tab-content-solid">
+                                    <div class="tab-pane fade active show" id="home-5-1" role="tabpanel" aria-labelledby="tab-5-1">
+                                        <div id="detail" class="form-group row">
+                                            <div class="col-lg-12">
+                                                <div class="col-sm-6">
+                                                    <p>
+                                                        <i class="mdi mdi-map-marker-multiple " data-name="mdi-map-marker-multiple"></i>Target &nbsp; &nbsp;
+                                                        <span id="lat"></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="detail" class="form-group row">
+                                            <div class="col-lg-12">
+                                                <div class="col-sm-6">
+                                                    <p>Number of varieties found &nbsp; &nbsp;
+                                                        <span id="gene"></span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="myImage1" class='row remo'>
+
+                                        </div>
+                                        <div id="bodypic2">
+                                            <div class="row">
+                                                <p id="Sp" class="col-lg-3 ">Species found nearby</p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img src="pic/t1.jpg">
+                                                                    <a href="index.php">
+                                                                        <p>LE042</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img src="pic/t2.jpg">
+                                                                    <a href="index.php">
+                                                                        <p>LE043</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img src="pic/t3.jpg">
+                                                                    <a href="index.php">
+                                                                        <p>LE044</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-5-2" role="tabpanel" aria-labelledby="tab-5-2">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <p>Breeding center </p>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <p>Number of varieties </p>
+                                            </div>
+                                        </div>
+                                        <div id="bodypic3">
+                                            <div class="row">
+                                                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img class="nevber" src="pic/t1.jpg">
+                                                                    <a href="index.php">
+                                                                        <p class="clearfix2">LE042</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img class="nevber" src="pic/t3.jpg">
+                                                                    <a href="index.php">
+                                                                        <p class="clearfix2">LE043</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="img-card  col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
+                                                    <div class="card card-pic1">
+                                                        <div class="card-body card-pic1">
+                                                            <div class="clearfix">
+                                                                <center>
+                                                                    <img class="nevber" src="pic/t2.jpg">
+                                                                    <a href="index.php">
+                                                                        <p class="clearfix2">LE044</p>
+                                                                    </a>
+                                                                </center>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
 
                             </div>
-                            </div>
-                            </div>
+
+
                         </div>
-                       
-                    <div class="tab-content tab-content-solid">
-                        <div class="tab-pane fade active show" id="home-5-1" role="tabpanel" aria-labelledby="tab-5-1">
-                            <div id="detail" class="form-group row">
-                                <div class="col-lg-12">
-                                        <div class="col-sm-6">
-                                               <p > <i class="mdi mdi-map-marker-multiple " data-name="mdi-map-marker-multiple"></i>Target &nbsp; &nbsp;:&nbsp; &nbsp; <span id="lat"></span> </p>
-                                        </div>      
-                                </div>
-                            </div>
-                            <div id="detail" class="form-group row">
-                                <div class="col-lg-12">
-                                        <div class="col-sm-6">
-                                               <p >Number of varieties found  &nbsp; &nbsp;:&nbsp; &nbsp; <span id="gene"></span> </p>
-                                        </div>       
-                                </div>
-                            </div>
-                           
-            
-                           
-                            <div id="myImage1"  class='row remo'>
-                            
-                            </div>
-                            <div id="bodypic2">
-                                <div class="row">
-                                        <p id="Sp" class="col-lg-3 ">Species found nearby</p>
-                                </div>
-                                <div class="row">
-                                    <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                                <div class="clearfix">
-                                                    <center>
-                                                        <img  src="pic/t1.jpg" >
-                                                        <a href="index.php"> <p>Accession Number : LE042</p></a>
-                                                    </center>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                            <div class="clearfix">
-                                                <center>
-                                                <img  src="pic/t2.jpg" >
-                                                <a href="index.php"><p>Accession Number : LE043</p></a>
-                                                </center>
-                                            </div>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                                <div class="clearfix">
-                                                <center>
-                                                    <img  src="pic/t3.jpg" >
-                                                    <a href="index.php"><p>Accession Number : LE044</p></a>
-                                                    </center>
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="profile-5-2" role="tabpanel" aria-labelledby="tab-5-2">
-                            <div class="row" >
-                                <div class="col-sm-2">
-                                    <p >Breeding center : </p><br>
-                                </div>  
-                            </div>
-                            <div class="row" >
-                                <div class="col-sm-2">
-                                    <p>Number of varieties :</p>
-                                </div>  
-                            </div>
-                            <div id="bodypic3">
-                                <div class="row">
-                                    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                                <div class="clearfix">
-                                                <center>
-                                                    <img class="nevber" src="pic/t1.jpg" >
-                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE042</p></a>
-                                                </center>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="img-card col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                                <div class="clearfix">
-                                                <center>
-                                                    <img class="nevber" src="pic/t3.jpg" >
-                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE043</p></a>
-                                                </center>
-                                                </div>   
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="img-card  col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
-                                        <div class="card card-pic1">
-                                            <div class="card-body card-pic1">
-                                                <div class="clearfix">
-                                                    <center>
-                                                    <img class="nevber" src="pic/t2.jpg" >
-                                                    <a href="index.php"><p class="clearfix2">Accession Number : LE044</p></a>
-                                                    </center>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
 
 
+
+
+
+
+
+                        <?php include('footer.php'); ?>
                 </div>
-               
-
-                </div>
-
-
-
-
-
-
-
-                <?php include('footer.php'); ?>
+                <!-- main-panel ends -->
             </div>
-            <!-- main-panel ends -->
-        </div>
 
-        <!-- page-body-wrapper ends -->
-    </div>
+            <!-- page-body-wrapper ends -->
+        </div>
 </body>
 
 </html>
@@ -419,10 +486,10 @@
         //var len = sp.length;
         var s = ""
         for (i = 1; i <= sp.length; i++) {
-            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i+1) + "'  class='remo'  ><a href='index.php'><p class='remo'>Accession Number &nbsp;:&nbsp; <span id='acs"+i+"' class='remo'> </span></p></a></center> </div></div></div></div>");
-            $('#myImage'+(i+1)).attr({ src: 'pic/t' + i + '.jpg' });
-            $('#acs' + (i)).append(sp[(i-1)]);
-            
+            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i + 1) + "'  class='remo'  ><a href='index.php'><p class='remo'><span id='acs" + i + "' class='remo'> </span></p></a></center> </div></div></div></div>");
+            $('#myImage' + (i + 1)).attr({ src: 'pic/t' + i + '.jpg' });
+            $('#acs' + (i)).append(sp[(i - 1)]);
+
         }
     }
     function asree() {
@@ -446,9 +513,9 @@
 
                 return function () {
                     $("#lat").empty();
-                    
+
                     var res = arrJ[i][3].split(",");
-                    document.getElementById('lat').append( arrJ[i][0]+' , '+arrJ[i][1]);
+                    document.getElementById('lat').append(arrJ[i][0] + ' , ' + arrJ[i][1]);
                     //document.getElementById('lon').innerHTML = arrJ[i][1];
                     document.getElementById('gene').innerHTML = res.length;
                     showimg(arrJ[i][3]);
