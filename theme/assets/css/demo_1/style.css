@@ -116,8 +116,22 @@
             .sidebar .nav .nav-item.nav-profile .nav-link .user-wrapper .text-wrapper .designation {
               margin-right: 3px; }
       .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {
-        background: #fafbfc;
-        color: #4a4a4a; }
+        background: #ff6258;/* #fafbfc; */
+        color: white;/*#4a4a4a;*/ }
+
+
+         .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link .menu-icon {
+      
+        color: white;/*#4a4a4a;*/ }
+
+         .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link .menu-title {
+      
+         background: #ff6258;/* #fafbfc; */
+        color: white;/*#4a4a4a;*/ 
+        opacity: 0.9;}
+
+
+
       .sidebar .nav.sub-menu {
         margin-bottom: 0;
         padding: 0 0 0 4rem; }

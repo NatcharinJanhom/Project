@@ -158,8 +158,22 @@ table tr td
 table.dataTable tbody td {
     padding: 5px 5px 5px 10px;
 }
+.table td img
+{
+    border-radius:unset;
+    max-height: 160px;
+    max-width: 160px;
+    width: 100%;
+    height: 100%;
+}
+table tr td img,
+table tr td.imge
+{
+    height: 160px !important;
+    width: 160px !important;
+    text-align: center !important;
+}
 </style>
-
 <body class="sidebar-icon-only">
     <div class="container-scroller">
         <?php include('navbar.php'); ?>
@@ -201,15 +215,17 @@ table.dataTable tbody td {
                         <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree">
                           <div class="card-body">
                             <div class="row">
-                              <div class="col-md-6">
-                              <p>Plant size : <span class="red"> small </span>, Stem pubescence density: <span class="red"> dense </span>, Leaf type: <span class="red"> peruvainum </span></p>
+                              <div class="col-md-12">
+                              <p id="search_by"></p>
                               </div>
                             </div>
+                            <!--
                             <div class="row">
                               <div class="col-md-12">
                               <p class="red right"><a href="#" >+more</a></p>
                               </div>
                             </div>
+                            -->
                          </div>
                         </div>
                       </div>
@@ -242,6 +258,7 @@ table.dataTable tbody td {
                                                     <?php $tomato = search(); ?>
                                                     <table id="data" class="table  table-bordered" style="width:100%">
                                                         <thead>
+                                                        
                                                             <tr align="center">
                                                                 <th >Accession number</th>
                                                                 <?php
@@ -253,6 +270,36 @@ table.dataTable tbody td {
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        
+                                                        <tr>
+                                                                <td bgcolor='#ff6258' class="text-white">Photo</td>
+                                                                <?php
+                    foreach($tomato as $key=>$value)
+                    {
+                        echo "<td bgcolor='#ff6258'></td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                        <tr>
+                                                            <td> </td>
+                                                            <?php
+                                                            $x=1;
+                                                                foreach($tomato as $key=>$value)
+                                                                {
+                                                                    if($x>5)
+                                                                    {
+                                                                        echo "<td> </td>";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        echo '<td class="imge"> <a href="detail.php"> <img class="image" src="pic/t'.$x.'.jpg" ></a></td>'; 
+                                                                        $x++;
+                                                                    }
+                                                                    
+                                                                }
+                                                            ?>
+                                                            </tr>
+                                                       
                                                             <tr>
                                                                 <td bgcolor='#ff6258' class="text-white">Plant</td>
                                                                 <?php
@@ -262,16 +309,19 @@ table.dataTable tbody td {
                     }
                     ?>
                                                             </tr>
+                                                            <!--
                                                             <tr>
                                                                 <td>Plant size</td>
-                                                                <?php
+                                                                <?php /*
                     foreach($tomato as $key=>$value)
                     {
                         echo "<td>".$value['plant_size']??'-'."</td>";
                     }
+                    */
                     ?>
                                                             </tr>
-                                                            <tr>
+                                                            -->
+                                                            
                                                                 <td>Stem pubescence density</td>
                                                                 <?php
                     foreach($tomato as $key=>$value)
@@ -548,7 +598,7 @@ table.dataTable tbody td {
                                                 <br/>
                                                 <div class="row">   
                                                     <div class="col-12">
-                                                        <p>Searching <span style="color:#f12222; padding-left:10px; padding-right:10px; ">4</span> results </p>
+                                                        <p>Searching <span style="color:#f12222; padding-left:10px; padding-right:10px; "><?php echo count($tomato); ?></span> results </p>
                                                     </div>   
                                                 </div>
                                                 <div class="row">
@@ -689,6 +739,8 @@ table.dataTable tbody td {
         <!-- page-body-wrapper ends -->
     </div>
 </body>
+<input type="hidden" id="stem_pubescence_density" value="<?php echo $_POST['stem_pubescence_density']?>">
+<input type="hidden" id="stem_internode_length" value="<?php echo $_POST['stem_internode_length']?>">
 
 </html>
 <script>
@@ -710,10 +762,66 @@ table.dataTable tbody td {
     });
 </script>
 <script src="theme/assets/js/shared/owl-carousel.js"></script>
+<script>
+var stem_pubescence_density = $('#stem_pubescence_density').val();
+var stem_internode_length =$('#stem_internode_length').val();
+$('#search_by').empty();
+var item = 0;
+if(stem_pubescence_density)
+{
+    if(stem_pubescence_density == 'all')
+    { 
+        var name ='stem_pubescence_density';
+        $.ajax({
+                    url: "ajaxValueTable.php",
+                    method: "GET",
+                    data: { table: name },
+                    success: function(data) {
+                        console.log("success");
+                        $('#search_by').append(' Stem pubescence density : ');
+                        for(i=0;i<data.length;i++)
+                        {
+                            if(i>0)
+                            {
+                                $('#search_by').append(' , ');
+                            }
+                            $('#search_by').append(' <span class="red"> '+data[i].stem_pubescence_density+' </span>');
+                        }
+            
+                        console.log(name);
+                        console.log(data);
+                    },
+                    error: function(data) {
+                        console.log("error");
+                        console.log(data);
+                    }
+                    });
+    }
+    else
+    {
+        $('#search_by').append(' Stem pubescence density : <span class="red"> '+stem_pubescence_density+' </span>');
+
+    }
+    item++;
+}
+if(stem_internode_length)
+{
+    if(stem_internode_length == 'all')
+    { 
+        $('#search_by').append(' Stem internode length : <span class="red"> short </span> , <span class="red"> intermediate </span> , <span class="red"> long </span>');
+    }
+    else
+    {
+        $('#search_by').append(' Stem internode length : <span class="red"> '+stem_internode_length+' </span>');
+    }
+  
+    item++;
+}
+
+</script>
 <?php
 function search()
     {
-      
         class conDb {
             private static $instance = NULL;
             private static $dsn = "mysql:dbname=tomatoes;host=localhost";
@@ -730,8 +838,69 @@ function search()
                 }
             }
     
+        unset($where);
+        unset($where_new);
+        $where = 'WHERE ';
+        $i=0;
+        if(!empty($_POST['stem_pubescence_density']))
+            {
+                if($_POST['stem_pubescence_density']=="all")
+                {
+                    $con = ConDb::getInstance();
+                    $sql = "SELECT * FROM stem_pubescence_density";
+                    $stmt = $con->prepare($sql);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($result as $key=>$value)
+                    {
+                        if($i != 0)
+                        {
+                        $where .= " || ";
+                        }
+                        $where .= "cha_data_tomato.stem_pubescence_density = '".$value['stem_pubescence_density']."'";
+                        $i++;
+                    }
+                    $i=0;
+                    
+                }
+                else
+                {
+                    $stem_pubescence_density =$_POST['stem_pubescence_density'];
+                    $where .= "cha_data_tomato.stem_pubescence_density = '$stem_pubescence_density'";
+                }
+                
+                $where .= ' AND ';
+            }
+        if(!empty($_POST['stem_internode_length']))
+        {
+            if($_POST['stem_internode_length']=="short")
+            {
+                $where .= "cha_data_tomato.stem_internode_length < 7";
+            }
+            else if($_POST['stem_internode_length']=="intermediate")
+            {
+                $where .= "cha_data_tomato.stem_internode_length BETWEEN 7 AND 8";
+            }
+            else if($_POST['stem_internode_length']=="long")
+            {
+                $where .= "cha_data_tomato.stem_internode_length > 8";
+            }
+            else if($_POST['stem_internode_length']=="all")
+            {
+                $where .= "cha_data_tomato.stem_internode_length < 7 OR cha_data_tomato.stem_internode_length BETWEEN 7 AND 8 OR cha_data_tomato.stem_internode_length > 8";
+            }
+            $where .= ' AND ';
+        }
+        if($where == 'WHERE ')
+        {
+
+           $where ="";
+        }
+    
+        $length_w = strlen($where);
+        $where_new = substr($where, 0, -5);
         $con = ConDb::getInstance();
-        $sql = "SELECT * FROM `cha_data_tomato` WHERE cha_data_tomato.hypocotyl_colour ='purple'";
+        $sql = "SELECT * FROM `cha_data_tomato` $where_new";
         $stmt = $con->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

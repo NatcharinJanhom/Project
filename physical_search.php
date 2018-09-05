@@ -57,11 +57,11 @@
     max-height:100px;
     width:40%;
     height:20%;   
-    cursor: pointer;   
+    cursor: pointer;  
+    font-size: 25px; 
   }
   .btn1
-  {   
-    background-image: url("pic/button1.png");   
+  {     
     position: fixed;
     top: 75%;
     right: -10px;    
@@ -80,19 +80,24 @@
     margin:auto;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    z-index: 1;   
-    background-image: url("pic/button2.png");   
+    z-index: 1;      
   }
-  .btn1:hover,
-  .btn2:active
-  {
-    background-image: url("pic/button1hover.png");   
-  }
-  .btn2:hover,
-  .btn2:active 
-  {
-    background-image: url("pic/button2hover.png");   
-  }
+  .btn-pill-left, .btn-pill-right {
+    width: 1000px;
+    height: 75px;
+    opacity: 0.5;
+}
+
+.btn-pill-left {
+    border-radius: 500px 0 0 500px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 </style>
 
 <body class="sidebar-icon-only">
@@ -112,7 +117,7 @@
               </div>
             </div>
           </div>
-          <form action="search_results.php">
+          <form action="search_results.php" method="post">
           <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
@@ -127,41 +132,45 @@
                         </div>
                         <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree">
                           <div class="card-body">
-                            <div class="row">
+                            <!--
+                              <div class="row">
                               <div class="col-md-6">
                                 <p>Plant size</p>
                               </div>
                               <div class="col-md-6">
-                              <select class="form-control">
-                                <option>---- select ----</option>
-                                <option>Small</option>
-                                <option>Intermediate</option>
-                                <option>Large</option>                                
+                              <select class="form-control" name="plant_size">
+                                <option value="">---- select ----</option>
+                                <option value="small">Small</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="large">Large</option>                                
                               </select>
                               </div>
                             </div>
+                            -->
                             <div class="row">
                               <div class="col-md-6">
                                 <p>Stem pubescence density</p>
                               </div>
                               <div class="col-md-6">
-                              <select class="form-control">
-                                <option>---- select ----</option>
-                                <option>dense </option>
-                                <option>intermediate</option>                                                    
+                              <select class="form-control" name="stem_pubescence_density">
+                                <option value="">---- select ----</option>
+                                <option value="all">---- All ----</option>
+                                <option value="dense">dense </option>
+                                <option value"intermediate">intermediate</option>                                                    
                               </select>
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Stem internode length</p>
+                                <p>Stem internode length (cm)</p>
                               </div>
                               <div class="col-md-6">
-                              <select class="form-control">
-                                <option>---- select ----</option>
-                                <option>short</option>
-                                <option>intermediate</option>  
-                                <option>long</option>                                                     
+                              <select class="form-control" name="stem_internode_length">
+                                <option value="">---- select ----</option>
+                                <option value="all">---- All ----</option>
+                                <option value="short">short ( < 7 )</option>
+                                <option value="intermediate">intermediate ( 7-8 )</option>  
+                                <option value="long">long ( > 8 )</option>                                                     
                               </select>
                               </div>
                             </div>                           
@@ -534,8 +543,8 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn1"></button>
-          <button type="button" class="btn btn2"></button>
+          <button type="submit" class="btn btn1 btn-round btn-primary btn-pill-left">Search</button>
+          <button type="button" class="btn btn2 btn-round btn-primary btn-pill-left"">Clear</button>
           </form>
         </div>
 

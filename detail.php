@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include 'head.php'; ?>
+      <?php include('head.php'); ?>
   </head>
   <style>
   .breadcrumb
@@ -11,6 +11,9 @@
 .card .card-body.top
 {
     padding: 0rem;
+}
+b{
+  margin-right: 10px;
 }
   </style>
 
@@ -98,16 +101,18 @@
                         <div class="card-header" role="tab" id="headingOne">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              <i class="card-icon mdi mdi-apple"></i>Product</a>
+                              <i class="card-icon fa fa-tree"></i>Plant</a>
                           </h6>
                         </div>
                         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                           <div class="card-body">
                             <div class="row">
                               <div class="col-md-3">
-                                <img class="img-fluid rounded" src="theme/assets/images/tomato/loop4.jpg" alt="image"> </div>
+                                <img class="img-fluid rounded resize" src="theme/assets/images/tomato/plant3.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                                <p><b>Plant size : </b> -</p>
+                                <p><b>Stem pubescence density : </b> dense</p>
+                                <p><b>Stem internode length : </b> 6.9</p>
                               </div>
                             </div>
                           </div>
@@ -129,7 +134,9 @@
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/leaf1.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                                <p> <b>Number of leaves under 1st inflorescence :</b> Many</p>
+                                <p><b>Leaf attitude : </b> semi-erect</p>
+                                <p><b>Leaf type : </b>standard</p>
                               </div>
                             </div>
                           </div>
@@ -151,7 +158,10 @@
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/flower1.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                                <p><b>Number of days to flowering : </b> 34</p>
+                                <p><b>Number of flowers : </b> 5-7</p>
+                                <p><b>Corolla colour : </b> yellow</p>
+                                <p><b>Style position : </b> same level as stamen</p>
                               </div>
                             </div>
                           </div>
@@ -164,16 +174,75 @@
                         <div class="card-header" role="tab" id="headingFour">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              <i class="card-icon fa fa-code-fork"></i>Root</a>
+                              <i class="card-icon mdi mdi-apple"></i>Fruit</a>
                           </h6>
                         </div>
                         <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
                           <div class="card-body">
                             <div class="row">
                               <div class="col-md-3">
-                                <img class="img-fluid rounded" src="theme/assets/images/tomato/root.jpg" alt="image"> </div>
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/loop8.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p>You can pay for the product you have purchased using credit cards, debit cards, or via online banking. </p>
+                                <p><b>Fruit weight : </b> 4.75</p>
+                                <p><b>Fruit size : </b> very small</p>
+                                <p><b>Exterior colour of mature fruit : </b> red</p>
+                                <p><b>Predominant fruit shape : </b> rounded</p>
+                                <p><b>Intensity of greenback : </b>none</p>
+                                <p><b>Fruit shoulder shape : </b>flat</p>
+                                <p><b>Easiness of fruit to detach from pedicel : </b>easy</p>
+                                <p><b>Fruit blossom end shape : </b> flat</p>
+                                <p><b>Shape of pistil scar : </b> dot</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingFive">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <i class="card-icon fa fa-lemon-o"></i>Seed</a>
+                          </h6>
+                        </div>
+                        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/seed1.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p><b>Seed shape : </b></p>
+                                <p><b>Seed colour : </b> brown</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="accordion basic-accordion" id="accordion" role="tablist">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingSix">
+                          <h6 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              <i class="card-icon fa fa-code-fork"></i>Other</a>
+                          </h6>
+                        </div>
+                        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img class="img-fluid rounded" src="theme/assets/images/tomato/plant2.jpg" alt="image"> </div>
+                              <div class="col-md-9">
+                                <p><b>Hypocotyl colour : </b> purple</p>
+                                <p><b>Hypocotyl colour intensity : </b> low</p>
+                                <p><b>Hypocotyl pubescence : </b>present</p>
+                                <p><b>Plant growth type : </b> indeterminate</p>
+
                               </div>
                             </div>
                           </div>
