@@ -47,7 +47,11 @@
     margin-bottom:10px;
     border-color:#8ba2b5; 
   }
-  .btn
+  .form-control.search
+  {
+    border-color:#ff0017; 
+  }
+  .btn-img
   {
     background: none;   
     background-size: cover;
@@ -177,6 +181,19 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
+                <div class="row">
+                <div class="col-lg-8">
+                </div>
+                <div class="col-lg-4">
+                <div class="input-group">
+										<input type="text" name="accession_number" id="as_search" class="form-control search" placeholder="Accession number">
+										<div class="input-group-append text-white">
+											<button type="submit" class="btn  btn-danger" type="button"><i class="text-white fa fa-search"></i></button>
+										</div>
+                </div>
+                </div>
+                </div>
+                <br/>
                 <div class="accordion basic-accordion" id="accordion" role="tablist">                                          
                       <div class="card item">
                         <div class="card-header" role="tab" id="headingThree">
@@ -598,8 +615,8 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn1"></button>
-          <button type="button" class="btn btn2"></button>
+          <button type="submit" class="btn btn-img btn1"></button>
+          <button type="button" class="btn btn-img btn2"></button>
           </form>
         </div>
 

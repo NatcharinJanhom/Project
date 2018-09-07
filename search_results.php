@@ -738,10 +738,11 @@ table tr td.imge
         </div>
         <!-- page-body-wrapper ends -->
     </div>
+
 </body>
 <input type="hidden" id="stem_pubescence_density" value="<?php echo $_POST['stem_pubescence_density']?>">
 <input type="hidden" id="stem_internode_length" value="<?php echo $_POST['stem_internode_length']?>">
-
+<input type="hidden" id="accession_number" value="<?php echo $_POST['accession_number']?>">
 </html>
 <script>
     $(document).ready(function () {
@@ -765,8 +766,13 @@ table tr td.imge
 <script>
 var stem_pubescence_density = $('#stem_pubescence_density').val();
 var stem_internode_length =$('#stem_internode_length').val();
+var accession_number =$('#accession_number').val();
 $('#search_by').empty();
 var item = 0;
+if(accession_number)
+{
+    $('#search_by').append(' Accession Number : <span class="red"> '+accession_number+' </span>');
+}
 if(stem_pubescence_density)
 {
     if(stem_pubescence_density == 'all')
@@ -842,6 +848,12 @@ function search()
         unset($where_new);
         $where = 'WHERE ';
         $i=0;
+        if(!empty($_POST['accession_number']))
+        {
+            $accession_number =$_POST['accession_number'];
+            $where .= "cha_data_tomato.accession_number LIKE '%$accession_number%'";
+            $where .= ' AND ';
+        }
         if(!empty($_POST['stem_pubescence_density']))
             {
                 if($_POST['stem_pubescence_density']=="all")
@@ -896,7 +908,7 @@ function search()
 
            $where ="";
         }
-    
+   
         $length_w = strlen($where);
         $where_new = substr($where, 0, -5);
         $con = ConDb::getInstance();
