@@ -160,17 +160,17 @@ table.dataTable tbody td {
 }
 .table td img
 {
-    border-radius:unset;
-    max-height: 160px;
-    max-width: 160px;
+    border-radius: 100%;
+    max-height: 100px;
+    max-width: 100px;
     width: 100%;
     height: 100%;
 }
 table tr td img,
 table tr td.imge
 {
-    height: 160px !important;
-    width: 160px !important;
+    height: 100px !important;
+    width: 100px !important;
     text-align: center !important;
 }
 </style>
@@ -241,21 +241,12 @@ table tr td.imge
                                 <div class="card-body">
                                     <div class="row ">
                                         <div class="col-md-12">
-                                            <ul class="nav nav-tabs tab-simple-styled" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active show" id="tab-3-1" data-toggle="tab" href="#home-3-1" role="tab" aria-controls="home-3-1" aria-selected="true">
-                                                        <i class="mdi mdi-table-large"></i>Table</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" id="tab-3-2" data-toggle="tab" href="#profile-3-2" role="tab" aria-controls="profile-3-2" aria-selected="false">
-                                                        <i class="mdi mdi-format-list-bulleted"></i>List</a>
-                                                </li>
-                                            </ul>
-                                            <hr>
-                                
-                                            <div class="tab-content tab-content-basic">
-                                                <div class="tab-pane fade active show" id="home-3-1" role="tabpanel" aria-labelledby="tab-3-1">
-                                                    <?php $tomato = search(); ?>
+                                                                                
+                                                    <?php $tomato = search();
+                                                    if($tomato)
+                                                    {
+
+                                                     ?>
                                                     <table id="data" class="table  table-bordered" style="width:100%">
                                                         <thead>
                                                         
@@ -593,158 +584,7 @@ table tr td.imge
                                                             </tr>
                                                         </tbody>
                                                     </table>
-                                                </div>
-                                                <div class="tab-pane fade" id="profile-3-2" role="tabpanel" aria-labelledby="tab-3-2">
-                                                <br/>
-                                                <div class="row">   
-                                                    <div class="col-12">
-                                                        <p>Searching <span style="color:#f12222; padding-left:10px; padding-right:10px; "><?php echo count($tomato); ?></span> results </p>
-                                                    </div>   
-                                                </div>
-                                                <div class="row">
-                                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card ">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                    <center>
-                                                    <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"> <img class="nevber image" src="pic/t5.jpg" ></a>
-                                                    </div>
-                                                 
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php" class="margin0">LE001</a>
-                                                    </div>
-                                                    </div> 
-                                                    <center>
-                                                </div>
-                                             
-                                            </div>
-                                        </div>
-                                    </div>
-                                                  
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card ">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                    <center>
-                                                    <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"> <img class="nevber image" src="pic/t1.jpg" ></a>
-                                                    </div>
-                                                 
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php" class="margin0">LE002</a>
-                                                    </div>
-                                                    </div> 
-                                                    <center>
-                                                </div>
-                                             
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                <center>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"> <img class="nevber image" src="pic/t3.jpg" > </a>
-                                                    </div>
-                                                 
-                                                 <div class="col-md-12">
-                                                 <a href="detail.php" class="margin0">LE003</a>
-                                                 </div>
-                                                 </div> </center>
-
-                                                </div>
-                                    
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card ">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                <center>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"> <img class="nevber image" src="pic/t2.jpg" ></a>
-                                                     </div>
-                                                 
-                                                 <div class="col-md-12">
-                                                 <a class="margin0" href="detail.php">LE004</a>
-                                                 </div>
-                                                 </div> </center>
-
-                                                </div>                                            
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card ">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                <center>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"><img class="nevber image" src="pic/t4.jpg" ></a>
-                                                     </div>
-                                                 
-                                                 <div class="col-md-12">
-                                                 <a href="detail.php" class="margin0">LE005</a>
-                                                 </div>
-                                                 </div> </center>
-
-                                                </div>                                            
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 grid-margin stretch-card">
-                                        <div class="card ">
-                                            <div class="card-body unpad">
-                                                <div class="clearfix">
-                                                <center>
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                    <a href="detail.php"><img class="nevber image" src="pic/t6.jpg" ></a>
-                                                     </div>
-                                                 
-                                                 <div class="col-md-12">
-                                                 <a href="detail.php" class="margin0">LE006</a>
-                                                 </div>
-                                                 </div> </center>
-
-                                                </div>                                            
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <?php include('footer.php'); ?>
-            </div>
-            <!-- main-panel ends -->
-        </div>
-        <!-- page-body-wrapper ends -->
-    </div>
-
-</body>
-<input type="hidden" id="stem_pubescence_density" value="<?php echo $_POST['stem_pubescence_density']?>">
-<input type="hidden" id="stem_internode_length" value="<?php echo $_POST['stem_internode_length']?>">
-<input type="hidden" id="accession_number" value="<?php echo $_POST['accession_number']?>">
-</html>
-<script>
+                                                    <script>
     $(document).ready(function () {
         var table = $('#data').DataTable({
             fixedColumns: {
@@ -762,68 +602,190 @@ table tr td.imge
 
     });
 </script>
+                                                    <?php
+                                                    
+                                                    }
+                                                    else
+                                                    {
+                                                        ?>
+                                                        <table id="data" class="table  table-bordered" style="width:100%">
+                                                        <tr><td style="text-align:center;">No data available</td></tr>
+                                                        </table>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                               
+                                            
+                                               
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <?php include('footer.php'); ?>
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <?php 
+    $search_list = array();
+    if(!empty($_POST['accession_number']))
+    {
+        $search_list['accession_number']=$_POST['accession_number'];
+    }
+        if(isset($_POST['stem_pubescence_density']))
+        {
+            $stem_pubescence_density=array();
+            foreach($_POST['stem_pubescence_density'] as $value)
+            {
+                $stem_pubescence_density[]=$value;
+            }
+            $search_list['stem_pubescence_density']= $stem_pubescence_density;
+        }
+        if(isset($_POST['stem_internode_length']))
+        {
+            $stem_internode_length=array();
+            foreach($_POST['stem_internode_length'] as $value)
+            {
+                $stem_internode_length[]=$value;
+            }   
+            $search_list['stem_internode_length']= $stem_internode_length;            
+        }
+        if(isset($_POST['number_of_leaves_under_1st_inflorescence']))
+        {
+            $number_of_leaves_under_1st_inflorescence=array();
+            foreach($_POST['number_of_leaves_under_1st_inflorescence'] as $value)
+            {
+                if($value=='2')
+                $number_of_leaves_under_1st_inflorescence[]="many";
+                else if($value=='1')
+                $number_of_leaves_under_1st_inflorescence[]="few";
+            }   
+            $search_list['number_of_leaves_under_1st_inflorescence']= $number_of_leaves_under_1st_inflorescence;            
+        }
+        if(isset($_POST['leaf_attitude']))
+        {
+            $leaf_attitude=array();
+            foreach($_POST['leaf_attitude'] as $value)
+            {
+                if($value=='1')
+                $leaf_attitude[]="semi-erect";
+                else if($value=='2')
+                $leaf_attitude[]="horizontal";               
+            }
+            $search_list['leaf_attitude']= $leaf_attitude;            
+        }
+        if(isset($_POST['leaf_type']))
+        {
+            $leaf_type=array();
+            foreach($_POST['leaf_type'] as $value)
+            {
+                if($value=='1')
+                $leaf_type[]="standard";
+                else if($value=='2')
+                $leaf_type[]="peruvianum";
+                else if($value=='3')
+                $leaf_type[]="potato leaf type";
+                else if($value=='4')
+                $leaf_type[]="pimpinellifolium";
+            }
+            $search_list['leaf_type']= $leaf_type;     
+        }
+        ?>
+        <input type="hidden" id="search_list" value='<?php echo json_encode($search_list); ?>'>
+    
+</body>
+</html>
+
 <script src="theme/assets/js/shared/owl-carousel.js"></script>
 <script>
-var stem_pubescence_density = $('#stem_pubescence_density').val();
-var stem_internode_length =$('#stem_internode_length').val();
-var accession_number =$('#accession_number').val();
+var search_list = JSON.parse($('#search_list').val());
 $('#search_by').empty();
 var item = 0;
-if(accession_number)
+if(search_list['accession_number'])
 {
-    $('#search_by').append(' Accession Number : <span class="red"> '+accession_number+' </span>');
+    $('#search_by').append('Accession Number : <span class="red"> '+search_list['accession_number']+' </span>');
+    item++;
 }
-if(stem_pubescence_density)
+if(search_list['stem_pubescence_density'])
 {
-    if(stem_pubescence_density == 'all')
-    { 
-        var name ='stem_pubescence_density';
-        $.ajax({
-                    url: "ajaxValueTable.php",
-                    method: "GET",
-                    data: { table: name },
-                    success: function(data) {
-                        console.log("success");
-                        $('#search_by').append(' Stem pubescence density : ');
-                        for(i=0;i<data.length;i++)
-                        {
-                            if(i>0)
-                            {
-                                $('#search_by').append(' , ');
-                            }
-                            $('#search_by').append(' <span class="red"> '+data[i].stem_pubescence_density+' </span>');
-                        }
-            
-                        console.log(name);
-                        console.log(data);
-                    },
-                    error: function(data) {
-                        console.log("error");
-                        console.log(data);
-                    }
-                    });
-    }
-    else
+    $('#search_by').append(' Stem pubescence density : ');
+    for(i =0 ;i<search_list['stem_pubescence_density'].length;i++)
     {
-        $('#search_by').append(' Stem pubescence density : <span class="red"> '+stem_pubescence_density+' </span>');
-
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['stem_pubescence_density'][i]+' </span>');
     }
     item++;
 }
-if(stem_internode_length)
+if(search_list['stem_internode_length'])
 {
-    if(stem_internode_length == 'all')
-    { 
-        $('#search_by').append(' Stem internode length : <span class="red"> short </span> , <span class="red"> intermediate </span> , <span class="red"> long </span>');
-    }
-    else
+    $('#search_by').append(' Stem internode length : ');
+    for(i =0 ;i<search_list['stem_internode_length'].length;i++)
     {
-        $('#search_by').append(' Stem internode length : <span class="red"> '+stem_internode_length+' </span>');
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['stem_internode_length'][i]+' </span>');
     }
   
     item++;
 }
-
+if(search_list['number_of_leaves_under_1st_inflorescence'])
+{
+    $('#search_by').append(' Number of leaves under 1st inflorescence : ');
+    for(i =0 ;i<search_list['number_of_leaves_under_1st_inflorescence'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['number_of_leaves_under_1st_inflorescence'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['leaf_attitude'])
+{
+    $('#search_by').append(' Leaf attitude : ');
+    for(i =0 ;i<search_list['leaf_attitude'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['leaf_attitude'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['leaf_type'])
+{
+    $('#search_by').append(' Leaf type : ');
+    for(i =0 ;i<search_list['leaf_type'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['leaf_type'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(item==0)
+{
+    $('#search_by').append(' Accession Number : <span class="red"> All </span>');
+}
 </script>
 <?php
 function search()
@@ -854,61 +816,94 @@ function search()
             $where .= "cha_data_tomato.accession_number LIKE '%$accession_number%'";
             $where .= ' AND ';
         }
-        if(!empty($_POST['stem_pubescence_density']))
+            if(isset($_POST['stem_pubescence_density']))
             {
-                if($_POST['stem_pubescence_density']=="all")
+                foreach($_POST['stem_pubescence_density'] as $value)
                 {
-                    $con = ConDb::getInstance();
-                    $sql = "SELECT * FROM stem_pubescence_density";
-                    $stmt = $con->prepare($sql);
-                    $stmt->execute();
-                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    foreach($result as $key=>$value)
+                    if($i != 0)
                     {
-                        if($i != 0)
-                        {
                         $where .= " || ";
-                        }
-                        $where .= "cha_data_tomato.stem_pubescence_density = '".$value['stem_pubescence_density']."'";
-                        $i++;
                     }
-                    $i=0;
-                    
+                    $where .= "cha_data_tomato.stem_pubescence_density = '$value'";
+                    $i++;
                 }
-                else
-                {
-                    $stem_pubescence_density =$_POST['stem_pubescence_density'];
-                    $where .= "cha_data_tomato.stem_pubescence_density = '$stem_pubescence_density'";
-                }
-                
+                $i=0;
                 $where .= ' AND ';
             }
-        if(!empty($_POST['stem_internode_length']))
-        {
-            if($_POST['stem_internode_length']=="short")
+            if(isset($_POST['stem_internode_length']))
             {
-                $where .= "cha_data_tomato.stem_internode_length < 7";
+                foreach($_POST['stem_internode_length'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    if($value == 'short')
+                    {
+                        $where .= "cha_data_tomato.stem_internode_length < '7'";
+                    }
+                    if($value == 'intermediate')
+                    {   
+                        $where .= "cha_data_tomato.stem_internode_length >='7' AND cha_data_tomato.stem_internode_length <='8'";
+                    }
+                    if($value == 'long')
+                    {
+                        $where .= "cha_data_tomato.stem_internode_length > '8'";
+                    }
+                    $i++;
+                }   
+
+                $i=0;
+                $where .= ' AND ';
             }
-            else if($_POST['stem_internode_length']=="intermediate")
+            if(isset($_POST['number_of_leaves_under_1st_inflorescence']))
             {
-                $where .= "cha_data_tomato.stem_internode_length BETWEEN 7 AND 8";
+                foreach($_POST['number_of_leaves_under_1st_inflorescence'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    $where .= "cha_data_tomato.id_number_of_leaves_under_1st_inflorescence = '$value'";
+                    $i++;
+                }   
+
+                $i=0;
+                $where .= ' AND ';
             }
-            else if($_POST['stem_internode_length']=="long")
+            if(isset($_POST['leaf_attitude']))
             {
-                $where .= "cha_data_tomato.stem_internode_length > 8";
+                foreach($_POST['leaf_attitude'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    $where .= "cha_data_tomato.id_leaf_attitude = '$value'";
+                    $i++;
+                }
+                $i=0;
+                $where .= ' AND ';
             }
-            else if($_POST['stem_internode_length']=="all")
+            if(isset($param['leaf_type']))
             {
-                $where .= "cha_data_tomato.stem_internode_length < 7 OR cha_data_tomato.stem_internode_length BETWEEN 7 AND 8 OR cha_data_tomato.stem_internode_length > 8";
+                foreach($param['leaf_type'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    $where .= "cha_data_tomato.id_leaf_type = '$value'";
+                    $i++;
+                }
+                $i=0;
+                $where .= ' AND ';
             }
-            $where .= ' AND ';
-        }
         if($where == 'WHERE ')
         {
 
            $where ="";
-        }
-   
+        }   
         $length_w = strlen($where);
         $where_new = substr($where, 0, -5);
         $con = ConDb::getInstance();
