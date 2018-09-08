@@ -167,6 +167,13 @@
     #lat,#gene{
         color: black;
     }
+    .img-a {
+            vertical-align: middle;
+            border-style: none;
+            border-radius: 100%;
+            max-height: 100px;
+            max-width: 100px;
+    }
     .sli {
         align-content: center;
         max-width: 120px;
@@ -283,7 +290,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true">
                                                     <i class="mdi mdi-map-marker-radius"></i>
-                                                    <span class="x">Sources found</span>
+                                                    <span class="x">Location</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
@@ -348,8 +355,8 @@
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img src="pic/t1.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a" src="pic/t1.jpg">
+                                                                    <a href="detail.php">
                                                                         <p>LE042</p>
                                                                     </a>
                                                                 </center>
@@ -363,8 +370,8 @@
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img src="pic/t2.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a"  src="pic/t2.jpg">
+                                                                    <a href="detail.php">
                                                                         <p>LE043</p>
                                                                     </a>
                                                                 </center>
@@ -378,8 +385,8 @@
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img src="pic/t3.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a" src="pic/t3.jpg">
+                                                                    <a href="detail.php">
                                                                         <p>LE044</p>
                                                                     </a>
                                                                 </center>
@@ -399,20 +406,16 @@
                                                 <br>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-2">
-                                                <p>Number of varieties </p>
-                                            </div>
-                                        </div>
-                                        <div id="bodypic3">
+                                        
+                                        <?php /*<div id="bodypic3" >
                                             <div class="row">
                                                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
                                                     <div class="card card-pic1">
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img class="nevber" src="pic/t1.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a nevber" src="pic/t1.jpg">
+                                                                    <a href="detail.php">
                                                                         <p class="clearfix2">LE042</p>
                                                                     </a>
                                                                 </center>
@@ -425,8 +428,8 @@
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img class="nevber" src="pic/t3.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a nevber" src="pic/t3.jpg">
+                                                                    <a href="detail.php">
                                                                         <p class="clearfix2">LE043</p>
                                                                     </a>
                                                                 </center>
@@ -439,8 +442,8 @@
                                                         <div class="card-body card-pic1">
                                                             <div class="clearfix">
                                                                 <center>
-                                                                    <img class="nevber" src="pic/t2.jpg">
-                                                                    <a href="index.php">
+                                                                    <img class="img-a nevber" src="pic/t2.jpg">
+                                                                    <a href="detail.php">
                                                                         <p class="clearfix2">LE044</p>
                                                                     </a>
                                                                 </center>
@@ -450,7 +453,8 @@
                                                 </div>
                                             </div>
 
-                                        </div>
+                                        </div>*/
+                                        ?>
                                     </div>
                                 </div>
 
@@ -486,14 +490,15 @@
         //var len = sp.length;
         var s = ""
         for (i = 1; i <= sp.length; i++) {
-            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i + 1) + "'  class='remo'  ><a href='index.php'><p class='remo'><span id='acs" + i + "' class='remo'> </span></p></a></center> </div></div></div></div>");
+            $('#myImage1').append("<div class='img-card col-xl-2 col-lg-2 col-md-2 col-sm-2'><div class='card card-pic1'><div class='card-body card-pic1'><div class='clearfix'><center><img id='myImage" + (i + 1) + "'  class='remo img-a'  ><a href='detail.php'><p class='remo'><span id='acs" + i + "' class='remo'> </span></p></a></center> </div></div></div></div>");
             $('#myImage' + (i + 1)).attr({ src: 'pic/t' + i + '.jpg' });
             $('#acs' + (i)).append(sp[(i - 1)]);
+           
 
         }
     }
     function asree() {
-
+        $('#bodypic2').hide();
         var map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 13.7244416, lng: 100.3529157 },
             zoom: 5,
@@ -513,7 +518,7 @@
 
                 return function () {
                     $("#lat").empty();
-
+                    $('#bodypic2').show();
                     var res = arrJ[i][3].split(",");
                     document.getElementById('lat').append(arrJ[i][0] + ' , ' + arrJ[i][1]);
                     //document.getElementById('lon').innerHTML = arrJ[i][1];
