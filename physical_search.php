@@ -51,12 +51,12 @@
   {
     border-color:#ff0017; 
   }
-  @media only screen and (max-width: 420px) 
-  {
-        .btn1
+  @media only screen and (max-width: 1920px) {
+    .btn1
       {   
+        
         position: fixed;
-        top: 75%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -65,19 +65,19 @@
       .btn2
       {   
         position: fixed;
-        top: 68%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
         text-align: center;
       }
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1366px) {
     .btn1
       {   
         
         position: fixed;
-        top: 60%;
+        top: 80%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -86,7 +86,7 @@
       .btn2
       {   
         position: fixed;
-        top: 55%;
+        top: 70%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -113,12 +113,14 @@
         text-align: center;
       }
   }
-  @media only screen and (max-width: 1920px) {
+
+
+  @media only screen and (max-width: 768px) {
     .btn1
       {   
         
         position: fixed;
-        top: 85%;
+        top: 61%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -127,13 +129,38 @@
       .btn2
       {   
         position: fixed;
-        top: 78%;
+        top: 55%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
         text-align: center;
       }
   }
+  @media only screen and (max-width: 420px) {
+    .btn1
+      {   
+        
+        position: fixed;
+        top: 65%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;
+        text-align: center;
+      }
+      .btn2
+      {   
+        position: fixed;
+        top: 57%;
+        right: -10px;    
+        margin:auto;
+        z-index: 1;   
+        text-align: center;
+      }
+  }
+ 
+ 
+  
+ 
 
   .btn-fix
   {
