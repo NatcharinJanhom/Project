@@ -183,7 +183,7 @@
     }
 </style>
 
-<body>
+<body class="sidebar-icon-only">
     <div class="container-scroller">
         <?php include('navbar.php'); ?>
         <div class="container-fluid page-body-wrapper">

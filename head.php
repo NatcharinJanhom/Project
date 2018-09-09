@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="theme/assets/vendors/iconfonts/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="theme/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="theme/assets/vendors/css/vendor.bundle.addons.css">
+    <link rel="stylesheet" href="theme/assets/vendors/lightgallery/css/lightgallery.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
     <link rel="stylesheet" href="theme/assets/vendors/iconfonts/flag-icon-css/flag-icon.min.css" />
@@ -43,6 +44,7 @@
     <script src="theme/assets/js/demo_1/dashboard.js"></script>
     <!-- End custom js for this page-->
 
+    <script src="theme/assets/vendors/lightgallery/js/lightgallery-all.min.js"></script>
 
 
 

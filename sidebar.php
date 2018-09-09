@@ -50,13 +50,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="chart.php" >
-                <i class="menu-icon mdi mdi-chart-line"></i>
-                <span class="menu-title">Statistics</span>
-                <i class="menu-arrow"></i>
-              </a>
-            </li>
+            
 
           </ul>
 

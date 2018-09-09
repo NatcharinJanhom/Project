@@ -177,12 +177,6 @@
 </style>
 
 <body>
-    <div class="container-scroller"> 
-       
-        <div class="container-fluid page-body-wrapper">
-           
-            <div class="main-panel">
-                <div class="content-wrapper">
                     <?php
     error_reporting(E_ALL ^ E_NOTICE);
     $ans=location();     
@@ -271,36 +265,14 @@
             echo " <script> var arrJ = ". $js_array . "; </script>";           
 
     ?>
-                        <br>
-                       
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-body">
                                         <div id="myDIV">
-                                            <div id="map" style="width:100%; height: 400;">
+                                            <div id="map" style="width:100%; height: 600px">
 
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                                   
 
 
-                    </div>
-
-
-
-
-                        <?php include('footer.php'); ?>
-                </div>
-                <!-- main-panel ends -->
-            </div>
-
-            <!-- page-body-wrapper ends -->
-        </div>
 </body>
 
 </html>

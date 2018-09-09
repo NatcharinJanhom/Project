@@ -113,12 +113,12 @@
         text-align: center;
       }
   }
-  @media only screen and (max-width: 1366px) {
+  @media only screen and (max-width: 1920px) {
     .btn1
       {   
         
         position: fixed;
-        top: 75%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -127,7 +127,7 @@
       .btn2
       {   
         position: fixed;
-        top: 66%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;   

@@ -15,6 +15,11 @@
 b{
   margin-right: 10px;
 }
+iframe{
+        margin : auto;
+        width: 100%;
+        height: 630px;
+}
   </style>
 
   <body class="sidebar-icon-only">
@@ -61,22 +66,20 @@ b{
                             <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#Physical-5-2" role="tab" aria-controls="Physical-5-2" aria-selected="false">Physical</a>
                           </li>
                            <li class="nav-item">
-                            <a class="nav-link" id="tab-5-8" data-toggle="tab" href="#Genome-5-8" role="tab" aria-controls="Genome-5-8" aria-selected="false">Genome</a>
+                            <a class="nav-link" id="tab-5-3" data-toggle="tab" href="#Genome-5-3" role="tab" aria-controls="Genome-5-3" aria-selected="false">Genotype</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="tab-5-3" data-toggle="tab" href="#Disease-5-3" role="tab" aria-controls="Disease-5-3" aria-selected="false">Disease</a>
+                            <a class="nav-link" id="tab-5-4" data-toggle="tab" href="#Disease-5-4" role="tab" aria-controls="Disease-5-4" aria-selected="false">Disease</a>
+                          </li>
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" id="tab-5-6" data-toggle="tab" href="#Location-5-6" role="tab" aria-controls="Location-5-6" aria-selected="false">Location</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="tab-5-4" data-toggle="tab" href="#Planting-5-4" role="tab" aria-controls="Planting-5-4" aria-selected="false">Planting</a>
+                            <a class="nav-link" id="tab-5-7" data-toggle="tab" href="#Germ-5-7" role="tab" aria-controls="Germ-5-7" aria-selected="false">Germplasm</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="tab-5-5" data-toggle="tab" href="#Location-5-5" role="tab" aria-controls="Location-5-5" aria-selected="false">Location</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="tab-5-6" data-toggle="tab" href="#Seeds-5-6" role="tab" aria-controls="Seeds-5-6" aria-selected="false">Seeds</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="tab-5-7" data-toggle="tab" href="#Gallery-5-7" role="tab" aria-controls="Gallery-5-7" aria-selected="false">Gallery</a>
+                            <a class="nav-link" id="tab-5-8" data-toggle="tab" href="#Gallery-5-8" role="tab" aria-controls="Gallery-5-8" aria-selected="false">Gallery</a>
                           </li>
                         </ul>
                         <div class="tab-content tab-content-solid">
@@ -94,7 +97,8 @@ b{
                               </div>  
                             </div>
                           </div>
-                          <div class="tab-pane fade" id="Physical-5-2" role="tabpanel" aria-labelledby="tab-5-2">
+
+                <div class="tab-pane fade" id="Physical-5-2" role="tabpanel" aria-labelledby="tab-5-2">
 
                   <div class="accordion basic-accordion" id="accordion" role="tablist">
                       <div class="card">
@@ -251,9 +255,49 @@ b{
                     </div>
           
 
+                    </div>
+
+                          <div class="tab-pane fade" id="Genome-5-3" role="tabpanel" aria-labelledby="tab-5-3"> ... </div>
+                           <div class="tab-pane fade" id="Disease-5-4" role="tabpanel" aria-labelledby="tab-5-4"> ... </div>
+                           <div class="tab-pane fade" id="Location-5-6" role="tabpanel" aria-labelledby="tab-5-6">
+                                <div class="row">
+                                  <div class="card-body">
+                                        <iframe src="locationid.php"></iframe>
+                                  </div>
+                                </div>
+                                
+                        </div>
+                           <div class="tab-pane fade" id="Germ-5-7" role="tabpanel" aria-labelledby="tab-5-7"> ... </div>
+
+
+                           <div class="tab-pane fade" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
+
+                            <div class="card-body">
+                    <div id="lightgallery" class="row lightGallery">
+                      <a href="theme/assets/images/tomato/loop1.jpg" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop1.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop10.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop3.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop4.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop5.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop6.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop11.jpg" alt="image small"> </a>
+                      <a href="" class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop1.jpg" alt="image small"> </a>
+                    </div>
+                  </div>
+
+
                           </div>
-                          <div class="tab-pane fade" id="Genome-5-8" role="tabpanel" aria-labelledby="tab-5-8"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam officia mollitia repudiandae, tempore provident omnis magnam deleniti obcaecati, non atque asperiores maiores sint! Officiis rerum quaerat perferendis adipisci aut pariatur.
-                            </div>
+
+
+
                         </div>
                       </div>
                     </div>
@@ -269,5 +313,7 @@ b{
       </div>
       <!-- page-body-wrapper ends -->
     </div>
+    
+
     </body>
 </html>
