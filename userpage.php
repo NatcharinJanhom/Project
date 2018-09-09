@@ -18,6 +18,7 @@
         width: 100%;
         height: 100%;
     }
+
     .sa {
         align-content: center;
         max-width: 150px;
@@ -25,10 +26,14 @@
         width: 100%;
         height: 100%;
     }
+
+    .tx {
+        text-align:center; 
+    }
 </style>
 
 
-  <body class="sidebar-icon-only">
+<body class="sidebar-icon-only">
     <div class="container-scroller">
         <?php include('navbar.php'); ?>
         <div class="container-fluid page-body-wrapper">
@@ -41,14 +46,26 @@
                     </div>
 
                     <div id="showD" class="container">
-
+                        <div class="row">
+                            <div class="col-lg-8">
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="input-group">
+                                    <input type="text" name="accession_number" id="as_search" class="form-control search" placeholder="Accession number">
+                                    <div class="input-group-append text-white">
+                                        <button type="submit" class="btn  btn-danger">
+                                            <i class="text-white fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                         <div class="row">
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
-                                    <div class="card-body">
-
-                                        <h3 align='center'>Tomato detail</h3>
-
+                                    <div class="tx card-body">
+                                        <h2>Tomato Detail</h2>
                                     </div>
                                 </div>
                             </div>
@@ -91,9 +108,7 @@
                                         <div class='card'>
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-md-4">
-                                                        <img class="sli img-fluid w-100 rounded" src="pic/t2.jpg" alt="Sample Image">
-                                                    </div>
+
                                                     <div class="col-md-8">
                                                         <p style="padding: 10px 100px 10px 20px; ">
                                                             An interesting aspect of tomato history is the classic debate: Is the Tomato a Fruit or Vegetable? I guess that depends on
@@ -112,6 +127,9 @@
                                                             vegetable. Nonetheless, the tomato is the most popular vegetable
                                                             in America and enjoyed by millions all over the world.
                                                         </p>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <img class="sli img-fluid w-100 rounded" src="pic/t2.jpg" alt="Sample Image">
                                                     </div>
                                                 </div>
                                             </div>
