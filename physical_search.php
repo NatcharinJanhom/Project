@@ -215,6 +215,10 @@
       height:30%;
   
     }
+    label
+    {
+      padding-right:1.75rem;
+    }
 </style>
 
 <body class="sidebar-icon-only">
@@ -252,7 +256,7 @@
                 </div>
                 </div>
                 <br/>
-                <div class="accordion basic-accordion" id="accordion" role="tablist">                                          
+                <div class="accordion basic-accordion" id="accordion" role="tablist">                                                  
                       <div class="card item">
                         <div class="card-header" role="tab" id="headingThree">
                           <h6 class="mb-0">
@@ -283,9 +287,9 @@
                               </div>
                               <div class="col-md-8">
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='dense'>
-                              <lable>dense</label>
+                              <label>dense</label>
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='intermediate'>
-                              <lable>intermediate</label>
+                              <label>intermediate</label>
                               </div>
                             </div>
                             <div class="row">
@@ -294,11 +298,11 @@
                               </div>
                               <div class="col-md-8">
                               <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='short'>
-                              <lable>short ( < 7 )</label>
+                              <label>short ( < 7 )</label>
                               <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='intermediate'>
-                              <lable>intermediate ( 7-8 )</label>
+                              <label>intermediate ( 7-8 )</label>
                               <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='long'>
-                              <lable>long ( > 8 )</label>
+                              <label>long ( > 8 )</label>
                               </div>
                             </div>                           
                           </div>
@@ -315,13 +319,13 @@
                           <div class="card-body">
                            <div class="row">
                               <div class="col-md-6">
-                                <p>Number of leaves under 1st inflorescence <span><a class='static' href="#" data-cha="Stem pubescence density" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Number of leaves under 1st inflorescence <span><a class='static' href="#" data-cha="Number of leaves under 1st inflorescence" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="number_of_leaves_under_1st_inflorescence[]" value='2'>
-                              <lable>many</label>
+                              <label>many</label>
                               <input type='checkbox' class='form-check-inline' name="number_of_leaves_under_1st_inflorescence[]" value='1'>
-                              <lable>few</label>
+                              <label>few</label>
                               </div>
                             </div>
                             <div class="row">
@@ -330,9 +334,9 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="leaf_attitude[]" value='1'>
-                              <lable>semi-erect</label>
+                              <label>semi-erect</label>
                               <input type='checkbox' class='form-check-inline' name="leaf_attitude[]" value='2'>
-                              <lable>horizontal</label>                                              
+                              <label>horizontal</label>                                              
                               </div>
                             </div>
                             <div class="row">
@@ -341,13 +345,14 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="leaf_type[]" value='1'>
-                              <lable>standard</label> 
+                              <label>standard</label> 
                               <input type='checkbox' class='form-check-inline' name="leaf_type[]" value='2'>
-                              <lable>peruvianum</label> 
+                              <label>peruvianum</label> 
                               <input type='checkbox' class='form-check-inline' name="leaf_type[]" value='3'>
-                              <lable>potato leaf type</label> 
+                              <label>potato leaf type</label> 
+                              <br/>
                               <input type='checkbox' class='form-check-inline' name="leaf_type[]" value='4'>
-                              <lable>pimpinellifolium</label>
+                              <label>pimpinellifolium</label>
                               </div>
                             </div>
                           </div>
@@ -368,9 +373,9 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='< 35'>
-                              <lable>< 35 Day</label>
+                              <label>< 35 Day</label>
                               <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='>= 35'>
-                              <lable>35 Day or more</label>                              
+                              <label>>= 35 Day</label>                              
                               </div>
                             </div>
                             <div class="row">
@@ -379,11 +384,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='5'>
-                              <lable>5</label>  
+                              <label>5</label>  
                               <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='6'>
-                              <lable>6</label>  
+                              <label>6</label>  
                               <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='>=7'>
-                              <lable>7 or more</label>  
+                              <label>>= 7</label>  
                               </div>
                             </div>
                             <div class="row">
@@ -392,7 +397,7 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="corolla_colour[]" value='yellow'>
-                              <lable>yellow</label>
+                              <label>yellow</label>
                               </div>
                             </div>
                             <div class="row">
@@ -401,15 +406,15 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='inserted'>
-                              <lable>inserted</label>
+                              <label>inserted</label>
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='same level as stamen stamen'>
-                              <lable>same level as stamen stamen</label>
+                              <label>same level as stamen stamen</label><br/> 
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='slightly exserted'>
-                              <lable> slightly exserted</label><br/>                           
+                              <label> slightly exserted</label>                          
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='highly exserted'>
-                              <lable>highly exserted</label>
+                              <label>highly exserted</label><br/> 
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='same level as stamen'>
-                              <lable>same level as stamen</label>
+                              <label>same level as stamen</label>
                               </div>
                             </div>
                           </div>
@@ -430,11 +435,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
-                              <lable>< 30</label>
+                              <label>< 30</label>
                               <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='30-50'>
-                              <lable>30-50</label>
+                              <label>30-50</label>
                               <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='> 50'>
-                              <lable>> 50</label>                          
+                              <label>> 50</label>                          
                               </div>
                             </div>
                             <div class="row">
@@ -443,11 +448,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='medium'>
-                              <lable>medium</label> 
+                              <label>medium</label> 
                               <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='small'>
-                              <lable>small</label> 
+                              <label>small</label> 
                               <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='very small'>
-                              <lable>very small</label>                               
+                              <label>very small</label>                               
                               </div>
                             </div>
                             <div class="row">
@@ -456,11 +461,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>red</label>     
+                              <label>red</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>orange red</label>     
+                              <label>orange red</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>pink</label>                             
+                              <label>pink</label>                             
                               </div>
                             </div>
                             <div class="row">
@@ -469,19 +474,19 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>cylindrical</label>     
+                              <label>cylindrical</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>flattened</label>     
+                              <label>flattened</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>heart-shaped</label>     
+                              <label>heart-shaped</label>  <br/>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>high-round</label> <br/>    
+                              <label>high-round</label>   
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>lengthened cylindrical</label>     
+                              <label>lengthened cylindrical</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>pear-shaped</label>   
+                              <label>pear-shaped</label>    <br/>
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>plum-shaped</label>                                
+                              <label>plum-shaped</label>                                
                               </div>
                             </div><br/>
                             <div class="row">
@@ -490,13 +495,13 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>intermediate</label>   
+                              <label>intermediate</label>   
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>none</label>   
+                              <label>none</label>   
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>slight</label>   
+                              <label>slight</label>   
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>strong</label>                                 
+                              <label>strong</label>                                 
                               </div>
                             </div>
                             <div class="row">
@@ -505,11 +510,11 @@
                               </div>
                               <div class="col-md-6">                           
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>flat</label>  
+                              <label>flat</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>moderately depressed</label>  
+                              <label>moderately depressed</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>slightly depressed</label>                                 
+                              <label>slightly depressed</label>                                 
                               </div>
                             </div>
                             <div class="row">
@@ -518,11 +523,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>easy</label>  
+                              <label>easy</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>intermediate</label>  
+                              <label>intermediate</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>difficult</label>                              
+                              <label>difficult</label>                              
                               </div>
                             </div>
                             <div class="row">
@@ -531,11 +536,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>easy</label>    
+                              <label>easy</label>    
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>intermediate</label>    
+                              <label>intermediate</label>    
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>difficult</label>                                                              
+                              <label>difficult</label>                                                              
                               </div>
                             </div>
                             <div class="row">
@@ -544,11 +549,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>flat</label>        
+                              <label>flat</label>        
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>indented</label>        
+                              <label>indented</label>        
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>pointed</label>                             
+                              <label>pointed</label>                             
                               </div>
                             </div>
                             <div class="row">
@@ -557,14 +562,14 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>dot</label> 
+                              <label>dot</label> 
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>linear</label>                              
+                              <label>linear</label>                              
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>                   
+                      </div>               
                       <div class="card item">
                         <div class="card-header" role="tab" id="headingSeven">
                           <h6 class="mb-0">
@@ -580,9 +585,9 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>globular</label>    
+                              <label>globular</label>    
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>ovate</label>                                  
+                              <label>ovate</label>                                  
                               </div>
                             </div>
                             <div class="row">
@@ -591,11 +596,11 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>brown</label>     
+                              <label>brown</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>dark yellow</label>     
+                              <label>dark yellow</label>     
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>light yellow</label>                               
+                              <label>light yellow</label>                               
                               </div>
                             </div>
                           </div>
@@ -616,15 +621,15 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>1/2 purple from the base</label>  
+                              <label>1/2 purple from the base</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>1/4 purple from the base</label>  <br/>
+                              <label>1/4 purple from the base</label>  <br/>
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>green</label>  
+                              <label>green</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>purple</label>  
+                              <label>purple</label>  
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>bluesky</label>                                
+                              <label>bluesky</label>                                
                               </div>
                             </div>
                             <br/>
@@ -634,9 +639,9 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>intermediate</label>      
+                              <label>intermediate</label>      
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>low</label>                                    
+                              <label>low</label>                                    
                               </div>
                             </div>
                             <div class="row">
@@ -645,7 +650,7 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>present</label>                                
+                              <label>present</label>                                
                               </div>
                             </div>
                             <div class="row">
@@ -654,13 +659,13 @@
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>indeterminate</label>           
+                              <label>indeterminate</label>           
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>determinate</label>           
+                              <label>determinate</label>           
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>semi-determinate</label>           
+                              <label>semi-determinate</label>   <br/>         
                               <input type='checkbox' class='form-check-inline' >
-                              <lable>intermediate</label>                             
+                              <label>intermediate</label>                             
                               </div>
                             </div>
                           </div>
@@ -680,7 +685,14 @@
       <div class="modal-content">
     
         <div class="modal-body">
+        <div class="row">
+        <div class="col-lg-9">
+        <h4 id="head"></h4>
+        </div>
+        <div class="col-lg-3">
         <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        </div>
         <div class="chart-data"> 
         <canvas id="myChart1"></canvas><br/>
         <canvas id="myChart2"></canvas><br/>
@@ -712,9 +724,11 @@
         $(".static").click(function() {
             $("#myChart1").remove();
             $("#myChart2").remove();
+            $("#head").empty();
             $('.chart-data').append('<canvas id="myChart1"><canvas>');
             $('#myChart1').after('<canvas id="myChart2"><canvas>');
             var input_cha = $(this).attr('data-cha');  
+            $("#head").append(input_cha);
             if (input_cha != '') {
                 $.ajax({
                     url: "ajaxChart.php",

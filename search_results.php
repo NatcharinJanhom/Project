@@ -173,6 +173,11 @@ table tr td.imge
     width: 100px !important;
     text-align: center !important;
 }
+@media (min-width: 992px){
+.sidebar-icon-only .main-panel {
+    width: calc(100% - 75px) ;
+}
+}
 </style>
 <body class="sidebar-icon-only">
     <div class="container-scroller">

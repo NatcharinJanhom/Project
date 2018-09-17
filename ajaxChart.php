@@ -21,6 +21,11 @@ $cha = $_GET['cha'];
                 $value = 'flesh_colour_of_peiricarp_interior';
                 $id = 'id_flesh_colour_of_peiricarp_interior';
             }
+            else if($cha == "Number of leaves under 1st inflorescence")
+            {
+                $value = 'number_of_leaves_under_1st_inflorescence';
+                $id = 'id_number_of_leaves_under_1st_inflorescence';
+            }
             else if($cha == "Blossom end scar condition")
             {
                 $value = 'blossom_end_scar_condition';
