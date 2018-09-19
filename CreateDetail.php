@@ -2,12 +2,36 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+
+
+
     <?php include('head.php'); ?>
     <script>
         function goBack() {
             window.history.back()
         }
     </script>
+
+    <style>
+        .card-title {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: #404852;
+            margin-bottom: 10px;
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+      
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+     
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="theme/assets/js/croppie.js"></script>
+    <link href="theme/assets/js/croppie.css" rel="stylesheet" type="text/css">
 
     <script>
         $(document).ready(function () {
@@ -30,19 +54,55 @@
             }
         }
 
+        $(document).ready(function () {
+            var $uploadCrop;
+
+
+            function readFile(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $uploadCrop.croppie('bind', {
+                            url: e.target.result
+                        });
+                        $('.upload-demo').addClass('ready');
+
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $uploadCrop = $('#upload-demo').croppie({
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+            $('#upload').on('change', function () { readFile(this); });
+            $('.upload-result').on('click', function (ev) {
+                $uploadCrop.croppie('result', {
+                    type: 'canvas',
+                    size: 'original'
+                }).then(function (resp) {
+                    $('#imagebase64').val(resp);
+                    $('#form').submit();
+                });
+            });
+
+        });
+
+
+
     </script>
 </head>
 
-<style>
-    .card-title {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        color: #404852;
-        margin-bottom: 10px;
-        font-size: 25px;
-        text-transform: capitalize;
-    }
-</style>
+
 
 <body class="sidebar-icon-only">
     <div class="container-scroller">
@@ -65,25 +125,49 @@
                                     </div>
                                 </div>
 
-                             
+
 
                                 <div class="form-group">
-                                    <label>Picture upload & crop </label>
-                                    <input type="file" name="img[]" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
+                                    <label>Upload and crop image</label>
+                                    <br>
+                                    <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#myModal">Upload files</button>
 
-                                        <span class="input-group-append">
-                                            <a href="crop.php" class="button file-upload-browse btn btn-primary">Upload</a>
-                                        </span>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                 
+                                                        <form action="" id="form" method="post">
+                                                            
+                                                          
+                                                           
+                                                            <input type="hidden" id="imagebase64" name="imagebase64">
+                                                            <div class="center">
+                                                            <input type="file" id="upload" >
+                                                            <button class="btn btn-success mr-2">Crop</button>
+  
+                                                           
+                                                        </form>
+   
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="InputMessage">Textarea :</label>
-                                    <textarea class="form-control" id="InputMessage" rows="3"></textarea> </div>
-                                <button type="submit" class="btn btn-success mr-2" >Submit</button>
+                                    <textarea class="form-control" id="InputMessage" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success mr-2">Submit</button>
                                 <input type="button" value="Cancel" class="btn btn-light" onclick="goBack()">
-                            </form>
+
 
                         </div>
                     </div>
