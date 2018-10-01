@@ -26,6 +26,11 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+        
+        .cenbut{
+            text-align: center;
+        }
+      
      
     </style>
 
@@ -97,6 +102,11 @@
 
         });
 
+        function closex()
+        {
+            myWindow.close();
+        }
+
 
 
     </script>
@@ -141,17 +151,21 @@
                                                 <div class="modal-body">
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                  
+                                                    
+                                                    <div class="card-body">
                                                         <form action="" id="form" method="post">
-                                                            
-                                                          
-                                                           
+                                                     
+                                                            <div id="upload-demo"></div>
                                                             <input type="hidden" id="imagebase64" name="imagebase64">
-                                                            <div class="center">
-                                                            <input type="file" id="upload" >
-                                                            <button class="btn btn-success mr-2">Crop</button>
-  
-                                                           
+                                                            <div class="cenbut">
+                                                            <input type="file" id="upload" value="Choose a file" ><br><br>
+                                                            <button class="btn btn-primary ">Capture</button>
+                                                            <button class="btn btn-default" onclick="closex()">Close</button>
+                                                            </div>
                                                         </form>
+                                                        
+                                                    </div>
+                                                
    
                                                 </div>
                                                 
