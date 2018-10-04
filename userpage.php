@@ -1,3 +1,7 @@
+<?php
+ session_start();
+ $_SESSION["type"] = "user";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +35,6 @@
         text-align:center; 
     }
 </style>
-
 
 <body class="sidebar-icon-only">
     <div class="container-scroller">
