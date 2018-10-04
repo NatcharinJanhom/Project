@@ -278,7 +278,7 @@
                         <br>
                         <div class="row">
                             <div class="col-lg-12">
-                                <h1>Location Search</h1>
+                                <h1>Germplasm Search</h1>
                             </div>
                         </div>
                         <div class="row">
@@ -290,15 +290,16 @@
                                             <li class="nav-item">
                                                 <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true">
                                                     <i class="mdi mdi-map-marker-radius"></i>
-                                                    <span class="x">Location</span>
+                                                    <span class="x">Germplasm</span>
                                                 </a>
                                             </li>
-                                            <li class="nav-item">
+                                           <!-- <li class="nav-item">
                                                 <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false">
                                                     <i class="mdi mdi-city"></i>
                                                     <span class="x">Breeding center</span>
                                                 </a>
                                             </li>
+                                            !-->
                                         </ul>
                                         <hr>
                                     </div>
@@ -399,14 +400,14 @@
                                         </div>
 
                                     </div>
-                                    <div class="tab-pane fade" id="profile-5-2" role="tabpanel" aria-labelledby="tab-5-2">
+                                  <!--  <div class="tab-pane fade" id="profile-5-2" role="tabpanel" aria-labelledby="tab-5-2">
                                         <div class="row">
                                             <div class="col-sm-2">
                                                 <p>Breeding center </p>
                                                 <br>
                                             </div>
                                         </div>
-                                        
+                                   !-->     
                                         <?php /*<div id="bodypic3" >
                                             <div class="row">
                                                 <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 ">
@@ -455,7 +456,7 @@
 
                                         </div>*/
                                         ?>
-                                    </div>
+                                   <!--   </div>!-->  
                                 </div>
 
 
