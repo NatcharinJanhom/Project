@@ -48,7 +48,7 @@
             <li class="nav-item dropdown d-none d-xl-inline-block">
               <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               	<?php
-              	error_reporting(0);
+
               		if ($_SESSION['type'] == 'admin') {
               			echo '<span class="profile-text">'.$_SESSION['type'].'</span>';
               			echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face1.jpg" alt="Profile image"> </a>';
@@ -68,6 +68,7 @@
               			echo ' <a class="dropdown-item" href="logout.php"> Sign Out </a>';
               		}
               		else {
+                    echo '<a class="dropdown-item mt-2"> Manage Accounts </a>';
               			echo '<a class="dropdown-item" href="#"> Change Password </a>';
               			echo ' <a class="dropdown-item" href="logout.php"> Sign Out </a>';
               		}

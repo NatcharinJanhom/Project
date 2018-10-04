@@ -63,6 +63,16 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.card-body h5 {
+    margin-bottom: 0;
+    color:#ff0017;
+    font-size: 1.2rem;
+    font-weight: 600;
+  } 
+  .card.item {
+     border: 1px solid #ff0017;
+    
+  }
 </style>
   <body class="sidebar-icon-only">
     <div class="container-scroller">
@@ -72,7 +82,19 @@ input:checked + .slider:before {
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
-
+            <div class="row">
+            <div class="col-lg-12 grid-margin">
+              <div class="">
+                <div class="card-body">
+                  <h5>User Management</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
             <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
@@ -275,6 +297,10 @@ input:checked + .slider:before {
                       });
                     }
             </script>
+             </div>
+             </div>
+             </div>
+             </div>
             <?php include('footer.php'); ?> 
         </div>
         <!-- main-panel ends -->

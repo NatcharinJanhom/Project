@@ -1,3 +1,4 @@
+
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
 
           <ul class="nav">
@@ -10,7 +11,20 @@
             
            
             <li class="nav-item">
+            <?php 
+              if($_SESSION['type'] == 'admin')
+            {
+              ?>
+              <a class="nav-link" href="admindetal_asree.php" >
+              <?php
+            }
+            else
+            {
+            ?>
               <a class="nav-link" href="userpage.php" >
+            <?php
+            }
+            ?>
                 <i class="menu-icon mdi mdi-home"></i>
                 <span class="menu-title">Gerenal Infomation</span>
                 <i class="menu-arrow"></i>
@@ -49,6 +63,20 @@
                 <i class="menu-arrow"></i>
               </a>
             </li>
+            <?php 
+            if($_SESSION['type']=='admin')
+            {
+              ?>
+            <li class="nav-item">
+              <a class="nav-link" href="admin_manage.php" >
+                <i class="menu-icon mdi mdi-settings"></i>
+                <span class="menu-title">User manage</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+            <?php
+            }
+            ?>
 
             
 
