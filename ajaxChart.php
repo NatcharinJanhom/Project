@@ -148,8 +148,8 @@ $cha = $_GET['cha'];
             }
             else if($cha == 'Intensity of greenback')
             {
-                $value = '';
-                $id = '';
+                $value = 'intensity_of_greenback';
+                $id = 'id_intensity_of_greenback';
             }
             else if($cha == 'Leaf attitude')
             {
