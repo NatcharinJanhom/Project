@@ -1,3 +1,7 @@
+<?php
+ session_start();
+ $_SESSION["type"] = "user";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +35,6 @@
         text-align:center; 
     }
 </style>
-
 
 <body class="sidebar-icon-only">
     <div class="container-scroller">
@@ -75,8 +78,7 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class='card'>
-                                            <div class="card-body">
+                                       
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <img class="sli img-fluid w-100 rounded" src="pic/t2.jpg" alt="Sample Image">
@@ -94,8 +96,7 @@
                                                         </p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -105,8 +106,7 @@
                             <div class="col-md-12 grid-margin stretch-card">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class='card'>
-                                            <div class="card-body">
+                                        
                                                 <div class="row">
 
                                                     <div class="col-md-8">
@@ -132,8 +132,7 @@
                                                         <img class="sli img-fluid w-100 rounded" src="pic/t2.jpg" alt="Sample Image">
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>

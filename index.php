@@ -83,7 +83,7 @@
           pass= $("input[name='password']").val();
           if(user =='admin' && pass =='admin')
           {
-            $("#login").attr("action", "physical_search.php");
+            $("#login").attr("action", "admindetal_asree.php");
           }
           else
           {

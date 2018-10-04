@@ -256,15 +256,177 @@
                 </div>
                 </div>
                 <br/>
-                <div class="accordion basic-accordion" id="accordion" role="tablist">                                                  
+                <div class="accordion basic-accordion" id="accordion" role="tablist">  
+                <div class="card item">
+                        <div class="card-header" role="tab" id="headingNine">
+                          <h6 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="true" aria-controls="headingSix">
+                            <i class="card-icon fa fa-medkit"></i>Disease</a>
+                          </h6>
+                        </div>   
+                        <div id="collapseNine" class="collapse show" role="tabpanel" aria-labelledby="headingNine">
+                          <div class="card-body">   
+                          </div>   
+                        </div>   
+                </div>   
+                <div class="card item">
+                        <div class="card-header" role="tab" id="headingSix">
+                          <h6 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="headingSix">
+                            <i class="card-icon mdi mdi-food-apple"></i>Fruit</a>
+                          </h6>
+                        </div>
+                        <div id="collapseSix" class="collapse show" role="tabpanel" aria-labelledby="headingSix">
+                          <div class="card-body">
+                          <div class="row">
+                              <div class="col-md-6">
+                                <p>Fruit weight (g)</p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
+                              <label>< 30</label>
+                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='30-50'>
+                              <label>30-50</label>
+                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='> 50'>
+                              <label>> 50</label>                          
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Fruit size <span><a class='static' href="#" data-cha="Fruit size" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='medium'>
+                              <label>medium</label> 
+                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='small'>
+                              <label>small</label> 
+                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='very small'>
+                              <label>very small</label>                               
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Exterior color of mature fruit <span><a class='static' href="#" data-cha="Exterior colour of mature fruit" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>red</label>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>orange red</label>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>pink</label>                             
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Predominant fruit shape <span><a class='static' href="#" data-cha="Predominant fruit shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>cylindrical</label>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>flattened</label>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>heart-shaped</label>  <br/>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>high-round</label>   
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>lengthened cylindrical</label>     
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>pear-shaped</label>    <br/>
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>plum-shaped</label>                                
+                              </div>
+                            </div><br/>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Intensity of greenback <span><a class='static' href="#" data-cha="Intensity of greenback" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>intermediate</label>   
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>none</label>   
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>slight</label>   
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>strong</label>                                 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Fruit shoulder shape <span><a class='static' href="#" data-cha="Fruit shoulder shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">                           
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>flat</label>  
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>moderately depressed</label>  
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>slightly depressed</label>                                 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Easiness of fruit to detach from the pedicel <span><a class='static' href="#" data-cha="Easiness of fruit to detach from pedicel" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>easy</label>  
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>intermediate</label>  
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>difficult</label>                              
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Easiness of fruit wall to be peeled <span><a class='static' href="#" data-cha="Easiness of fruit wall (skin) to be peeled" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>easy</label>    
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>intermediate</label>    
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>difficult</label>                                                              
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Fruit blossom end shape <span><a class='static' href="#" data-cha="Fruit blossom end shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>flat</label>        
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>indented</label>        
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>pointed</label>                             
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <p>Shape of pistil scar <span><a class='static' href="#" data-cha="Shape of pistil scar" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              </div>
+                              <div class="col-md-6">
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>dot</label> 
+                              <input type='checkbox' class='form-check-inline' >
+                              <label>linear</label>                              
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                                                   
                       <div class="card item">
                         <div class="card-header" role="tab" id="headingThree">
                           <h6 class="mb-0">
-                            <a class="collapsed  " data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <a class="collapsed  " data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <i class="card-icon mdi mdi-tree"></i>Plant</a>
                           </h6>
                         </div>
-                        <div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree">
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
                           <div class="card-body">
                             <!--
                               <div class="row">
@@ -419,157 +581,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="card item">
-                        <div class="card-header" role="tab" id="headingSix">
-                          <h6 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="headingSix">
-                            <i class="card-icon mdi mdi-food-apple"></i>Fruit</a>
-                          </h6>
-                        </div>
-                        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
-                          <div class="card-body">
-                          <div class="row">
-                              <div class="col-md-6">
-                                <p>Fruit weight (g)</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
-                              <label>< 30</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='30-50'>
-                              <label>30-50</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='> 50'>
-                              <label>> 50</label>                          
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Fruit size</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='medium'>
-                              <label>medium</label> 
-                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='small'>
-                              <label>small</label> 
-                              <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='very small'>
-                              <label>very small</label>                               
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Exterior color of mature fruit</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>red</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>orange red</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>pink</label>                             
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Predominant fruit shape</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>cylindrical</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>flattened</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>heart-shaped</label>  <br/>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>high-round</label>   
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>lengthened cylindrical</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>pear-shaped</label>    <br/>
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>plum-shaped</label>                                
-                              </div>
-                            </div><br/>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Intensity of greenback</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>intermediate</label>   
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>none</label>   
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>slight</label>   
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>strong</label>                                 
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Fruit shoulder shape</p>
-                              </div>
-                              <div class="col-md-6">                           
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>flat</label>  
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>moderately depressed</label>  
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>slightly depressed</label>                                 
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Easiness of fruit to detach from the pedicel</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>easy</label>  
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>intermediate</label>  
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>difficult</label>                              
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Easiness of fruit wall to be peeled</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>easy</label>    
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>intermediate</label>    
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>difficult</label>                                                              
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Fruit blossom end shape</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>flat</label>        
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>indented</label>        
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>pointed</label>                             
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p>Shape of pistil scar</p>
-                              </div>
-                              <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>dot</label> 
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>linear</label>                              
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>               
+                      </div>      
                       <div class="card item">
                         <div class="card-header" role="tab" id="headingSeven">
                           <h6 class="mb-0">

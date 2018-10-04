@@ -702,6 +702,24 @@ table tr td.imge
             }
             $search_list['leaf_type']= $leaf_type;     
         }
+        if(isset($_POST['fruit_weight_g']))
+        {
+            $fruit_weight_g=array();
+            foreach($_POST['fruit_weight_g'] as $key=>$value)
+            {
+                $fruit_weight_g[]=$value;
+            }
+            $search_list['fruit_weight_g']= $fruit_weight_g;     
+        }
+        if(isset($_POST['fruit_size']))
+        {
+            $fruit_size=array();
+            foreach($_POST['fruit_size'] as $key=>$value)
+            {
+                $fruit_size[]=$value;
+            }
+            $search_list['fruit_size']= $fruit_size;     
+        }
         ?>
         <input type="hidden" id="search_list" value='<?php echo json_encode($search_list); ?>'>
     
@@ -783,6 +801,34 @@ if(search_list['leaf_type'])
             $('#search_by').append(', ');
         }
         $('#search_by').append('<span class="red"> '+search_list['leaf_type'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['fruit_weight_g'])
+{
+    $('#search_by').append(' Fruit Weight : ');
+    for(i =0 ;i<search_list['fruit_weight_g'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['fruit_weight_g'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['fruit_size'])
+{
+    $('#search_by').append(' Fruit Size : ');
+    for(i =0 ;i<search_list['fruit_size'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(', ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['fruit_size'][i]+' </span>');
     }
   
     item++;
@@ -890,15 +936,53 @@ function search()
                 $i=0;
                 $where .= ' AND ';
             }
-            if(isset($param['leaf_type']))
+            if(isset($_POST['leaf_type']))
             {
-                foreach($param['leaf_type'] as $value)
+                foreach($_POST['leaf_type'] as $value)
                 {
                     if($i != 0)
                     {
                         $where .= " || ";
                     }
                     $where .= "cha_data_tomato.id_leaf_type = '$value'";
+                    $i++;
+                }
+                $i=0;
+                $where .= ' AND ';
+            }
+            if(isset($_POST['fruit_weight_g']))
+            {
+                foreach($_POST['fruit_weight_g'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    if($value=='30-50')
+                    {
+                        $where .= "cha_data_tomato.fruit_weight_g BETWEEN 30 AND 50";
+                    }
+                    else
+                    {
+                        $where .= "cha_data_tomato.fruit_weight_g $value";
+                    }
+                    $i++;
+                }
+                $i=0;
+                $where .= ' AND ';
+            }
+            if(isset($_POST['fruit_size']))
+            {
+                foreach($_POST['fruit_size'] as $value)
+                {
+                    if($i != 0)
+                    {
+                        $where .= " || ";
+                    }
+                    if($value == 'medium'){$id = 1;}
+                    if($value == 'small'){$id = 2;}
+                    if($value == 'very small'){$id = 3;}
+                        $where .= "cha_data_tomato.id_fruit_size = '$id'";
                     $i++;
                 }
                 $i=0;

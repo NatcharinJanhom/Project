@@ -1,3 +1,7 @@
+<?php
+ session_start();
+ $_SESSION["type"] = "admin";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
