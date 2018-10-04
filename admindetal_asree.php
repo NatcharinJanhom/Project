@@ -64,27 +64,38 @@
                         </div>
                     </div>
 
-
-                    <div id="showD" class="container">
-                        <div class="row">
-                            <div class="col-md-12 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class=" card-body">
-                                        <h2 align='center'>Tomato detail</h2>
-                                        <i class="far fa-edit"></i>
-                                        <i class="fas fa-trash-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
+                    
+                                
+                     
+                                <div class="row">
                             <div class="col-md-12 h-100">
                                 <div class="bg-light p-4">
-
+                                <div class="card rounded mb-2">
+                                            
+                                    
                                     <div id="profile-list-left" class="py-2">
+                                        <div class="card rounded mb-2">
+                                            <div class="card-body">
 
+
+                                             
+                                            <div class="row">
+                                            <div class="col-md-12 grid-margin stretch-card">
+                                             <div id="showD" class="container">
+                                                                            <h2 align='center'>Tomato detail</h2>
+                                                                            <i class="far fa-edit"></i>
+                                                                            <i class="fas fa-trash-alt"></i>
+                                                                
+                                                                
+                                                            </div>
+
+                                            </div>
+                                            </div>
+
+
+                                             
+                                            </div>
+                                        </div>
                                         <div class="card rounded mb-2">
                                             <div class="card-body">
 
