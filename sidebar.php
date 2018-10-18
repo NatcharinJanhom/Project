@@ -70,7 +70,7 @@
             <li class="nav-item">
               <a class="nav-link" href="admin_manage.php" >
                 <i class="menu-icon mdi mdi-settings"></i>
-                <span class="menu-title">User manage</span>
+                <span class="menu-title">User management</span>
                 <i class="menu-arrow"></i>
               </a>
             </li>

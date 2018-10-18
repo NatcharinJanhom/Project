@@ -272,7 +272,16 @@ iframe{
 
                            <div class="tab-pane fade" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
 
+                            <?php 
+                              if ($_SESSION['type'] == 'admin') {
+                                # code...
+                                echo '<button style="margin-left:3%;" type="button" class="btn btn-dark btn-fw">
+                                       <i class="fa fa-edit"></i> Edit </button>' ;
+                              }
+                             ?>
+
                             <div class="card-body">
+                              
                     <div id="lightgallery" class="row lightGallery">
                       <a href="theme/assets/images/tomato/loop1.jpg" class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop1.jpg" alt="image small"> </a>

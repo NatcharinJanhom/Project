@@ -12,8 +12,10 @@
   .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 43px;
+  height: 23px;
+  margin-left : 30%;
+  margin-top: 5%;
 }
 .switch input {display:none;}
 
@@ -32,10 +34,10 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 17.5px;
+  width: 17.5px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2.8px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -50,9 +52,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
 }
 
 /* Rounded sliders */
@@ -72,6 +74,16 @@ input:checked + .slider:before {
   .card.item {
      border: 1px solid #ff0017;
     
+  }
+  .btn{
+    height: 25px;
+  }
+  .badge{
+    height: 20px;
+    width: 60px;
+  }
+  .btn2{
+    height: 40px;
   }
 </style>
   <body class="sidebar-icon-only">
@@ -114,8 +126,8 @@ input:checked + .slider:before {
                     <td>wangjaem</td>
                     <td>madeena@hotmail.com</td>
                     <td>Admin</td>
-                    <td><center><span class="badge badge-success badge-pill">Active</span></center></td>
-                    <td><center><button type="button" class='static btn btn-warning' data-name="madeena" data-s="wangjaem" data-e="madeena@hotmail.com" data-p="Admin"  data-st="Active">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-danger' >Delete</button></center></td>
+                    <td><center> <span class="badge badge-success badge">Active</span> </center>  </td>
+                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="madeena" data-s="wangjaem" data-e="madeena@hotmail.com" data-p="Admin"  data-st="Active">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
                     <td> <label class="switch">
                                       <input type="checkbox" >
                                       <span class="slider round"></span>
@@ -127,8 +139,8 @@ input:checked + .slider:before {
                     <td>wangjaem</td>
                     <td>asree@hotmail.com</td>
                     <td>User</td>
-                    <td><center><span class="badge badge-danger badge-pill">Block</span></center></td>
-                    <td><center><button type="button" class='static btn btn-warning' data-name="asree" data-s="wangjaem" data-e="asree@hotmail.com" data-p="User"  data-st="Block">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-danger' >Delete</button></center></td>
+                    <td><center><span class="badge badge-danger badge">Blocked</span></center></td>
+                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="asree" data-s="wangjaem" data-e="asree@hotmail.com" data-p="User"  data-st="Block">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
                     <td> <label class="switch">
                                       <input type="checkbox" checked>
                                       <span class="slider round"></span>
@@ -140,8 +152,8 @@ input:checked + .slider:before {
                     <td>junhom</td>
                     <td>natcharin@hotmail.com</td>
                     <td>User</td>
-                    <td><center><span class="badge badge-warning badge-pill">Waiting-Email</span></center></td>
-                    <td><center><button type="button" class='static btn btn-warning' data-name="natcharin" data-s="junhom" data-e="natcharin@hotmail.com" data-p="User"  data-st="Waiting-Email">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-danger' >Delete</button></center></td>
+                    <td><center><span class="badge badge-warning badge">Waiting</span></center></td>
+                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="natcharin" data-s="junhom" data-e="natcharin@hotmail.com" data-p="User"  data-st="Waiting-Email">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
                     <td> <label class="switch">
                                       <input type="checkbox" id='ch' onclick="showSwal()"  >
                                       <span class="slider round"></span>
@@ -198,8 +210,8 @@ input:checked + .slider:before {
 
 
                         <div class='modal-footer'>
-                        <button type='button' class='btn btn-success'>Save</button>
-                        <button data-dismiss="modal" type='button' class='btn'>Cancle</button>
+                        <button type='button' class='btn btn2 btn-success'>Save</button>
+                        <button data-dismiss="modal" type='button' class='btn btn2'>Cancle</button>
                         </div>
 
                       </div>

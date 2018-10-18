@@ -56,7 +56,7 @@
       {   
         
         position: fixed;
-        top: 85%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -65,7 +65,7 @@
       .btn2
       {   
         position: fixed;
-        top: 78%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -77,7 +77,7 @@
       {   
         
         position: fixed;
-        top: 80%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -86,7 +86,7 @@
       .btn2
       {   
         position: fixed;
-        top: 70%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -97,7 +97,7 @@
     .btn1
       {   
         position: fixed;
-        top: 45%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -106,7 +106,7 @@
       .btn2
       {   
         position: fixed;
-        top: 40%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -120,7 +120,7 @@
       {   
         
         position: fixed;
-        top: 61%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -129,7 +129,7 @@
       .btn2
       {   
         position: fixed;
-        top: 55%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -141,7 +141,7 @@
       {   
         
         position: fixed;
-        top: 65%;
+        top: 78%;
         right: -10px;    
         margin:auto;
         z-index: 1;
@@ -150,7 +150,7 @@
       .btn2
       {   
         position: fixed;
-        top: 57%;
+        top: 85%;
         right: -10px;    
         margin:auto;
         z-index: 1;   
@@ -165,13 +165,14 @@
   .btn-fix
   {
     background: none;   
-    max-width: 200px;
-    max-height:50px;
+    max-width: 180px;
+    max-height:6.5%;
     width:40%;
     height:20%;   
     cursor: pointer;  
-    font-size: 25px; 
+    font-size: 23px; 
     border-radius: 500px 0 0 500px;
+    opacity: 0.9;
   }
 .btn-search {
     color: #2196f3;
@@ -187,7 +188,7 @@
 }
 .btn-search:hover
 {
-  opacity: 1;
+  opacity: 0.9;
   color: #fff;
     background-color: #0c83e2;
     border-color: #0c7cd5;
@@ -282,6 +283,8 @@
                               <div class="col-md-6">
                                 <p>Fruit weight (g)</p>
                               </div>
+
+
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
                               <label>< 30</label>
