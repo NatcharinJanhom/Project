@@ -220,6 +220,14 @@
     {
       padding-right:1.75rem;
     }
+    .pt
+    {
+      padding-top:0.1rem;
+      padding-bottom:0.2rem;
+    }
+    .mt-5, .my-5 {
+    margin-top: 2rem !important;
+    }
 </style>
 
 <body class="sidebar-icon-only">
@@ -286,12 +294,10 @@
 
 
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
-                              <label>< 30</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='30-50'>
-                              <label>30-50</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='> 50'>
-                              <label>> 50</label>                          
+                              <div class="mt-5 pt w-75 mx-auto">
+                                    <div id="soft-limit-3" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>                        
                               </div>
                             </div>
                             <div class="row">
@@ -447,10 +453,10 @@
                             </div>
                             -->
                             <div class="row">
-                              <div class="col-md-4">
+                              <div class="col-md-6">
                                 <p>Stem pubescence density<span><a class='static' href="#" data-cha="Stem pubescence density" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
-                              <div class="col-md-8">
+                              <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='dense'>
                               <label>dense</label>
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='intermediate'>
@@ -458,16 +464,15 @@
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-4">
+                              <div class="col-md-6">
                                 <p>Stem internode length (cm)</p>
                               </div>
-                              <div class="col-md-8">
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='short'>
-                              <label>short ( < 7 )</label>
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='intermediate'>
-                              <label>intermediate ( 7-8 )</label>
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='long'>
-                              <label>long ( > 8 )</label>
+                              <div class="col-md-6">
+                              <div class="mt-5 pt w-75 mx-auto">
+                                    <div id="soft-limit-4" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>                        
+                              
                               </div>
                             </div>                           
                           </div>
@@ -537,10 +542,10 @@
                                 <p>Number of days to flowering</p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='< 35'>
-                              <label>< 35 Day</label>
-                              <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='>= 35'>
-                              <label>>= 35 Day</label>                              
+                              <div class="mt-5 pt w-75 mx-auto">
+                                    <div id="soft-limit-5" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>                          
                               </div>
                             </div>
                             <div class="row">
@@ -864,3 +869,54 @@
         });
     });
     </script>
+     <script>
+     (function($) {
+      'use strict';
+          var softSlider = document.getElementById('soft-limit-3');
+          var softSlider1 = document.getElementById('soft-limit-4');
+          var softSlider2 = document.getElementById('soft-limit-5');
+
+        noUiSlider.create(softSlider, {
+          start: [0, 20],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+            min: 0,
+            max: 60
+          },
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+        noUiSlider.create(softSlider1, {
+          start: [0, 20],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+            min: 0,
+            max: 60
+          },
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+        noUiSlider.create(softSlider2, {
+          start: [0, 35],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+            min: 0,
+            max: 60
+          },
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+    })(jQuery);
+     </script>
