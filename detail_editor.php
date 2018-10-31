@@ -20,6 +20,16 @@ iframe{
         width: 100%;
         height: 630px;
 }
+.row .lightGallery .image-tile{
+  cursor: all-scroll ;
+  padding: 20px;
+  margin: 0;
+  border-radius: 5px;
+}
+.image-tile:hover{
+  background-color: skyblue;
+}
+
   </style>
 
   <body class="sidebar-icon-only">
@@ -60,7 +70,7 @@ iframe{
                         <h4 class="card-title">Accession number : LE001</h4>
                         <ul class="nav nav-tabs tab-solid tab-solid-danger" role="tablist">
                           <li class="nav-item">
-                            <a class="nav-link active" id="tab-5-1" data-toggle="tab" href="#details-5-1" role="tab" aria-controls="details-5-1" aria-selected="true">General details</a>
+                            <a class="nav-link" id="tab-5-1" data-toggle="tab" href="#details-5-1" role="tab" aria-controls="details-5-1" aria-selected="true">General details</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#Physical-5-2" role="tab" aria-controls="Physical-5-2" aria-selected="false">Physical</a>
@@ -79,18 +89,11 @@ iframe{
                             <a class="nav-link" id="tab-5-7" data-toggle="tab" href="#Germ-5-7" role="tab" aria-controls="Germ-5-7" aria-selected="false">Germplasm</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="tab-5-8" data-toggle="tab" href="#Gallery-5-8" role="tab" aria-controls="Gallery-5-8" aria-selected="false">Gallery</a>
+                            <a class="nav-link active" id="tab-5-8" data-toggle="tab" href="#Gallery-5-8" role="tab" aria-controls="Gallery-5-8" aria-selected="false">Gallery</a>
                           </li>
                         </ul>
                         <div class="tab-content tab-content-solid">
-                          <div class="tab-pane fade show active" id="details-5-1" role="tabpanel" aria-labelledby="tab-5-1">
-                            <?php 
-                              if ($_SESSION['type'] == 'admin') {
-                                # code...
-                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-dark btn-fw" href="detail_editor.php">
-                                       <i class="fa fa-edit"></i> Edit </a>' ;
-                              }
-                             ?>
+                          <div class="tab-pane fade" id="details-5-1" role="tabpanel" aria-labelledby="tab-5-1">
                             <div class="row">
 
                               <div class="col-md-8" >
@@ -266,31 +269,38 @@ iframe{
 
                           <div class="tab-pane fade" id="Genome-5-3" role="tabpanel" aria-labelledby="tab-5-3"> ... </div>
                            <div class="tab-pane fade" id="Disease-5-4" role="tabpanel" aria-labelledby="tab-5-4"> ... </div>
-                           <div class="tab-pane fade" id="Location-5-6" role="tabpanel" aria-labelledby="tab-5-6">
+                            <div class="tab-pane fade" id="Location-5-6" role="tabpanel" aria-labelledby="tab-5-6">
                                 <div class="row">
                                   <div class="card-body">
                                         <iframe src="locationid.php"></iframe>
                                   </div>
                                 </div>
-                                
-                        </div>
+                            </div>
                            <div class="tab-pane fade" id="Germ-5-7" role="tabpanel" aria-labelledby="tab-5-7"> ... </div>
 
 
-                           <div class="tab-pane fade" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
+                           <div class="tab-pane fade show active" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
 
                             <?php 
                               if ($_SESSION['type'] == 'admin') {
                                 # code...
-                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-dark btn-fw" href="detail_editor.php">
-                                       <i class="fa fa-edit"></i> Edit </a>' ;
+                               /*  echo '<button style="margin-left:2.35%;" type="button" class="btn btn-dark btn-fw">
+                                       <i class="fa fa-edit"></i> Edit </button>' ;
+                                */
+
+
                               }
                              ?>
 
-                            <div class="card-body">
+                  <div class="card-body">
+
+                    <div id="fileuploader"><div class="ajax-upload-dragdrop" style="margin-left: 20px; vertical-align: top; width: 400px;"><div class="ajax-file-upload" style="position: relative; overflow: hidden; cursor: default;">Upload<form method="POST" action="YOUR_FILE_UPLOAD_URL" enctype="multipart/form-data" style="margin: 0px; padding: 0px;"><input type="file" id="ajax-upload-id-1540916542716" name="myfile[]" accept="*" multiple="" style="position: absolute; cursor: pointer; top: 0px; width: 100%; height: 100%; left: 0px; z-index: 100; opacity: 0;"></form></div><span><b>Clikc "Upload" button to add a image.</b></span></div><div></div></div>
+
+                    <h5 style="margin-left: 25px; margin-top:30px;"><i class="fa fa-arrows" style="margin-right: 8px;"> </i> Drag and drop a image.</h5>
                               
-                    <div id="lightgallery" class="row lightGallery">
-                      <a class="image-tile">
+                    <div id="dragula-left" class="row lightGallery">
+
+                        <a class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop1.jpg" alt="image small"> </a>
                       <a  class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop10.jpg" alt="image small"> </a>
@@ -300,19 +310,26 @@ iframe{
                         <img class="s300x300" src="theme/assets/images/tomato/loop4.jpg" alt="image small"> </a>
                       <a  class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop5.jpg" alt="image small"> </a>
-                      <a  class="image-tile">
+                        <a  class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop6.jpg" alt="image small"> </a>
+                      <a  class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop10.jpg" alt="image small"> </a>
+                        <a  class="image-tile">
+                        <img class="s300x300" src="theme/assets/images/tomato/loop2.jpg" alt="image small"> </a>
                       <a  class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop11.jpg" alt="image small"> </a>
                       <a  class="image-tile">
                         <img class="s300x300" src="theme/assets/images/tomato/loop1.jpg" alt="image small"> </a>
-                    </div>
 
-                    
+                      </div>
+
                   </div>
+  
+                  <a href="detail.php" style="margin-right: 50px; margin-left: 10px;" role="button" class="btn btn-secondary pull-right"><i></i> Cancel </a>
+                  <button type="button" class="btn btn-primary pull-right"><i class="fa fa-save"></i> Save </button>
 
 
-                          </div>
+              </div>
 
 
 
@@ -335,3 +352,4 @@ iframe{
 
     </body>
 </html>
+<script src="theme/assets/js/shared/dragula.js"></script>

@@ -3,85 +3,9 @@
   <head>
   <?php include('head.php'); ?>    
   
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.17/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.5/css/fixedColumns.dataTables.min.css">
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.1/js/dataTables.fixedColumns.min.js"></script>
-
-	
-
 
   </head>
   <style>
- .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 28px;
-}
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 21px;
-  width: 21px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 28px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-.card-body h5 {
-    margin-bottom: 0;
-    color:#ff0017;
-    font-size: 1.2rem;
-    font-weight: 600;
-  } 
-  .card.item {
-     border: 1px solid #ff0017;
-    
-  }
-  .mdi::before {
-    font-size: 19px;
-    line-height: 14px;
-}
 h5 {
     margin-bottom: 0;
     color: #ff0017;
@@ -98,14 +22,14 @@ h5 {
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
                 <h5>Admin</h5>
-                <h5>Data ownwe on User</h5>
+                <h5>Data owner on User</h5>
                 <div class="row">
                 <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                 <div class="card-body">
                             <label>Data owner</lable>
-                            <table style="margin-left: 50px;" id="owner" class="table  table-bordered" style="width:100%">
-                                <thead>  
+                            <table style="margin-left: 42px;" id="owner" class="table  table-bordered" style="width:100%">
+                                <thead>
                                     <tr>
                                         <th>User</th>
                                         <th>Accession number</th>
@@ -249,7 +173,6 @@ h5 {
                
                 </div>
             </div>   
-
         <!-- modal start -->      
             <div id="static_modal" class="modal fade">
             <div class="modal-dialog modal-lg-6">

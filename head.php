@@ -40,6 +40,7 @@
 
     <script src="theme/assets/js/shared/tooltips.js"></script>
     <script src="theme/assets/js/shared/popover.js"></script>
+    <script src="theme/assets/js/shared/dragula.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <script src="theme/assets/js/demo_1/dashboard.js"></script>

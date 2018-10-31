@@ -63,10 +63,20 @@
                 <i class="menu-arrow"></i>
               </a>
             </li>
+
+
             <?php 
             if($_SESSION['type']=='admin')
             {
               ?>
+            <li class="nav-item">
+              <a class="nav-link" href="User_dataShare.php" >
+                <i class="menu-icon  mdi mdi-share-variant"></i>
+                <span class="menu-title"> Data sharing </span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="admin_manage.php" >
                 <i class="menu-icon mdi mdi-settings"></i>
@@ -74,9 +84,20 @@
                 <i class="menu-arrow"></i>
               </a>
             </li>
+
             <?php
             }
+              else{
             ?>
+            <li class="nav-item">
+              <a class="nav-link" href="data_share.php" >
+                <i class="menu-icon mdi mdi-share-variant"></i>
+                <span class="menu-title"> Data sharing </span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+          <?php } ?>
+
 
             
 
