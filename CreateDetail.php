@@ -34,10 +34,11 @@
      
     </style>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
     <script type="text/javascript" src="theme/assets/js/croppie.js"></script>
     <link href="theme/assets/js/croppie.css" rel="stylesheet" type="text/css">
-
+    <link href="sweetalert.css" rel="stylesheet"/>
+    <script>src = "sweetalert.min.js"</script>
     <script>
         $(document).ready(function () {
 
@@ -59,9 +60,9 @@
             }
         }
 
+         //Circle Crop
         $(document).ready(function () {
             var $uploadCrop;
-            var $uploadCropSquare;
 
             function readFile(input) {
                 if (input.files && input.files[0]) 
@@ -80,7 +81,7 @@
                 }
                
             }
-            //Circle Crop
+           
             $uploadCrop = $('#upload-demo').croppie({
                 viewport: {
                     width: 200,
@@ -93,8 +94,6 @@
                 }
             });
 
-          
-
             $('#upload').on('change', function () { readFile(this); });
             $('.upload-result').on('click', function (ev) {
                 $uploadCrop.croppie('result', {
@@ -105,18 +104,68 @@
                     $('#form').submit();
                 });
             });
+          
 
             
         });
 
+        // Crop Square
+        $(document).ready(function () {
+            var $uploadCrop;
+
+            function readFile(input) {
+                if (input.files && input.files[0]) 
+                {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        //Circle
+                        $uploadCrop.croppie('bind', {
+                            url: e.target.result
+                        });
+                        $('.upload-demo2').addClass('ready');
+                       
+
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+               
+            }
+       
+            $uploadCrop = $('#upload-demo2').croppie({
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'square'
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+            $('#upload2').on('change', function () { readFile(this); });
+            $('.upload-result').on('click', function (ev) {
+                $uploadCrop.croppie('result', {
+                    type: 'canvas',
+                    size: 'original'
+                }).then(function (resp) {
+                    $('#imagebase64').val(resp);
+                    $('#form2').submit();
+                });
+            });
+
+            
+        });
+
+
+
+        
         function closex()
         {
             myWindow.close();
         }
 
-        $(function() 
-        {
-        enable_cb();
+        $(function() { enable_cb();
         $("#cb1").click(enable_cb);
         $("#cb2").click(enable_cb);
         });
@@ -140,7 +189,9 @@
            
         }
 
+      
 
+        
 
     </script>
 </head>
@@ -169,45 +220,18 @@
                                 </div>
 
                                 <div class="form-group">
-                                <label>Type of crop:</lable><br><br>
-                                <input name="" type="checkbox" value="" id="cb1" class="cb1">Circle
-                                <input name="" type="checkbox" value="" id="cb2" class="cb2">Square
+                                    
+                                    <label>*Type of crop (Please choose type of crop before upload your image)</label></br>
+                                    <input name="" type="checkbox" id="cb1" >Crop by circle
+                                    <input name="" type="checkbox" id="cb2" >Crop by square                      
+                                    
                                 </div>
+
 
                                 <div class="form-group">
                                     <label>Upload and crop image</label>
                                     <br>
-                                    <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#myModal">Upload files</button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="myModal" role="dialog">
-                                        <div class="modal-dialog">
-
-                                            <!-- Modal content-->
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                 
-                                                    
-                                                    <div class="card-body">
-                                                        <form action="" id="form" method="post">
-                                                            <div id="upload-demo"></div>
-                                                            <input type="hidden" id="imagebase64" name="imagebase64">
-                                                            <div class="cenbut">
-                                                            <input type="file" id="upload" value="Choose a file" ><br><br>
-                                                            <button class="btn btn-primary ">Crop Image</button>
-                                                            <button class="btn btn-default" onclick="closex()">Close</button>
-                                                            </div>
-                                                        </form>     
-                                                    </div>
-                                                
-   
-                                                </div>
-                                                
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                    <button type="button" class="btn btn-success mr-2 btn-crop" >Upload image</button>
                                 </div>
 
                                 <div class="form-group">
@@ -215,11 +239,7 @@
                                     <textarea class="form-control" id="InputMessage" rows="3"></textarea>
                                 </div>
 
-                                <div class="form-group">
-                                <label>Image side:</lable><br><br>
-                                <input name="" type="checkbox" value="" id="cb1" class="cb1">ImgLeft
-                                <input name="" type="checkbox" value="" id="cb2" class="cb2">ImgRight
-                                </div>
+                             
 
                                 <button type="submit" class="btn btn-success mr-2">Submit</button>
                                 <input type="button" value="Cancel" class="btn btn-light" onclick="goBack()">
@@ -231,4 +251,66 @@
             </div>
         </div>
     </div>
+     <!-- Modal -->
+     <div class="modal fade" id="myModal1">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <div class="card-body">
+                                                        <form action="" id="form" method="post">
+                                                            <div id="upload-demo"></div>
+                                                            <input type="hidden" id="imagebase64" name="imagebase64">
+                                                            <div class="cenbut">
+                                                            <input type="file" id="upload" value="Choose a file" ><br><br>
+                                                            <button class="btn btn-primary">Result</button>
+                                                            <button class="btn btn-default" onclick="closex()">Close</button>
+                                                            </div>
+                                                        </form>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <!-- Modal -->
+     <div class="modal fade" id="myModal2">
+                                        <div class="modal-dialog">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <div class="card-body">
+                                                        <form action="" id="form2" method="post">
+                                                            <div id="upload-demo2"></div>
+                                                            <input type="hidden" id="imagebase64" name="imagebase64">
+                                                            <div class="cenbut">
+                                                            <input type="file" id="upload2" value="Choose a file" ><br><br>
+                                                            <button class="btn btn-primary ">Crop Image</button>
+                                                            <button class="btn btn-default" onclick="closex()">Close</button>
+                                                            </div>
+                                                        </form>     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+    <script>
+    $(".btn-crop").click(function(){
+        var cb1 = $("#cb1")[0].checked;
+        var cb2 = $("#cb2")[0].checked;
+        if(cb1)
+        {
+            $('#myModal1').modal('show');
+        }
+        else if(cb2)
+        {
+            $('#myModal2').modal('show');
+        }
+      
+    });
+</script>
 </body>
