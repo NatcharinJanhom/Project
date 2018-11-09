@@ -87,7 +87,7 @@ iframe{
                             <?php 
                               if ($_SESSION['type'] == 'admin') {
                                 # code...
-                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-dark btn-fw" href="detail_editor.php">
+                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-primary btn-fw" href="detail_editor.php">
                                        <i class="fa fa-edit"></i> Edit </a>' ;
                               }
                              ?>
@@ -282,7 +282,7 @@ iframe{
                             <?php 
                               if ($_SESSION['type'] == 'admin') {
                                 # code...
-                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-dark btn-fw" href="detail_editor.php">
+                                echo '<a style="margin-left:2.35%;" role="button" class="btn btn-primary btn-fw" href="detail_editor.php">
                                        <i class="fa fa-edit"></i> Edit </a>' ;
                               }
                              ?>

@@ -93,7 +93,24 @@ iframe{
                           </li>
                         </ul>
                         <div class="tab-content tab-content-solid">
+
                           <div class="tab-pane fade" id="details-5-1" role="tabpanel" aria-labelledby="tab-5-1">
+                          
+                          <div style="margin: 40px 0px 40px 20px;">
+                            
+                            <button style="float: left; margin-right: 20px; width: 80px; height: 40px; " type="button" class="btn btn-primary btn-fw">
+                              <i style="margin-right: 0;" class="fa fa-bars"></i><i style="margin-right: 0;" class="fa fa-bars"></i><i class="fa fa-bars"></i>
+                              <i style="margin-left: 10px;" class="fa fa-file-photo-o"></i>
+                            </button>
+                             
+                             <button style="height: 40px;" type="button" class="btn btn-outline-primary btn-fw">
+                              <i style="margin-right: 10px;" class="fa fa-file-photo-o"></i>
+                              <i style="margin-right: 0;" class="fa fa-bars"></i><i style="margin-right: 0;" class="fa fa-bars"></i><i class="fa fa-bars"></i>
+                            </button>
+                          </div>
+                            
+
+
                             <div class="row">
 
                               <div class="col-md-8" >
@@ -281,20 +298,20 @@ iframe{
 
                            <div class="tab-pane fade show active" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
 
-                            <?php 
-                              if ($_SESSION['type'] == 'admin') {
-                                # code...
-                               /*  echo '<button style="margin-left:2.35%;" type="button" class="btn btn-dark btn-fw">
-                                       <i class="fa fa-edit"></i> Edit </button>' ;
-                                */
-
-
-                              }
-                             ?>
+                           
 
                   <div class="card-body">
 
-                    <div id="fileuploader"><div class="ajax-upload-dragdrop" style="margin-left: 20px; vertical-align: top; width: 400px;"><div class="ajax-file-upload" style="position: relative; overflow: hidden; cursor: default;">Upload<form method="POST" action="YOUR_FILE_UPLOAD_URL" enctype="multipart/form-data" style="margin: 0px; padding: 0px;"><input type="file" id="ajax-upload-id-1540916542716" name="myfile[]" accept="*" multiple="" style="position: absolute; cursor: pointer; top: 0px; width: 100%; height: 100%; left: 0px; z-index: 100; opacity: 0;"></form></div><span><b>Clikc "Upload" button to add a image.</b></span></div><div></div></div>
+                    <div id="fileuploader">
+                      <div class="ajax-upload-dragdrop" style="margin-left: 20px; vertical-align: top; width: 400px;">
+                        <div class="ajax-file-upload" style="background-color: #19D895; position: relative; overflow: hidden; cursor: default;"> Upload 
+                          <form method="POST" action="YOUR_FILE_UPLOAD_URL" enctype="multipart/form-data" style="margin: 0px; padding: 0px;">
+                            <input type="file" id="ajax-upload-id-1540916542716" name="myfile[]" accept="*" multiple="" style="position: absolute; cursor: pointer; top: 0px; width: 100%; height: 100%; left: 0px; z-index: 100; opacity: 0;">
+                          </form></div><span><b>Clikc "Upload" button to add images.</b></span>
+                        </div>
+                        <div>
+                        </div>
+                      </div>
 
                     <h5 style="margin-left: 25px; margin-top:30px;"><i class="fa fa-arrows" style="margin-right: 8px;"> </i> Drag and drop a image.</h5>
                               
