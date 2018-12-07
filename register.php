@@ -23,7 +23,8 @@
             <div class="col-lg-6 mx-auto">
               <h2 class="text-center mb-4">Register</h2>
               <div class="auto-form-wrapper">
-                <form action="#" method="post">
+
+                <form action="add_member.php" method="post">
                   <div class="form-group row">
   
                       <label for="name" class="col-sm-3 col-form-label">Name</label>
@@ -56,7 +57,7 @@
                   <div class="form-group row">
                       <label for="username" class="col-sm-3 col-form-label">Username</label>
                       <div class="col-sm-9">
-                      <input id="username" name="username" type="text" class="form-control" placeholder="Enter Username">
+                      <input id="username" name="username" type="username" class="form-control" placeholder="Enter Username">
                       </div>   
                     
                   </div>
@@ -64,7 +65,7 @@
                       <label for="password" class="col-sm-3 col-form-label">Password</label>
                       <div class="col-sm-9">
                       <div class="input-group">
-                      <input id="password" name="password" type="text" class="form-control" placeholder="Enter Password">
+                      <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-key"></i>
@@ -78,7 +79,7 @@
                       <label for="cf_password" class="col-sm-3 col-form-label">Confirm Password</label>
                       <div class="col-sm-9">
                       <div class="input-group">
-                      <input id="cf_password" name="cf_password" type="text" class="form-control" placeholder="Confirm Password">
+                      <input id="cf_password" name="cf_password" type="password" class="form-control" placeholder="Confirm Password">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="mdi mdi-key"></i>
@@ -94,13 +95,15 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <button type="button" class="btn btn-primary submit-btn btn-block">Register</button>
+                    <button type="submit" class="btn btn-primary submit-btn btn-block">Register</button>
                   </div>
                   <div class="text-block text-center my-3">
                     <span class="text-small font-weight-semibold">Already have and account ?</span>
                     <a href="index.php" class="text-black text-small">Login</a>
                   </div>
                 </form>
+
+
               </div>
             </div>
           </div>

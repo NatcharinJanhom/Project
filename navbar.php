@@ -53,10 +53,14 @@
               			echo '<span class="profile-text">'.$_SESSION['type'].'</span>';
               			echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face1.jpg" alt="Profile image"> </a>';
               		}
-              		else {
+              		elseif($_SESSION['type'] == 'user') {
               			echo '<span class="profile-text">'.'User'.'</span>';
               			echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face2.jpg" alt="Profile image"> </a>';
               		}
+                  else {
+                    echo '<span class="profile-text">'.'Permission Error'.'</span>';
+                    echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face2.jpg" alt="Profile image"> </a>';
+                  }
               	 ?>
                 
               <div style="padding-top: 10px;" class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">

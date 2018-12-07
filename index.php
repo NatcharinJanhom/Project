@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<?php include 'head.php'; ?>
+  	<?php 
+  		include 'head.php'; 
+  		if(!empty($_SESSION["username"])){
+  			header( "location: userpage.php" );
+ 			exit(0);
+  		}
+  	?>
   </head>
   <style>
     .form-control
@@ -20,7 +26,9 @@
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
-                <form  method="post" id="login">
+                
+
+                <form  method="post" id="login" action="check_login.php">
                   <div class="form-group">
                     <label class="label">Username</label>
                     <div class="input-group">
@@ -44,9 +52,11 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="form-group">
-                    <button type="button" class="btn btn-primary submit-btn btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary submit-btn btn-block">Login</button>
                   </div>
+
                   <div class="form-group d-flex justify-content-between">
                     <div class="form-check form-check-flat mt-0">
                       <label class="form-check-label">
@@ -59,6 +69,8 @@
                     <a href="register.php" class="text-black text-small">Create new account</a>
                   </div>
                 </form>
+
+
               </div>
               <ul class="auth-footer">
                
@@ -76,6 +88,7 @@
   </body>
 
 </html>
+<!--
 <script>
       $(document).ready(function(){
         $(".submit-btn").click(function(){
@@ -93,3 +106,4 @@
         });
       });
   </script>
+  -->
