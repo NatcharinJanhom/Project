@@ -874,15 +874,9 @@
     });
     </script>
      <script>   
-                                $(document).ready(function () {
-                                    $('.noUi-handle').click(function() {
-                                      
-                                          var min = $('.noUi-handle').attr('aria-valuenow');
-                                          var max = $('.noUi-handle').attr('aria-valuemax');
-                                          //$(this).value(min+"-"+max);
-                                          alert(min+"-"+max);
-                                    });
-                                });
+                           slider.noUiSlider.on('update', function(values,handle,unencoded){
+                            console.log(handle);
+});
     </script>
     <script src="theme/assets/js/shared/no-ui-slider.js"></script>
     <script src="theme/assets/js/shared/ion-range-slider.js"></script>

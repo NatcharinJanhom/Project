@@ -198,8 +198,8 @@ $cha = $_GET['cha'];
             }
             else if($cha == 'Seed shape')
             {
-                $value = '';
-                $id = '';
+                $value = 'seed_shape';
+                $id = 'id_seed_shape';
             }
             else if($cha == 'Shape of pistil scar')
             {
