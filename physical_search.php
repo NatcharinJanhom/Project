@@ -247,7 +247,7 @@
               </div>
             </div>
           </div>
-          <form action="search_results.php" method="post">
+          <form id="physical_search" action="search_results.php" method="post">
           <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
@@ -294,15 +294,16 @@
 
 
                               <div class="col-md-6">
-                              <div class="mt-5 pt w-75 mx-auto">
-                                    <div id="soft-limit-3" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                              <div class="mt-5 pt w-75 mx-auto soft-limit-3">
+                                <input type="hidden" name="fruit_weight_g">
+                                    <div id="soft-limit-3" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
                                     </div>
                                 </div>                        
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit size <span><a class='static' href="#" data-cha="Fruit size" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit size <span><a class='static' id="#fruit_size" href="#fruit_size" data-cha="Fruit size" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='medium'>
@@ -315,20 +316,20 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Exterior color of mature fruit <span><a class='static' href="#" data-cha="Exterior colour of mature fruit" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Exterior color of mature fruit <span><a class='static' id="#exterior_color_of_mature_fruit" href="#exterior_color_of_mature_fruit" data-cha="Exterior colour of mature fruit" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="red">
                               <label>red</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="orange red">
                               <label>orange red</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="pink">
                               <label>pink</label>                             
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Predominant fruit shape <span><a class='static' href="#" data-cha="Predominant fruit shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Predominant fruit shape <span><a class='static' id="#predominant_fruit_shape" href="#predominant_fruit_shape" data-cha="Predominant fruit shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -349,7 +350,7 @@
                             </div><br/>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Intensity of greenback <span><a class='static' href="#" data-cha="Intensity of greenback" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Intensity of greenback <span><a class='static' id="#intensity_of_greenback" href="#intensity_of_greenback" data-cha="Intensity of greenback" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -364,7 +365,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit shoulder shape <span><a class='static' href="#" data-cha="Fruit shoulder shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit shoulder shape <span><a class='static' id="#fruit_shoulder_shape" href="#fruit_shoulder_shape" data-cha="Fruit shoulder shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">                           
                               <input type='checkbox' class='form-check-inline' >
@@ -377,7 +378,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Easiness of fruit to detach from the pedicel <span><a class='static' href="#" data-cha="Easiness of fruit to detach from pedicel" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Easiness of fruit to detach from the pedicel <span><a class='static' href="#easiness_of_fruit_to_detach_from_the_pedicel" data-cha="Easiness of fruit to detach from pedicel" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -390,7 +391,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Easiness of fruit wall to be peeled <span><a class='static' href="#" data-cha="Easiness of fruit wall (skin) to be peeled" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Easiness of fruit wall to be peeled <span><a class='static' id="#easiness_of_fruit_wall_to_be_peeled" href="#easiness_of_fruit_wall_to_be_peeled" data-cha="Easiness of fruit wall (skin) to be peeled" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -403,7 +404,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit blossom end shape <span><a class='static' href="#" data-cha="Fruit blossom end shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit blossom end shape <span><a class='static' id="#fruit_blossom_end_shape" href="#fruit_blossom_end_shape" data-cha="Fruit blossom end shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -416,7 +417,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Shape of pistil scar <span><a class='static' href="#" data-cha="Shape of pistil scar" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Shape of pistil scar <span><a class='static' id="#shape_of_pistil_scar" href="#shape_of_pistil_scar" data-cha="Shape of pistil scar" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' >
@@ -696,7 +697,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn-fix btn1 btn-round btn-search">Search</button>
+          <button type="button" class="btn-fix btn1 btn-round btn-search">Search</button>
           <button type="button" class="btn-fix btn2 btn-round btn-clear">Clear</button>
           </form>
         </div>
@@ -877,7 +878,7 @@
           var softSlider2 = document.getElementById('soft-limit-5');
 
         noUiSlider.create(softSlider, {
-          start: [0, 20],
+          start: [0, 60],
           tooltips: [true, true],
           connect: true,
           range: {
@@ -891,7 +892,7 @@
           }
         });
         noUiSlider.create(softSlider1, {
-          start: [0, 20],
+          start: [0, 60],
           tooltips: [true, true],
           connect: true,
           range: {
@@ -905,7 +906,7 @@
           }
         });
         noUiSlider.create(softSlider2, {
-          start: [0, 35],
+          start: [0, 60],
           tooltips: [true, true],
           connect: true,
           range: {
@@ -920,3 +921,21 @@
         });
     })(jQuery);
      </script>
+       <script>   
+       
+     
+    $(".btn-search").click(function(){ 
+      var s = $("#soft-limit-3")[0].innerText;
+      var st=s.split("\n"); 
+      if(st[0]=='0.00' && st[1]=='60.00')
+      {
+        $("input[name='fruit_weight_g']").remove();
+      }
+      else
+      {
+        $("input[name='fruit_weight_g']").val(st);
+      }
+     
+      $("#physical_search").submit();
+    });  
+      </script>

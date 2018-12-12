@@ -245,13 +245,14 @@ table tr td.imge
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row ">
-                                        <div class="col-md-12">
-                                                                                
+                                        <div class="col-md-12">                
                                                     <?php $tomato = search();
                                                     if($tomato)
-                                                    {
-
+                                                    {                                        
                                                      ?>
+                                                    <form action="detail.php" id="send_id" method="post">
+                                                    <input type="hidden" name="id_fact_tomato" id="id_fact_tomato">                                                   
+                                                    </form>
                                                     <table id="data" class="table  table-bordered" style="width:100%">
                                                         <thead>
                                                         
@@ -260,7 +261,7 @@ table tr td.imge
                                                                 <?php
                     foreach($tomato as $key=>$value)
                     {
-                        echo "<th ><a href='detail.php' class='btn btn-danger btn-sm' >".$value['accession_number']??'-'."</a></th>";
+                        echo "<th ><button type='button' data-id='".$value['NO']."'class='btn btn-danger btn-sm btn-send' >".$value['accession_number']??'-'."</button></th>";
                     }
                     ?>
                                                             </tr>
@@ -705,10 +706,11 @@ table tr td.imge
         if(isset($_POST['fruit_weight_g']))
         {
             $fruit_weight_g=array();
-            foreach($_POST['fruit_weight_g'] as $key=>$value)
-            {
-                $fruit_weight_g[]=$value;
-            }
+            $tmp =$_POST['fruit_weight_g'];
+            $val =explode(",",$tmp); 
+            $fruit_weight_g[]=$val[0];
+            $fruit_weight_g[]=$val[1];
+            
             $search_list['fruit_weight_g']= $fruit_weight_g;     
         }
         if(isset($_POST['fruit_size']))
@@ -725,7 +727,13 @@ table tr td.imge
     
 </body>
 </html>
-
+<script>
+$('.btn-send').click(function(){
+    var id = $(this).attr('data-id');
+    $("#id_fact_tomato").val(id);
+    $('#send_id').submit();
+});
+</script>
 <script src="theme/assets/js/shared/owl-carousel.js"></script>
 <script>
 var search_list = JSON.parse($('#search_list').val());
@@ -812,7 +820,7 @@ if(search_list['fruit_weight_g'])
     {
         if(i>0)
         {
-            $('#search_by').append(', ');
+            $('#search_by').append(' - ');
         }
         $('#search_by').append('<span class="red"> '+search_list['fruit_weight_g'][i]+' </span>');
     }
@@ -839,23 +847,40 @@ if(item==0)
 }
 </script>
 <?php
+class conDb {
+    private static $instance = NULL;
+    private static $dsn = "mysql:dbname=tomatoes;host=localhost";
+    private static $user = "root";
+    private static $pass = "";
+        private function __construct() {}
+        private function __clone() {}
+        public static function getInstance() {
+        if (!isset(self::$instance)) {
+            self::$instance = new PDO(self::$dsn,self::$user,self::$pass);
+            self::$instance->exec("set names utf8");
+        }
+        return self::$instance;
+        }
+    }
+function get_id($name_table,$id_table)
+{
+        $con = ConDb::getInstance();
+        $sql = "SELECT id_$name_table FROM $name_table WHERE $name_table='$id_table'";
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if($stmt->rowCount())
+        {
+            return $result;
+        }
+        else
+        {
+            return false;
+        }
+}
 function search()
     {
-        class conDb {
-            private static $instance = NULL;
-            private static $dsn = "mysql:dbname=tomatoes;host=localhost";
-            private static $user = "root";
-            private static $pass = "";
-                private function __construct() {}
-                private function __clone() {}
-                public static function getInstance() {
-                if (!isset(self::$instance)) {
-                    self::$instance = new PDO(self::$dsn,self::$user,self::$pass);
-                    self::$instance->exec("set names utf8");
-                }
-                return self::$instance;
-                }
-            }
+        
     
         unset($where);
         unset($where_new);
@@ -952,23 +977,9 @@ function search()
             }
             if(isset($_POST['fruit_weight_g']))
             {
-                foreach($_POST['fruit_weight_g'] as $value)
-                {
-                    if($i != 0)
-                    {
-                        $where .= " || ";
-                    }
-                    if($value=='30-50')
-                    {
-                        $where .= "cha_data_tomato.fruit_weight_g BETWEEN 30 AND 50";
-                    }
-                    else
-                    {
-                        $where .= "cha_data_tomato.fruit_weight_g $value";
-                    }
-                    $i++;
-                }
-                $i=0;
+                $tmp =$_POST['fruit_weight_g'];
+                $val =explode(",",$tmp);
+                $where .= "cha_data_tomato.fruit_weight_g BETWEEN ".$val[0]." AND ".$val[1];
                 $where .= ' AND ';
             }
             if(isset($_POST['fruit_size']))
@@ -979,9 +990,13 @@ function search()
                     {
                         $where .= " || ";
                     }
-                    if($value == 'medium'){$id = 1;}
-                    if($value == 'small'){$id = 2;}
-                    if($value == 'very small'){$id = 3;}
+                    if(get_id('fruit_size',$value))
+                    {
+                        
+                        $id = get_id('fruit_size',$value);
+                        
+                        $id=$id[0]['id_fruit_size'];
+                    }                    
                         $where .= "cha_data_tomato.id_fruit_size = '$id'";
                     $i++;
                 }
@@ -996,7 +1011,7 @@ function search()
         $length_w = strlen($where);
         $where_new = substr($where, 0, -5);
         $con = ConDb::getInstance();
-        $sql = "SELECT * FROM `cha_data_tomato` $where_new";
+        $sql = "SELECT * FROM `cha_data_tomato` $where_new ORDER BY id_accession_number";
         $stmt = $con->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
