@@ -100,8 +100,15 @@
                     type: 'canvas',
                     size: 'original'
                 }).then(function (resp) {
-                    $('#imagebase64').val(resp);
-                    $('#form').submit();
+                    $.ajax({
+                        url: "http://localhost:8080/Project/ajaxpro2.php",
+                        type: "POST",
+                        data: {"image":resp},
+                        success: function (data) {
+                            html = '<img src="' + resp + '" />';
+                            $("#upload-demo-i").html(html);
+                        }
+                    });
                 });
             });
           
@@ -149,12 +156,20 @@
                     type: 'canvas',
                     size: 'original'
                 }).then(function (resp) {
-                    $('#imagebase64').val(resp);
-                    $('#form2').submit();
+                    $.ajax({
+                        url: "http://localhost:8080/Project/ajaxpro2.php",
+                        type: "POST",
+                        data: {"image":resp},
+                        success: function (data) {
+                            html = '<img src="' + resp + '" />';
+                            $("#upload-demo-i").html(html);
+                        }
+                    });
                 });
             });
 
             
+
         });
 
 
@@ -195,6 +210,8 @@
 
     </script>
 </head>
+ 
+
 
 
 
@@ -222,8 +239,8 @@
                                 <div class="form-group">
                                     
                                     <label>*Type of crop (Please choose type of crop before upload your image)</label></br>
-                                    <input name="" type="checkbox" id="cb1" >Crop by circle
-                                    <input name="" type="checkbox" id="cb2" >Crop by square                      
+                                    <input name="" type="checkbox" id="cb1" >Circle
+                                    <input name="" type="checkbox" id="cb2" >Square                      
                                     
                                 </div>
 
@@ -239,7 +256,11 @@
                                     <textarea class="form-control" id="InputMessage" rows="3"></textarea>
                                 </div>
 
-                             
+                                <div class="form-group">
+                                    <label>*Type of side text</label></br>
+                                    <input name="" type="checkbox" id=".................." >Right
+                                    <input name="" type="checkbox" id=".................." >Left    
+                                </div>
 
                                 <button type="submit" class="btn btn-success mr-2">Submit</button>
                                 <input type="button" value="Cancel" class="btn btn-light" onclick="goBack()">
@@ -265,7 +286,7 @@
                                                             <input type="hidden" id="imagebase64" name="imagebase64">
                                                             <div class="cenbut">
                                                             <input type="file" id="upload" value="Choose a file" ><br><br>
-                                                            <button class="btn btn-primary">Result</button>
+                                                            <button class="btn btn-primary upload-result">Result</button>
                                                             <button class="btn btn-default" onclick="closex()">Close</button>
                                                             </div>
                                                         </form>     
@@ -288,7 +309,7 @@
                                                             <input type="hidden" id="imagebase64" name="imagebase64">
                                                             <div class="cenbut">
                                                             <input type="file" id="upload2" value="Choose a file" ><br><br>
-                                                            <button class="btn btn-primary ">Crop Image</button>
+                                                            <button class="btn btn-primary upload-result ">Result</button>
                                                             <button class="btn btn-default" onclick="closex()">Close</button>
                                                             </div>
                                                         </form>     
