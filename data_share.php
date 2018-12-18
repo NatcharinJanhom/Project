@@ -458,7 +458,7 @@ $(document).ready(function() {
     })
     $(".static").click(function() {
         var Lexx = $(this).attr('data-a');
-        var sesio_name = "<?php echo $_SESSION['username'];?>";
+        var sesio_name = "<?php echo $_SESSION['member']['username'];?>";
         $.ajax({
                     url: "ajax_unshared.php",
                     method: "GET",
@@ -645,7 +645,7 @@ function search()
         $where = 'WHERE ';
 
         $i=0; 
-        $user_c = $_SESSION['username'];
+        $user_c = $_SESSION['member']['username'];
         $where .= "member.username='$user_c'";
         //$where ="";
         $length_w = strlen($where);
@@ -678,7 +678,7 @@ function search_ass()
         $where = 'WHERE ';
 
         $i=0; 
-        $user_c = $_SESSION['username'];
+        $user_c = $_SESSION['member']['username'];
         $where .= "member.username='$user_c'";
         //$where ="";
         $length_w = strlen($where);
