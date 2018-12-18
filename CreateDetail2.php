@@ -184,13 +184,40 @@
                 }
             });
 
-            $('#upload2').on('change', function () { readFile(this); });
+            $('#upload2').on('change', function () 
+            {
+                
+                readFile(this); 
+            });
             $('.upload-result').on('click', function (ev) {
                 $uploadCrop.croppie('result', {
                     type: 'canvas',
                     size: 'original'
                 }).then(function (resp) {
-                    $('#imagebase').val(resp);
+                    if(resp == 'data:,')
+                    {
+                        console.log('no pic');
+                    }
+                    else
+                    {
+                        $('#imagebase64').val(resp);
+                            $.ajax({
+                                    url: "crop_image.php",
+                                    method: "post",
+                                    data: { imagebase64: resp },
+                                    success: function(data) {                                        
+                                        $('#temp_pic').val(data);
+                                    },
+                                    error: function(data) {
+                                        console.log("error");
+                                        console.log(data);
+                                    }
+                                
+                            });
+                        
+                        $('#myModal2').modal('hide');
+                    }
+
                 });
             });
 
@@ -295,10 +322,9 @@
                                                     <div class="card-body">
                                                         <form action="" id="form2" method="post">
                                                             <div id="upload-demo2"></div>
-                                                            <input type="hidden" id="imagebase" name="imagebase">
                                                             <div class="cenbut">
                                                             <input type="file" id="upload2" value="" ><br><br>
-                                                            <button type="button" class="btn btn-primary ">Crop</button>
+                                                            <button type="button" class="btn btn-primary upload-result ">Crop</button>
                                                             <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
                                                             </div>
                                                         </form>     
