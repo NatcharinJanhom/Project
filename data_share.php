@@ -569,7 +569,7 @@ $(document).ready(function() {
                       data: {id_m_oJ:id_m_o,id_mJ:id_m,id_aJ:id_a},
                       success: function(data)
                       {
-                                alert('Hee');  
+                                
                       },
                         error: function(){
                             alert('failure');
@@ -608,7 +608,7 @@ $(document).ready(function() {
                       data: {id_fa:fact_t,id_m_o:id_mem_ow,id_m_s:data_idMem_sh,LE:Lexx3,dat_sh:date_sh},
                       success: function(data)
                       {
-                                alert('KUY');  
+                                 
                       },
                         error: function(){
                             alert('failure');
