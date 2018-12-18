@@ -56,7 +56,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(118px, 32px, 0px);">
                                     <a class="dropdown-item" href="createtitle.php">Create title</a>
-                                    <a class="dropdown-item" href="createdetail.php">Create details</a>
+                                    <a class="dropdown-item" href="createdetail2.php">Create details</a>
                                     <a class="dropdown-item" href="createpicture.php">Create pictures</a>
                                 </div>&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="userpage.php" class="button btn btn-primary">User UI</a>
