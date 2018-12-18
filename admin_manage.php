@@ -103,6 +103,9 @@ input:checked + .slider:before {
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
+                <?php                     
+                      $member_all =get_all_member($_SESSION['member']['id_member']);
+                ?>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
@@ -117,46 +120,50 @@ input:checked + .slider:before {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>madeena</td>
-                    <td>wangjaem</td>
-                    <td>madeena@hotmail.com</td>
-                    <td>Admin</td>
-                    <td><center> <span class="badge badge-success badge">Active</span> </center>  </td>
-                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="madeena" data-s="wangjaem" data-e="madeena@hotmail.com" data-p="Admin"  data-st="Active">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
-                    <td> <label class="switch">
-                                      <input type="checkbox" >
-                                      <span class="slider round"></span>
-                                    </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>asree</td>
-                    <td>wangjaem</td>
-                    <td>asree@hotmail.com</td>
-                    <td>User</td>
-                    <td><center><span class="badge badge-danger badge">Blocked</span></center></td>
-                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="asree" data-s="wangjaem" data-e="asree@hotmail.com" data-p="User"  data-st="Block">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
-                    <td> <label class="switch">
+            <?php foreach($member_all as $key=>$value)
+            {
+              ?>
+              <tr>
+              <td><?php echo$value['firstname']?></td>
+              <td><?php echo$value['lastname']?></td>
+              <td><?php echo$value['email']?></td>
+              <td><?php echo$value['permission']?></td>
+              <?php 
+                    if($value['status']==='Active')
+                    echo"<td><center> <span class='badge badge-success badge'>Active</span> </center>  </td>";
+                    else if($value['status']==='Blocked')
+                    echo"<td><center><span class='badge badge-danger badge'>Blocked</span></center></td>";
+                    else if($value['status']==='Waiting')
+                    echo"<td><center><span class='badge badge-warning badge'>Waiting</span></center></td>";
+              ?>
+              <td><center><button type="button" class='static btn btn-outline-warning' data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status']?>">Edit</button>
+              <span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' data-id ="<?php echo$value['id_member'] ?>">Delete</button></center></td>
+              <?php if($value['status']==='Blocked')
+              {
+                ?>
+                 <td> <label class="switch">
                                       <input type="checkbox" checked>
                                       <span class="slider round"></span>
                                     </label>
                     </td>
-                </tr>
-                <tr>
-                    <td>natcharin</td>
-                    <td>junhom</td>
-                    <td>natcharin@hotmail.com</td>
-                    <td>User</td>
-                    <td><center><span class="badge badge-warning badge">Waiting</span></center></td>
-                    <td><center><button type="button" class='static btn btn-outline-warning' data-name="natcharin" data-s="junhom" data-e="natcharin@hotmail.com" data-p="User"  data-st="Waiting-Email">Edit</button><span style="padding-left:10px;"></span><button type='button' class='btn btn-outline-danger' >Delete</button></center></td>
+              
+                    <?php 
+              }
+                    else
+              {
+                    ?>
                     <td> <label class="switch">
                                       <input type="checkbox" id='ch' onclick="showSwal()"  >
                                       <span class="slider round"></span>
                                     </label>
                     </td>
-                </tr>
-
+                    <?php
+              }
+              ?>
+              </tr>
+              <?php
+            }
+            ?>
                 </tbody>
             </table>
 
@@ -166,16 +173,16 @@ input:checked + .slider:before {
             <div class="modal-dialog modal-lg">
             <div class="modal-content">
                       <div class="modal-body">
-                      
+                      <form method="post" action="update.php" >
                           <div class="form-group row">
                              <div class='col-md-4'>
-                              <label for='edit_n'>Name</label>  <input type="text" class='form-control' id='edit_n'>
+                              <label for='edit_n'>Name</label>  <input type="text" class='form-control' id='edit_firstname'>
                               </div>
                               <div class='col-md-4'>
-                              <label for='edit_s'>Surname</label>  <input type="text" class='form-control' id='edit_s'>
+                              <label for='edit_s'>Surname</label>  <input type="text" class='form-control' id='edit_lastname'>
                               </div>
                               <div class='col-md-4'>
-                              <label for='edit_e'>Email</label>  <input type="text" class='form-control' id='edit_e'>
+                              <label for='edit_e'>Email</label>  <input type="text" class='form-control' id='edit_email'>
                               
                            
                           </div>
@@ -184,9 +191,9 @@ input:checked + .slider:before {
                       <div class='col-md-6'>
                       <div class='form-group'>
                       <label>Permission</label> 
-                      <select class='form-control' id='edit_p'>
+                      <select class='form-control' id='edit_permission'>
                       <option value="Admin">Admin</option>
-                      <option value="User">User</option>
+                      <option value="member">Member</option>
                       
                     </select>
                       </div>
@@ -194,7 +201,7 @@ input:checked + .slider:before {
                       <div class='col-md-6'>
                       <div class='form-group'>
                         <label>Status</label> 
-                        <select class='form-control' id='edit_st'>
+                        <select class='form-control' id='edit_status'>
                         <option value="Active">Active</option>
                         <option value="Waiting-Email">Waiting-Email</option>
                         <option value="Block">Block</option>
@@ -206,9 +213,10 @@ input:checked + .slider:before {
 
 
                         <div class='modal-footer'>
-                        <button type='button' class='btn btn2 btn-success'>Save</button>
+                        <button type='submit' class='btn btn2 btn-success'>Save</button>
                         <button data-dismiss="modal" type='button' class='btn btn2'>Cancle</button>
                         </div>
+                        </form>
 
                       </div>
             </div>
@@ -221,18 +229,19 @@ input:checked + .slider:before {
             $(document).ready(function() {
                  $('#example').DataTable();
                  $(".static").click(function() {
-                          var x =  $(this).attr("data-name");
-                          var s =  $(this).attr("data-s");
-                          var e =  $(this).attr("data-e");
-                          var p =  $(this).attr("data-p");
-                          var st =  $(this).attr("data-st");
-                          
-                          $("#edit_n").val(x);
-                          $("#edit_s").val(s);
-                          $("#edit_e").val(e);
-                          $("#edit_p").val(p);
-                          $("#edit_st").val(st);
-                            $("#static_modal").modal('show');
+                  var id =$(this).attr("data-id");
+                          var firstname =  $(this).attr("data-firstname");
+                          var lastname =  $(this).attr("data-lastname");
+                          var email =  $(this).attr("data-email");
+                          var permission =  $(this).attr("data-permission");
+                          var status =  $(this).attr("data-status");
+                          $("#edit_id").val(id);
+                          $("#edit_firstname").val(firstname);
+                          $("#edit_lastname").val(lastname);
+                          $("#edit_email").val(email);
+                          $("#edit_permission").val(permission);
+                          $("#edit_status").val(status);
+                          $("#static_modal").modal('show');
 
 
 
@@ -317,5 +326,37 @@ input:checked + .slider:before {
     </div>
     </body>
 </html>
-
+<?php
+class conDb {
+  private static $instance = NULL;
+  private static $dsn = "mysql:dbname=tomatoes;host=localhost";
+  private static $user = "root";
+  private static $pass = "";
+      private function __construct() {}
+      private function __clone() {}
+      public static function getInstance() {
+      if (!isset(self::$instance)) {
+          self::$instance = new PDO(self::$dsn,self::$user,self::$pass);
+          self::$instance->exec("set names utf8");
+      }
+      return self::$instance;
+      }
+  }
+  function get_all_member($id_member)
+  {
+    $con = ConDb::getInstance();
+    $sql = "SELECT * FROM member WHERE id_member != '$id_member' ";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if($stmt->rowCount())
+    {
+        return $result;
+    }
+    else
+    {
+        return false;
+    }
+  }
+?>
 

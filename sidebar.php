@@ -12,7 +12,7 @@
            
             <li class="nav-item">
             <?php 
-              if($_SESSION['type'] == 'admin')
+              if($_SESSION['member']['permission'] == 'admin')
             {
               ?>
               <a class="nav-link" href="admindetal_asree.php" >

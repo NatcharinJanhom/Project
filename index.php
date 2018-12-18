@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<?php 
-  		include 'head.php'; 
-  		if(!empty($_SESSION["username"])){
-  			header( "location: userpage.php" );
- 			exit(0);
-  		}
-  	?>
+  	<?php include('head.php'); ?>
   </head>
   <style>
     .form-control
@@ -20,6 +14,19 @@
     }
   </style>
  <body>
+ <?php
+ if(isset($_SESSION['member'])){
+        if($_SESSION['member']['permission'] === 'admin')
+        {
+          header( "location: admindetal_asree.php" ); 			
+        }
+        else if($_SESSION["member"]['permission'] === 'member')
+        {
+          header( "location: userpage.php" ); 
+        }
+        
+    }
+?>
     <div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">
         <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
