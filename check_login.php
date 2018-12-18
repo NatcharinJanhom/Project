@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once("connect_db.php");
 $login_username = $_POST['username'];
 $login_password = md5($_POST['password']);

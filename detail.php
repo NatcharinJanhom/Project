@@ -63,7 +63,20 @@ td.imge {
                           <li class="breadcrumb-item">
                             <a href="search_results.php" style="text-decoration: none; color: #f12222;">Search Result</a>
                           </li>
-                          <li class="breadcrumb-item active" aria-current="page" >Accession Number : LE001</li>
+
+
+                          <?php 
+                            require_once("connect_db.php");
+                            $id_fact = $_POST['id_fact_tomato'];
+                            
+                            $sql = "SELECT * FROM `cha_data_tomato` WHERE NO = $id_fact ORDER BY id_accession_number";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute();
+                            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                          ?>
+
+                          <li class="breadcrumb-item active" aria-current="page" >Accession Number : <?php echo $result[0]['accession_number']; ?></li>
                         </ol>
                       </nav>
                       </div>
@@ -72,10 +85,12 @@ td.imge {
             </div>
             <div class="row">
 
+              
+
                 <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Accession number : LE001</h4>
+                        <h4 class="card-title">Accession number : <?php echo $result[0]['accession_number']; ?></h4>
                         <ul class="nav nav-tabs tab-solid tab-solid-danger" role="tablist">
                           <li class="nav-item">
                             <a class="nav-link active" id="tab-5-1" data-toggle="tab" href="#details-5-1" role="tab" aria-controls="details-5-1" aria-selected="true">General details</a>
@@ -139,9 +154,9 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded resize" src="theme/assets/images/tomato/plant3.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p><b>Plant size : </b> -</p>
-                                <p><b>Stem pubescence density : </b> dense</p>
-                                <p><b>Stem internode length : </b> 6.9</p>
+                                <p><b>Plant size : </b> <?php echo $result[0]['plant_size']; ?></p>
+                                <p><b>Stem pubescence density : </b> <?php echo $result[0]['stem_pubescence_density']; ?></p>
+                                <p><b>Stem internode length : </b> <?php echo round($result[0]['stem_internode_length'],2); ?> </p>
                               </div>
                             </div>
                           </div>
@@ -163,9 +178,9 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/leaf1.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p> <b>Number of leaves under 1st inflorescence :</b> Many</p>
-                                <p><b>Leaf attitude : </b> semi-erect</p>
-                                <p><b>Leaf type : </b>standard</p>
+                                <p> <b>Number of leaves under 1st inflorescence :</b> <?php echo $result[0]['number_of_leaves_under_1st_inflorescence']; ?></p>
+                                <p><b>Leaf attitude : </b> <?php echo $result[0]['leaf_attitude']; ?></p>
+                                <p><b>Leaf type : </b> <?php echo $result[0]['leaf_type']; ?> </p>
                               </div>
                             </div>
                           </div>
@@ -178,7 +193,7 @@ td.imge {
                         <div class="card-header" role="tab" id="headingThree">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              <i class="card-icon fa fa-sun-o"></i>Flower</a>
+                              <i class="card-icon mdi mdi-flower"></i>Flower</a>
                           </h6>
                         </div>
                         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
@@ -187,10 +202,10 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/flower1.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p><b>Number of days to flowering : </b> 34</p>
-                                <p><b>Number of flowers : </b> 5-7</p>
-                                <p><b>Corolla colour : </b> yellow</p>
-                                <p><b>Style position : </b> same level as stamen</p>
+                                <p><b>Number of days to flowering : </b> <?php echo $result[0]['number_of_days_to_flowering']; ?></p>
+                                <p><b>Number of flowers : </b> <?php echo $result[0]['number_of_flowers_per']; ?></p>
+                                <p><b>Corolla colour : </b> <?php echo $result[0]['corolla_colour']; ?></p>
+                                <p><b>Style position : </b> <?php echo $result[0]['style_position']; ?></p>
                               </div>
                             </div>
                           </div>
@@ -203,7 +218,7 @@ td.imge {
                         <div class="card-header" role="tab" id="headingFour">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              <i class="card-icon mdi mdi-apple"></i>Fruit</a>
+                              <i class="card-icon mdi mdi-food-apple"></i>Fruit</a>
                           </h6>
                         </div>
                         <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
@@ -212,15 +227,15 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/loop8.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p><b>Fruit weight : </b> 4.75</p>
-                                <p><b>Fruit size : </b> very small</p>
-                                <p><b>Exterior colour of mature fruit : </b> red</p>
-                                <p><b>Predominant fruit shape : </b> rounded</p>
-                                <p><b>Intensity of greenback : </b>none</p>
-                                <p><b>Fruit shoulder shape : </b>flat</p>
-                                <p><b>Easiness of fruit to detach from pedicel : </b>easy</p>
-                                <p><b>Fruit blossom end shape : </b> flat</p>
-                                <p><b>Shape of pistil scar : </b> dot</p>
+                                <p><b>Fruit weight : </b> <?php echo $result[0]['fruit_weight_g']; ?></p>
+                                <p><b>Fruit size : </b> <?php echo $result[0]['fruit_size']; ?></p>
+                                <p><b>Exterior colour of mature fruit : </b> <?php echo $result[0]['exterior_colour_of_mature_fruit']; ?></p>
+                                <p><b>Predominant fruit shape : </b> <?php echo $result[0]['predominant_fruit_shape']; ?></p>
+                                <p><b>Intensity of greenback : </b> <?php echo $result[0]['intensity_of_greenback']; ?></p>
+                                <p><b>Fruit shoulder shape : </b> <?php echo $result[0]['fruit_shoulder_shape']; ?></p>
+                                <p><b>Easiness of fruit to detach from pedicel : </b> <?php echo $result[0]['easiness_of_fruit_to_detach_from_pedicel']; ?></p>
+                                <p><b>Fruit blossom end shape : </b> <?php echo $result[0]['fruit_blossom_end_shape']; ?></p>
+                                <p><b>Shape of pistil scar : </b> <?php echo $result[0]['shape_of_pistil_scar']; ?></p>
                               </div>
                             </div>
                           </div>
@@ -233,7 +248,7 @@ td.imge {
                         <div class="card-header" role="tab" id="headingFive">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                              <i class="card-icon fa fa-lemon-o"></i>Seed</a>
+                              <i class="card-icon mdi mdi-google-circles-communities"></i>Seed</a>
                           </h6>
                         </div>
                         <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
@@ -242,8 +257,8 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/seed1.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p><b>Seed shape : </b></p>
-                                <p><b>Seed colour : </b> brown</p>
+                                <p><b>Seed shape : </b> <?php echo $result[0]['seed_shape']; ?> </p>
+                                <p><b>Seed colour : </b> <?php echo $result[0]['seed_colour']; ?></p>
                               </div>
                             </div>
                           </div>
@@ -258,7 +273,7 @@ td.imge {
                         <div class="card-header" role="tab" id="headingSix">
                           <h6 class="mb-0">
                             <a data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                              <i class="card-icon fa fa-code-fork"></i>Other</a>
+                              <i class="card-icon mdi mdi-dots-horizontal"></i>Other</a>
                           </h6>
                         </div>
                         <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
@@ -267,10 +282,10 @@ td.imge {
                               <div class="col-md-3">
                                 <img class="img-fluid rounded" src="theme/assets/images/tomato/plant2.jpg" alt="image"> </div>
                               <div class="col-md-9">
-                                <p><b>Hypocotyl colour : </b> purple</p>
-                                <p><b>Hypocotyl colour intensity : </b> low</p>
-                                <p><b>Hypocotyl pubescence : </b>present</p>
-                                <p><b>Plant growth type : </b> indeterminate</p>
+                                <p><b>Hypocotyl colour : </b> <?php echo $result[0]['hypocotyl_colour']; ?></p>
+                                <p><b>Hypocotyl colour intensity : </b> <?php echo $result[0]['hypocotyl_colour_intensity']; ?></p>
+                                <p><b>Hypocotyl pubescence : </b> <?php echo $result[0]['hypocotyl_pubescence']; ?></p>
+                                <p><b>Plant growth type : </b> <?php echo $result[0]['plant_growth_type']; ?></p>
 
                               </div>
                             </div>
