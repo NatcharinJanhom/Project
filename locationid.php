@@ -178,91 +178,25 @@
 
 <body>
                     <?php
-    error_reporting(E_ALL ^ E_NOTICE);
-    $ans=location();     
-            for($k = 0;$k <=sizeof($ans);$k++)
-            {
-                $la =0;//
-                $long =0;
-                $ch1=0;$ch2=0;$ch3=0;
-                $la_c =$ans[$k]['c_la'];
-                $long_c =$ans[$k]['c_long'];
-                $detail = $ans[$k]['accession']." "."  ";
-                if(empty($ans[$k]['a_long']))
-                {
-                    //echo "dd";
-                    $ch1=1;
-                }
-                if(empty($ans[$k]['p_long']))
-                {
-                    $ch2=1;
-                }
-                if($ch1==1&&$ch2==1)
-                {
-                    $la=$ans[$k]['c_la'];
-                    $long=$ans[$k]['c_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country'];
-                    $acs = $ans[$k]['accession'];
-                    $arr[] = array($la,$long,$detail,$acs);
-                    /*for($m = 0;$m<= $k;$m++)
-                    {
-                            if($m == $k){
-                                $arr[] = array($la,$long,$detail,$acs);
-                            }
-                            
-                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
-                            {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
-                                $arr[$m][3] = $arr[$m][3].",".$acs;
-                                break;
-                            }
-                    }*/
-                }
-                else if($ch1==1&&$ch2==0)
-                {
-                    $la=$ans[$k]['p_la'];
-                    $long=$ans[$k]['p_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country']." "."จังหวัด "." ".$ans[$k]['province'];
-                    $acs = $ans[$k]['accession'];
-                    $arr[] = array($la,$long,$detail,$acs);
-                    /*for($m = 0;$m<= $k;$m++)
-                   {
-                           if($m == $k){
-                            $arr[] = array($la,$long,$detail,$acs);
-                           }
-                           
-                           if($arr[$m][0] == $la && $arr[$m][1] == $long)
-                           {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
-                                $arr[$m][3] = $arr[$m][3].",".$acs;
-                                break;
-                           }
-                   }*/
-                }
-                else if($ch1==0&&$ch2==0)
-                {
-                    $la=$ans[$k]['a_la'];
-                    $long=$ans[$k]['a_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country']." "."จังหวัด "." ".$ans[$k]['province']." "."อำเภอ ";
-                    $acs = $ans[$k]['accession'];
-                    $arr[] = array($la,$long,$detail,$acs);
-                    /*for($m = 0;$m<= $k;$m++)
-                   {
-                           if($m == $k){
-                            $arr[] = array($lFa,$long,$detail,$acs);
-                           }
-                           
-                           if($arr[$m][0] == $la && $arr[$m][1] == $long)
-                           {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
-                                $arr[$m][3] = $arr[$m][3].",".$acs;
-                                break;
-                           }
-                   }*/
-                }
-            }
+
+            $la="16.395223";
+            $long="99.513448";
+            $detail = "LE001 ,Country:  Thailand , Province :  Kalasin ";
+            $acs = "LE001";
+            $arr[0] = array($la,$long,$detail,$acs);
+            $la=" 19.921688";
+            $long="99.513448";
+            $detail = "LE001 ,Country:  Thailand , Province :  Kamphaeng Phet ";
+            $acs = "LE001";
+            $arr[1] = array($la,$long,$detail,$acs);
+            $la="15.109208";
+            $long="105.813103";
+            $detail = "LE001 ,Country:  Thailand , Province :  Kanchanaburi ";
+            $acs = "LE001";
+            $arr[2] = array($la,$long,$detail,$acs);
             $js_array = json_encode($arr, JSON_UNESCAPED_UNICODE);
-            echo " <script> var arrJ = ". $js_array . "; </script>";           
+            
+            echo " <script> var arrJ = ". $js_array . "; console.log(". $js_array . ");</script>";           
 
     ?>
                                         <div id="myDIV">
@@ -287,18 +221,18 @@
         });
         var infowindow = new google.maps.InfoWindow();
         var marker, i;
-
-
+        var cars = ["purple", "green", "yellow"];
         for (i = 0; i < arrJ.length; i++) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng(arrJ[i][0], arrJ[i][1]),
-                map: map
+                map: map,
+                icon: 'http://maps.google.com/mapfiles/ms/icons/'+cars[i]+'-dot.png'
             });
 
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
 
                 return function () {          
-                    infowindow.setContent('พันธ์ุ LE001 ประเทศ Thailand จังหวัด Kamphaengpet');
+                    infowindow.setContent('<div style="font-size: 18px;">'+arrJ[i][2]+'</div>');
                     infowindow.open(map, marker);
                 }
             })(marker, i));

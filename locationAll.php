@@ -181,6 +181,15 @@
         width: 100%;
         height: 100%;
     }
+    .info_m{
+        all: initial;
+        * {
+            all: unset;
+        } 
+    }
+    .info_m{
+        style=font-size: 20px; 
+    } 
 </style>
 
 <body class="sidebar-icon-only">
@@ -192,49 +201,31 @@
                 <div class="content-wrapper">
                     <?php
     error_reporting(E_ALL ^ E_NOTICE);
-    $ans=locationAll();     
+    $ans=locationAll(); 
+    $js_array = json_encode($ans, JSON_UNESCAPED_UNICODE);   
+    
             for($k = 0;$k <=sizeof($ans);$k++)
             {
                 $la =0;//
                 $long =0;
-                $ch1=0;$ch2=0;$ch3=0;
-                $la_c =$ans[$k]['c_la'];
-                $long_c =$ans[$k]['c_long'];
-                $detail = $ans[$k]['accession']." "."  ";
-                if(empty($ans[$k]['a_long']))
+                $a_l=0;$p_l=0;$c_l=0;
+                if($ans[$k]['a_long']!=NULL && $ans[$k]['a_la']!=NULL)
                 {
-                    //echo "dd";
-                    $ch1=1;
+                    $a_l=1;
                 }
-                if(empty($ans[$k]['p_long']))
+                if($ans[$k]['p_long']!=NULL && $ans[$k]['p_la']!=NULL)
                 {
-                    $ch2=1;
+                    $p_l=1;
                 }
-                if($ch1==1&&$ch2==1)
+                if($ans[$k]['c_long']!=NULL && $ans[$k]['c_la']!=NULL)
                 {
-                    $la=$ans[$k]['c_la'];
-                    $long=$ans[$k]['c_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country'];
-                    $acs = $ans[$k]['accession'];
-                    for($m = 0;$m<= $k;$m++)
-                    {
-                            if($m == $k){
-                                $arr[] = array($la,$long,$detail,$acs);
-                            }
-                            
-                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
-                            {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
-                                $arr[$m][3] = $arr[$m][3].",".$acs;
-                                break;
-                            }
-                    }
+                    $c_l=1;
                 }
-                else if($ch1==1&&$ch2==0)
+                if($a_l==1)
                 {
-                    $la=$ans[$k]['p_la'];
-                    $long=$ans[$k]['p_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country']." "."จังหวัด "." ".$ans[$k]['province'];
+                    $la=$ans[$k]['a_la'];
+                    $long=$ans[$k]['a_long'];
+                    $detail = "Country : "." ".$ans[$k]['country']." "." <br>Province : "." ".$ans[$k]['province']." "."<br>Amp :  "." ".$ans[$k]['amp'].",<br>Accession : "." ".$ans[$k]['accession']."";
                     $acs = $ans[$k]['accession'];
                     for($m = 0;$m<= $k;$m++)
                    {
@@ -244,35 +235,56 @@
                            
                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
                            {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
+                                //$arr[$m][2] = $arr[$m][2]."\n".$detail;
                                 $arr[$m][3] = $arr[$m][3].",".$acs;
                                 break;
                            }
                    }
                 }
-                else if($ch1==0&&$ch2==0)
+                
+                else if($p_l==1)
                 {
-                    $la=$ans[$k]['a_la'];
-                    $long=$ans[$k]['a_long'];
-                    $detail = "พันธ์ุ"." ".$ans[$k]['accession']." "."ประเทศ "." ".$ans[$k]['country']." "."จังหวัด "." ".$ans[$k]['province']." "."อำเภอ ";
+                    $la=$ans[$k]['p_la'];
+                    $long=$ans[$k]['p_long'];
+                    $detail = "Country : "." ".$ans[$k]['country']." "." <br>Province : "." ".$ans[$k]['province']." <br>Accession : "." ".$ans[$k]['accession']."";
                     $acs = $ans[$k]['accession'];
                     for($m = 0;$m<= $k;$m++)
                    {
                            if($m == $k){
-                            $arr[] = array($lFa,$long,$detail,$acs);
+                            $arr[] = array($la,$long,$detail,$acs);
                            }
                            
                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
                            {
-                                $arr[$m][2] = $arr[$m][2]."\t".$detail;
+                                //$arr[$m][2] = $arr[$m][2]."\n".$detail;
                                 $arr[$m][3] = $arr[$m][3].",".$acs;
                                 break;
                            }
                    }
                 }
+                else if($c_l==1)
+                {
+                    $la=$ans[$k]['c_la'];
+                    $long=$ans[$k]['c_long'];
+                    $detail = "Country : "." ".$ans[$k]['country']." <br>Accession : "." ".$ans[$k]['accession']."";
+                    $acs = $ans[$k]['accession'];
+                    for($m = 0;$m<= $k;$m++)
+                    {
+                            if($m == $k){
+                                $arr[] = array($la,$long,$detail,$acs);
+                            }
+                            
+                            if($arr[$m][0] == $la && $arr[$m][1] == $long)
+                            {
+                                //$arr[$m][2] = $arr[$m][2]."\n".$detail;
+                                $arr[$m][3] = $arr[$m][3].",".$acs;
+                                break;
+                            }
+                    }
+                }
             }
             $js_array = json_encode($arr, JSON_UNESCAPED_UNICODE);
-            echo " <script> var arrJ = ". $js_array . "; </script>";           
+            echo " <script> var arrJ = ". $js_array . ";console.log(". $js_array ."); </script>";           
 
     ?>
                         <br>
@@ -281,32 +293,7 @@
                                 <h1>Germplasm Search</h1>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-                                <div class="card navv">
-                                    <div class=" card-body ">
-
-                                        <ul class="nav nav-tabs tab-basic" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active show" id="tab-5-1" data-toggle="tab" href="#home-5-1" role="tab" aria-controls="home-5-1" aria-selected="true">
-                                                    <i class="mdi mdi-map-marker-radius"></i>
-                                                    <span class="x">Germplasm</span>
-                                                </a>
-                                            </li>
-                                           <!-- <li class="nav-item">
-                                                <a class="nav-link" id="tab-5-2" data-toggle="tab" href="#profile-5-2" role="tab" aria-controls="profile-5-2" aria-selected="false">
-                                                    <i class="mdi mdi-city"></i>
-                                                    <span class="x">Breeding center</span>
-                                                </a>
-                                            </li>
-                                            !-->
-                                        </ul>
-                                    
-                                        <hr>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                         <div class="row">
                             <div class="col-lg-12">
@@ -324,10 +311,15 @@
                                     <div class="tab-pane fade active show" id="home-5-1" role="tabpanel" aria-labelledby="tab-5-1">
                                         <div id="detail" class="form-group row">
                                             <div class="col-lg-12">
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-12">
                                                     <p>
                                                         <i class="mdi mdi-map-marker-multiple " data-name="mdi-map-marker-multiple"></i>Target &nbsp; &nbsp;
-                                                        <span id="lat"></span>
+                                                       <div class="form-inline">
+                                                        lat  : <input style = "margin:5px" id = "lat" type="text" name="lat" value="">
+                                                        lon : <input style = "margin:5px" id = "lon" type="text" name="lon" value="">
+                                                        Accession : <input style = "margin:5px" id = "acce" type="text" name="acce" value="">
+                                                        <button id = "search" type="button">Search</button>
+                                                        </div>
                                                     </p>
                                                 </div>
                                             </div>
@@ -484,7 +476,52 @@
 </html>
 
 <script>
+    $( document ).ready(function() {
+        $("#search").click(function() {
+           var lat_in = $("#lat").val();
+           var lon_in = $("#lon").val();  
+           var acce = $("#acce").val();      
+           var i_ta =0;
+           
+           
+           if(lat_in != '' && lon_in != '')
+           {
+                    
+                    for (i_ta=0; i_ta<arrJ.length ;i_ta++)
+                    {
+                        if((arrJ[i_ta][0] == lat_in & arrJ[i_ta][1]== lon_in) )
+                        {
+                                find_posi(arrJ[i_ta][0],arrJ[i_ta][1], arrJ[i_ta][2],arrJ[i_ta][3],i_ta ) ;  
+                                break;
+                        }
+                    }
+           }
+           else if(acce !=' ')
+           {
+               
+                    for (i_ta=0; i_ta<arrJ.length ;i_ta++)
+                    {
+                        var sp = [];
+                        sp = arrJ[i_ta][3].split(",");
+                        
+                        for (i_ta2=0; i_ta2<sp.length ;i_ta2++)
+                        {
+                            //alert(sp[i_ta2]);
+                            if(sp[i_ta2] == acce)
+                            {
+                                
+                                find_posi(arrJ[i_ta][0],arrJ[i_ta][1], arrJ[i_ta][2],arrJ[i_ta][3],i_ta ) ;  
+                                i_ta = arrJ.length+2;
+                                break;
+                            }
+                                
+                        }
+                    } 
+           }
+           
 
+        });
+    });
     function showimg(acs) {
 
         $(".remo").empty();
@@ -499,15 +536,18 @@
 
         }
     }
+    var map,marker,infowindow;
+    
+    
     function asree() {
         $('#bodypic2').hide();
-        var map = new google.maps.Map(document.getElementById('map'), {
+         map = new google.maps.Map(document.getElementById('map'), {
             center: { lat: 13.7244416, lng: 100.3529157 },
             zoom: 5,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-        var infowindow = new google.maps.InfoWindow();
-        var marker, i;
+        infowindow = new google.maps.InfoWindow();
+        var  i;
 
 
         for (i = 0; i < arrJ.length; i++) {
@@ -515,28 +555,75 @@
                 position: new google.maps.LatLng(arrJ[i][0], arrJ[i][1]),
                 map: map
             });
-
-            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+               google.maps.event.addListener(marker, 'click', (function (marker, i) {
 
                 return function () {
                     $("#lat").empty();
+                    $("#long").empty();
+                    $("#acce").empty();
                     $('#bodypic2').show();
                     var res = arrJ[i][3].split(",");
-                    document.getElementById('lat').append(arrJ[i][0] + ' , ' + arrJ[i][1]);
+                    $("#lat").val(arrJ[i][0]);
+                    $("#lon").val(arrJ[i][1]);
                     //document.getElementById('lon').innerHTML = arrJ[i][1];
                     document.getElementById('gene').innerHTML = res.length;
                     showimg(arrJ[i][3]);
                     // findNearestMarker(arrJ[i][0],arrJ[i][1])
-                    infowindow.setContent(arrJ[i][2]);
+                    infowindow.setContent('<div class="info_m" >'+arrJ[i][2]+'<br>'+arrJ[i][3]+'</div>');
                     infowindow.open(map, marker);
                 }
             })(marker, i));
+            
+            
         }
+       
+        
+        
+    }
+    function find_posi(l,o,c,c_acc,i_p) {
+       
+        var sp = c_acc.split(",");
+        //console.log(sp[0]);
+        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(l, o),
+                            map: map,
+                            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+                        });
+                    google.maps.event.addListener(marker, 'click', (function (marker, i_p) {
+
+                    return function () {          
+                    infowindow.setContent('<div style="font-size: 18px;">'+c+'<br>'+c_acc+'</div>');
+                    infowindow.open(map, marker);
+                        }
+                    })(marker, i_p));
     }
 
 
-
-
+    function rad(x) {return x*Math.PI/180;}
+    function find_closest_marker( event ) {
+        
+        var lat = event.latLng.lat();
+        var lng = event.latLng.lng();
+        var R = 6371; // radius of earth in km
+        var distances = [];
+        var closest = -1;
+        for( i=0;i<map.markers.length; i++ ) {
+            var mlat = map.markers[i].position.lat();
+            var mlng = map.markers[i].position.lng();
+            var dLat  = rad(mlat - lat);
+            var dLong = rad(mlng - lng);
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var d = R * c;
+            distances[i] = d;
+            if ( closest == -1 || d < distances[closest] ) {
+                closest = i;
+            }
+        }
+    
+        alert(map.markers[closest].title);
+    }
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwVxLnsuNM9mJUqDFkj6r7FSxVcQCh4ic&callback=asree" async defer></script>
