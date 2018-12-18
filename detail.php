@@ -20,6 +20,24 @@ iframe{
         width: 100%;
         height: 630px;
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.table td img {
+    border-radius: 100%;
+    max-height: 100px;
+    max-width: 100px;
+}
+.img-ss, .image-grouped img, .table td img, .jsgrid .jsgrid-table td img, .table th img, .jsgrid .jsgrid-table th img, .settings-panel .color-tiles .tiles {
+    width: 80px;
+    height: 80px;
+}
+td.imge {
+    height: 100px !important;
+    width: 100px !important;
+    text-align: center !important;
+}
   </style>
 
   <body class="sidebar-icon-only">
@@ -76,7 +94,7 @@ iframe{
                             <a class="nav-link" id="tab-5-6" data-toggle="tab" href="#Location-5-6" role="tab" aria-controls="Location-5-6" aria-selected="false">Location</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" id="tab-5-7" data-toggle="tab" href="#Germ-5-7" role="tab" aria-controls="Germ-5-7" aria-selected="false">Germplasm</a>
+                            <a class="nav-link" id="tab-5-7" data-toggle="tab" href="#Germ-5-7" role="tab" aria-controls="Germ-5-7" aria-selected="false">Storage</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" id="tab-5-8" data-toggle="tab" href="#Gallery-5-8" role="tab" aria-controls="Gallery-5-8" aria-selected="false">Gallery</a>
@@ -274,7 +292,213 @@ iframe{
                                 </div>
                                 
                         </div>
-                           <div class="tab-pane fade" id="Germ-5-7" role="tabpanel" aria-labelledby="tab-5-7"> ... </div>
+                           <!--  start asree     !--> 
+<div class="tab-pane fade" id="Germ-5-7" role="tabpanel" aria-labelledby="tab-5-7"> 
+<div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                      <div class="form-inline" style="margin: 10px;">
+                         <div class="form-group">
+                            <p style="padding-right:20px;">Choose Location</p>
+                            <select >
+                              <option value="Location1">Kasetsart</option>
+                              <option value="Location2">Netherlands</option>
+                              <option value="Location3">Lab Bio</option>
+                            </select>
+                        </div>
+                        </div>
+                        <ul class="nav nav-tabs tab-solid tab-solid-danger" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="n" data-toggle="tab" href="#nn" role="tab" aria-controls="nn" aria-selected="true">Plots</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " id="c" data-toggle="tab" href="#cc" role="tab" aria-controls="cc" aria-selected="false">Tube</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " id="s" data-toggle="tab" href="#ss" role="tab" aria-controls="ss" aria-selected="false">Seed</a>
+                          </li>
+                        </ul>
+                        
+                        <div class="tab-content tab-content-solid">
+    <!--          n       !--><div class="tab-pane fade show active" id="nn" role="tabpanel" aria-labelledby="n">
+                              <div class="row">
+
+                                <div class="col-lg-12" >
+                                 
+                                <table id="tb_n" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>_</th>
+                                        <th>first</th>
+                                        <th>second</th>
+                                        <th>third</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Location</td>
+                                        <td class="left_c">lat : 14 , lon : 50  province : Chachoengsao</td>
+                                        <td class="left_c">lat : 16 , lon : 78  province : Nakhon Pathom</td>   
+                                        <td class="left_c">lat : 19 , lon : 90  province : Surin</td>  
+                                    </tr>
+                                    <tr>
+                                        <td>Institution</td>
+                                        <td> <input type="text" name="fname"></td>
+                                        <td> <input type="text" name="fname"></td>
+                                        <td> <input type="text" name="fname"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Image</td>
+                                        <td class="imge"> <a > <img class="image" src="pic/t_n.jpg" ></a></td>
+                                        <td class="imge"> <a > <img class="image" src="pic/t_n.jpg" ></a></td>
+                                        <td class="imge"> <a > <img class="image" src="pic/t_n.jpg" ></a></td>    
+                                    </tr>
+                              
+
+                                    <tr>
+                                        <td>Size Plots(width * Length / m.)</td>
+                                        <td class="left_c">5*20</td>
+                                        <td class="left_c">5*10</td>
+                                        <td class="left_c">6*15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date(year / month / day)</td>
+                                        <td class="left_c">2561 / 1  / 9</td>
+                                        <td class="left_c">2561 / 2  / 3</td>
+                                        <td class="left_c">2561 / 2  / 8</td>
+                                    </tr>
+                                    
+                                    
+                    
+                                    </tbody>
+                                </table>
+                                
+                                    </div>  
+                                    </div>
+ <!--         / n       !-->   </div>
+ 
+
+<!--          c       !--><div class="tab-pane fade" id="cc" role="tabpanel" aria-labelledby="c">
+<div class="row">
+
+                                <div class="col-lg-12" >
+                                <table id="tb_c" class="table  table-bordered" style="width:100%">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>first</th>
+                                    <th>second</th>
+                                    <th>third</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Image</td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_c.jpg" ></a></td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_c.jpg" ></a></td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_c.jpg" ></a></td> 
+                                </tr>
+                                <tr>
+                                    <td>Id tube</td>
+                                    <td class="left_c">No.1</td>
+                                    <td class="left_c">No.2</td>
+                                    <td class="left_c">No.3</td>
+                                </tr>
+                                 <tr>
+                                    <td>Size tube ( wide * hight )</td>
+                                    <td class="left_c">5*20</td>
+                                    <td class="left_c">5*10</td>
+                                    <td class="left_c">6*15</td>
+                                </tr>
+                                <tr>
+                                    <td>temperature(°C)</td>
+                                    <td class="left_c">5</td>
+                                    <td class="left_c">4</td>
+                                    <td class="left_c">8</td>
+                                </tr>   
+                                <tr>
+                                    <td>Date(year / month / day)</td>
+                                    <td class="left_c">2561 / 1  / 9</td>
+                                    <td class="left_c">2561 / 2  / 3</td>
+                                    <td class="left_c">2561 / 2  / 8</td>
+                                </tr>
+                                
+                
+                                </tbody>
+                                    </table>
+                                    </div>  
+                                    </div>
+ <!--         / c       !-->   </div>
+ <!--          s       !--><div class="tab-pane fade" id="ss" role="tabpanel" aria-labelledby="s">
+ <div class="row">
+
+                                <div class="col-lg-12" >
+                                <table id="tb_s" class="table  table-bordered" style="width:100%">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>first</th>
+                                    <th>second</th>
+                                    <th>third</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Image</td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_s.jpg" ></a></td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_s.jpg" ></a></td>
+                                    <td class="imge"> <a > <img class="image" src="pic/t_s.jpg" ></a></td>
+                                </tr>
+                          
+                                 <tr>
+                                    <td>Seeds / pack</td>
+                                    <td class="left_c"> 50</td>
+                                    <td class="left_c"> 50</td>
+                                    <td class="left_c">62</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Size seed(diameter,mm)</td>
+                                    <td class="left_c">5</td>
+                                    <td class="left_c"3</td>
+                                    <td class="left_c">4</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Color seed</td>
+                                    <td class="left_c">Yellow </td>
+                                    <td class="left_c">orange</td>
+                                    <td class="left_c">brown</td>
+                                </tr>   
+                                <tr>
+                                    <td>temperature(°C)</td>
+                                    <td class="left_c">17</td>
+                                    <td class="left_c">15</td>
+                                    <td class="left_c">13</td>
+                                </tr>   
+                                <tr>
+                                    <td>Date(year / month / day)</td>
+                                    <td class="left_c">2561 / 1  / 9</td>
+                                    <td class="left_c">2561 / 2  / 3</td>
+                                    <td class="left_c">2561 / 2  / 8</td>
+                                </tr>
+                                
+                
+                                </tbody>
+                                    </table>
+                                    </div>  
+                                    </div>
+ <!--         / c       !-->   </div>
+
+
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+    </div> 
+</div>
+<!--  End  asree     !-->
 
 
                            <div class="tab-pane fade" id="Gallery-5-8" role="tabpanel" aria-labelledby="tab-5-8">
@@ -335,3 +559,21 @@ iframe{
 
     </body>
 </html>
+  
+<script>        
+                        var x = 0;
+                          $('#n').click(function(){
+                                         if (x==0){
+                                               var table = $('#tb_n').DataTable({
+                                                                  paging: false,
+                                                                  ordering: false,
+                                                                  columnDefs: [
+                                                                  { searchable: false, targets: 0 }
+                                                                  ]
+                                                                  });
+                                                                  x++;
+                                         }
+                                         
+                
+                                              });                             
+</script>
