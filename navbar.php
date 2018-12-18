@@ -53,7 +53,7 @@
               			echo '<span class="profile-text">'.$_SESSION['member']['username'].'</span>';
               			echo '<img class="img-sm rounded-circle" src="'.$_SESSION['member']['pictrue'].'" alt="Profile image"> </a>';
               		}
-              		elseif($_SESSION['member']['permission'] == 'user') {
+              		elseif($_SESSION['member']['permission'] == 'member') {
               			echo '<span class="profile-text">'.$_SESSION['member']['username'].'</span>';
               			echo '<img class="img-sm rounded-circle" src="'.$_SESSION['member']['pictrue'].'" alt="Profile image"> </a>';
               		}
