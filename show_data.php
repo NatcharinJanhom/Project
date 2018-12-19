@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php include('head.php'); ?>    
+  <?php include('head.php'); ?>   
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.17/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.5/css/fixedColumns.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.1/js/dataTables.fixedColumns.min.js"></script> 
   </head>
   <style>
-th, td { white-space: nowrap; }
-div.dataTables_wrapper {
-	width: 95%;
-	margin: 0 auto;
-}
+ table.dataTable {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .dataTables_filter {
+        display: none;
+    }
+    #data_info
+    {
+        display: none;
+    }
+    .DTFC_LeftBodyLiner {
+        overflow-y: hidden !important;
+    }
+
+    .dataTables_wrapper .dataTable .btn {
+        padding: 0.5rem 0.81rem;
+
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+        border: 0px;
+    }
+
+    table.dataTable thead th,
+    table.dataTable tfoot th {
+        font-weight: normal;
+    }
+
+    table.dataTable thead th,
+    table.dataTable thead td {
+        border-bottom: 0px;
+    }
+
 .new{
 	color:blue;
 }
+
 </style> 
-<?php   require_once("PHPExcel-1.8/Classes/PHPExcel.php"); ?>
+<?php   include_once("PHPExcel-1.8/Classes/PHPExcel.php"); ?>
   <body class="sidebar-icon-only">
     <div class="container-scroller">
-    <?php include('navbar2.php'); ?>   
+    <?php include('navbar.php'); ?>   
       <div class="container-fluid page-body-wrapper">        
-      <?php include('sidebar2.php'); ?>    
+      <?php include('sidebar.php'); ?>    
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->
@@ -57,7 +93,17 @@ div.dataTables_wrapper {
 			//$col_name[] = array( "B"=>"1");
 			//print_r($col_name);
             $col_name = array( 
-                "A"=>"0","B"=>"1","C"=>"2","D"=>"3","E"=>"4","F"=>"5","G"=>"6","H"=>"7","I"=>"8","J"=>"9","K"=>"10","L"=>"11","M"=>"12","N"=>"13","O"=>"14","P"=>"15","Q"=>"16","R"=>"17","S"=>"18","T"=>"19","U"=>"20","V"=>"21","W"=>"22","X"=>"23","Y"=>"24","Z"=>"25","AA"=>"26","AB"=>"27","AC"=>"28","AD"=>"29","AE"=>"30","AF"=>"31","AG"=>"32","AH"=>"33","AI"=>"34","AJ"=>"35","AK"=>"36","AL"=>"37","AM"=>"38","AN"=>"39","AO"=>"40","AP"=>"41","AQ"=>"42","AR"=>"43","AS"=>"44","AT"=>"45","AU"=>"46","AV"=>"47","AW"=>"48","AX"=>"49","AY"=>"50","AZ"=>"51","BA"=>"52","BB"=>"53","BC"=>"54","BD"=>"55","BE"=>"56","BF"=>"57","BG"=>"58","BH"=>"59","BI"=>"60","BJ"=>"61","BK"=>"62","BL"=>"63","BM"=>"64","BN"=>"65","BO"=>"66","BP"=>"67","BQ"=>"68","BR"=>"69","BS"=>"70","BT"=>"71","BU"=>"72","BV"=>"73","BW"=>"74","BX"=>"75","BY"=>"76","BZ"=>"77","CA"=>"78","CB"=>"79","CC"=>"80","CD"=>"81","CE"=>"82","CF"=>"83"
+                "A"=>"0","B"=>"1","C"=>"2","D"=>"3","E"=>"4","F"=>"5","G"=>"6","H"=>"7","I"=>"8",
+                "J"=>"9","K"=>"10","L"=>"11","M"=>"12","N"=>"13","O"=>"14","P"=>"15","Q"=>"16",
+                "R"=>"17","S"=>"18","T"=>"19","U"=>"20","V"=>"21","W"=>"22","X"=>"23","Y"=>"24",
+                "Z"=>"25","AA"=>"26","AB"=>"27","AC"=>"28","AD"=>"29","AE"=>"30","AF"=>"31","AG"=>"32",
+                "AH"=>"33","AI"=>"34","AJ"=>"35","AK"=>"36","AL"=>"37","AM"=>"38","AN"=>"39","AO"=>"40",
+                "AP"=>"41","AQ"=>"42","AR"=>"43","AS"=>"44","AT"=>"45","AU"=>"46","AV"=>"47","AW"=>"48",
+                "AX"=>"49","AY"=>"50","AZ"=>"51","BA"=>"52","BB"=>"53","BC"=>"54","BD"=>"55","BE"=>"56",
+                "BF"=>"57","BG"=>"58","BH"=>"59","BI"=>"60","BJ"=>"61","BK"=>"62","BL"=>"63","BM"=>"64",
+                "BN"=>"65","BO"=>"66","BP"=>"67","BQ"=>"68","BR"=>"69","BS"=>"70","BT"=>"71","BU"=>"72",
+                "BV"=>"73","BW"=>"74","BX"=>"75","BY"=>"76","BZ"=>"77","CA"=>"78","CB"=>"79","CC"=>"80",
+                "CD"=>"81","CE"=>"82","CF"=>"83"
 			);
 			if($row >= $start_row){
                 $data_arr[$row-$start_row][$col_name[$column]] = $data_value;                                               
@@ -176,7 +222,7 @@ for($i=0;$i<count($data_arr[0]);$i++)
                @$id[]=$data_arr[$j][$i];
                
 ?>					
-                     <th><?php echo$data_arr[$j][$i]; ?><lable style="font-weight:normal">  Replace All</lable> <input type="checkbox"/></th>
+                     <th><?php echo$data_arr[$j][$i]; ?><lable style="font-weight:normal">  Replace All</lable> <input data-colum="NO<?php echo $j?>"class="NO_All" type="checkbox" checked/></th>
                
            
 <?php		 
@@ -187,7 +233,7 @@ for($i=0;$i<count($data_arr[0]);$i++)
                
                
                
-               echo"<th>".$data_arr[$j][$i] ."<lable style='font-weight:normal'> Add All</lable> <input type='checkbox'/></th>";
+               echo"<th>".$data_arr[$j][$i] ."<lable style='font-weight:normal'> Add All</lable> <input type='checkbox' checked/></th>";
            }
        }
        echo"</tr>
@@ -199,8 +245,8 @@ for($i=0;$i<count($data_arr[0]);$i++)
        echo"<tr>";
        for($j=0;$j<count($data_arr);$j++)
        { 
-       
-           @$data_arr[$j][$i]=prepare_data($data_arr[$j][$i]);						
+          
+           $data_arr[$j][$i]=prepare_data($data_arr[$j][$i]);						
            if($j==0)
            {
 ?>					
@@ -209,10 +255,8 @@ for($i=0;$i<count($data_arr[0]);$i++)
 <?php		
            }
            else if($data_arr[$j][0]==@$id[$j-1])
-           {
-               
-               $check=searchdata(@$id[$j-1]);
-           
+           {   
+               $check=searchdata(@$id[$j-1]); 
                if($check[1][$i]!=$data_arr[$j][$i])
                {
                    
@@ -244,8 +288,18 @@ for($i=0;$i<count($data_arr[0]);$i++)
                    }
                    else
                    {
-                       $data1=round($check[1][$i],2);
-                       $data2=round($data_arr[$j][$i],2);
+                       $data1=$check[1][$i];
+                       $data2=$data_arr[$j][$i];
+                       if(is_numeric($check[1][$i]))
+                       {
+                        $data1=round($check[1][$i],2);
+                       }
+                       if(is_numeric($data_arr[$j][$i]))
+                       {
+                        $data2=round($data_arr[$j][$i],2);
+                       }
+                       
+                       
                        if($data1!=$data2)
                        {
                            ?>
@@ -325,9 +379,7 @@ for($i=0;$i<count($data_arr[0]);$i++)
    
 }
 ?>			  </tbody>
-       </table>
-       
-       <input type="hidden" name="controller" value="uploadFile">
+       </table>       
        <button type ="submit" class="btn btn-success btn-block" name="action" value="acceptData" >ยืนยัน</button>
             </div>   
             <?php
@@ -338,17 +390,30 @@ for($i=0;$i<count($data_arr[0]);$i++)
 <script>
 $(document).ready(function() {
     var table = $('#data').DataTable( {
-        scrollY:        "400px",
-        scrollX:        true,
-        scrollCollapse: true,
-        paging:         false,
-        ordering: false,
-        searchable: false,
-        fixedColumns:   {
-            leftColumns: 1
-        }
+        fixedColumns: {
+                leftColumns: 1
+            },
+            scrollY: "400px",
+            scrollX: true,
+            scrollCollapse: true,
+            paging: false,
+            ordering: false,
+            columnDefs: [
+                { searchable: false, targets: 0 }
+            ]
     } );
-    
+    $(".NO_All").click(function(){
+        var s = $(this).attr("data-colum");
+        var x = $(this).prop("checked");
+        if(x)
+        {
+            $("input[name='"+s+"[]']").prop("checked",true);
+        }
+        else
+        {
+            $("input[name='"+s+"[]']").prop("checked",false);
+        }
+    });
 } );
 </script>
 <?php

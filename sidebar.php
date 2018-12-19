@@ -97,6 +97,14 @@
               </a>
             </li>
           <?php } ?>
+          <li class="nav-item">
+              <a class="nav-link" href="upload.php" >
+                <i class="menu-icon fas fa-file-upload"></i>
+                <span class="menu-title">Upload accession number</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+
 
 
             

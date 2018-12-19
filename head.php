@@ -6,7 +6,7 @@
     <!-- plugins:css -->
     <link rel="stylesheet" href="theme/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="theme/assets/vendors/iconfonts/puse-icon-feather/feather.css">
-    <link rel="stylesheet" href="theme/assets/vendors/iconfonts/font-awesome/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="theme/assets/vendors/iconfonts/font-awesome/font-awesome.min.css"> -->
     <link rel="stylesheet" href="theme/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="theme/assets/vendors/css/vendor.bundle.addons.css">
     <link rel="stylesheet" href="theme/assets/vendors/lightgallery/css/lightgallery.css">
@@ -23,7 +23,7 @@
 
     <!-- Nav image link -->
     <link rel="stylesheet" href="theme/assets/css/imgLink.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
     <!-- plugins:js -->
     <script src="theme/assets/vendors/js/vendor.bundle.base.js"></script>

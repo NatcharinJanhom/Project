@@ -4,31 +4,12 @@
   <?php include('head.php'); ?>    
   </head>
   <style>
-    .sidebar .nav .nav-item.active > .nav-link .menu-title, .sidebar .nav .nav-item.active > .nav-link i {
-    color:#57c7d4;
-}
-    .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link .menu-title {
-    background: #57c7d4 !important;
-    color: white;
-    opacity: 0.9;
-}
-.sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {
-    background: #57c7d4;
-    color: white;
-}
-.sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link .menu-icon, {
-    color: white;
-}
-
-.sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link .menu-icon {
-    color: white;
-}
-  </style>
+   </style>
   <body class="sidebar-icon-only">
     <div class="container-scroller">
-    <?php include('navbar2.php'); ?>   
+    <?php include('navbar.php'); ?>   
       <div class="container-fluid page-body-wrapper">        
-      <?php include('sidebar2.php'); ?>    
+      <?php include('sidebar.php'); ?>    
         <div class="main-panel">
             <div class="content-wrapper">
             <!-- หน้าเว็บ -->

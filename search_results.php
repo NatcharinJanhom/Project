@@ -326,7 +326,7 @@ table tr td.imge
                                                                 <?php
                     foreach($tomato[0] as $key=>$value)
                     {
-                        echo "<td>".$value['fruit_weight_g']??'-'."</td>";
+                        echo "<td>".round($value['fruit_weight_g'],2)??'-'."</td>";
                     }
                     ?>
                                                             </tr>
@@ -446,7 +446,7 @@ table tr td.imge
                                                                 <?php
                     foreach($tomato[0] as $key=>$value)
                     {
-                        echo "<td>".$value['stem_internode_length']??'-'."</td>";
+                        echo "<td>".round($value['stem_internode_length'],2)??'-'."</td>";
                     }
                     ?>
                                                             </tr>
