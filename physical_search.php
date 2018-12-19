@@ -259,7 +259,7 @@
                 <div class="input-group">
 										<input type="text" name="accession_number" id="as_search" class="form-control search" placeholder="Accession number">										
                     <div class="input-group-append text-white">
-           <button type="submit" class="btn  btn-danger" type="button"><i class="text-white fa fa-search"></i></button>
+           <button type="button" class="btn  btn-danger btn-search-submit" type="button"><i class="text-white fa fa-search"></i></button>
           </div>
                 </div>
                 </div>
@@ -696,7 +696,7 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn-fix btn1 btn-round btn-search">Search</button>
+          <button type="button" class="btn-fix btn1 btn-round btn-search btn-search-submit">Search</button>
           <button type="button" class="btn-fix btn2 btn-round btn-clear">Clear</button>
           </form>
         </div>
@@ -970,7 +970,7 @@
        <script>   
        
      
-    $(".btn-search").click(function(){ 
+    $(".btn-search-submit").click(function(){ 
       var s = $("#soft-limit-3")[0].innerText;
       var fruit_weight_g=s.split("\n"); 
       if(fruit_weight_g[0]=='0.00' && fruit_weight_g[1]=='60.00')
