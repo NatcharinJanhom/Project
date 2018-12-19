@@ -29,7 +29,7 @@
         max-height: 150px;
         width: 100%;
         height: 100%;
-    }
+    } 
 
     .tx {
         text-align: center;

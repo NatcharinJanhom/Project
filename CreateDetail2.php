@@ -7,7 +7,11 @@
 
 
     <?php include('head.php'); ?>
-   
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
 
     <style>
         .card-title {
@@ -256,7 +260,7 @@
                                     
                                 </div>
 
-
+ 
                                 <div class="form-group">
                                     <label>Upload and crop image</label>
                                     <br>
