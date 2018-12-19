@@ -401,7 +401,7 @@ td.imge {
                                 <table id="tb_c" class="table  table-bordered" style="width:100%">
                                 <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>_</th>
                                     <th>first</th>
                                     <th>second</th>
                                     <th>third</th>
@@ -452,7 +452,7 @@ td.imge {
                                 <table id="tb_s" class="table  table-bordered" style="width:100%">
                                 <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>_</th>
                                     <th>first</th>
                                     <th>second</th>
                                     <th>third</th>
@@ -590,5 +590,33 @@ td.imge {
                                          }
                                          
                 
-                                              });                             
+                                              });
+                          $('#c').click(function(){
+                                         if (x==0){
+                                               var table2 = $('#tb_c').DataTable({
+                                                                  paging: false,
+                                                                  ordering: false,
+                                                                  columnDefs: [
+                                                                  { searchable: false, targets: 0 }
+                                                                  ]
+                                                                  });
+                                                                  x++;
+                                         }
+                                         
+                
+                                              });  
+                          $('#s').click(function(){
+                                         if (x==0){
+                                               var table3 = $('#tb_s').DataTable({
+                                                                  paging: false,
+                                                                  ordering: false,
+                                                                  columnDefs: [
+                                                                  { searchable: false, targets: 0 }
+                                                                  ]
+                                                                  });
+                                                                  x++;
+                                         }
+                                         
+                
+                                              });                               
 </script>

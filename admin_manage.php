@@ -162,19 +162,19 @@ input:checked + .slider:before {
                 echo$value['permission'];
               }?></td>
               <?php 
-                    if($value['status']=='Active')
+                    if($value['status_mb']=='Active')
                     echo"<td><center> <span class='badge badge-success badge'>Active</span> </center>  </td>";
-                    else if($value['status']=='Blocked')
+                    else if($value['status_mb']=='Blocked')
                     echo"<td><center><span class='badge badge-danger badge'>Blocked</span></center></td>";
-                    else if($value['status']=='Waiting')
+                    else if($value['status_mb']=='Waiting')
                     echo"<td><center><span class='badge badge-warning badge'>Waiting</span></center></td>";
               ?>
-              <td><center><button type="button" class='btn-edit btn btn-outline-warning' data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status']?>">Edit</button>
+              <td><center><button type="button" class='btn-edit btn btn-outline-warning' data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status_mb']?>">Edit</button>
               <span style="padding-left:10px;"></span><button type='button' class='btn-delete btn btn-outline-danger' data-id ="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>">Delete</button></center></td>
-              <?php if($value['status']==='Blocked')
+              <?php if($value['status_mb']==='Blocked')
               {
                 ?>
-                 <td><center> <button type="button" data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status']?>" class="btn social-btn btn-google btn_lock">
+                 <td><center> <button type="button" data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status_mb']?>" class="btn social-btn btn-google btn_lock">
                             <i class="fa fa-lock"></i>
                           </button>
                           </center></td>
@@ -184,7 +184,7 @@ input:checked + .slider:before {
                     else
               {
                     ?>
-                    <td><center> <button type="button" data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status']?>" class="btn social-btn btn-social-outline-google btn_lock">
+                    <td><center> <button type="button" data-id="<?php echo$value['id_member'] ?>" data-firstname="<?php echo$value['firstname'] ?>" data-lastname="<?php echo$value['lastname'] ?>" data-email="<?php echo$value['email']?>" data-permission="<?php echo$value['permission']?>"  data-status="<?php echo$value['status_mb']?>" class="btn social-btn btn-social-outline-google btn_lock">
                             <i class="fa fa-unlock"></i>
                           </button>
                           </center> </td>

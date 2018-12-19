@@ -51,11 +51,11 @@
 
               		if ($_SESSION['member']['permission'] == 'admin') {
               			echo '<span class="profile-text">'.$_SESSION['member']['username'].'</span>';
-              			echo '<img class="img-sm rounded-circle" src="'.$_SESSION['member']['pictrue'].'" alt="Profile image"> </a>';
+              			echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face2.jpg" alt="Profile image"> </a>';
               		}
               		elseif($_SESSION['member']['permission'] == 'member') {
               			echo '<span class="profile-text">'.$_SESSION['member']['username'].'</span>';
-              			echo '<img class="img-sm rounded-circle" src="'.$_SESSION['member']['pictrue'].'" alt="Profile image"> </a>';
+              			echo '<img class="img-sm rounded-circle" src="theme/assets/images/faces/face1.jpg" alt="Profile image"> </a>';
               		}
                   else {
                     echo '<span class="profile-text">'.'Permission Error'.'</span>';
