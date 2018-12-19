@@ -24,12 +24,7 @@
         {
           header( "location: userpage.php" ); 
         }
-        
     }
-    else
-        {
-          header( "location: no_user.php" ); 
-        }
 ?>
     <div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">
@@ -99,22 +94,3 @@
   </body>
 
 </html>
-<!--
-<script>
-      $(document).ready(function(){
-        $(".submit-btn").click(function(){
-          user= $("input[name='username']").val();
-          pass= $("input[name='password']").val();
-          if(user =='admin' && pass =='admin')
-          {
-            $("#login").attr("action", "admindetal_asree.php");
-          }
-          else
-          {
-            $("#login").attr("action", "userpage.php");
-          }
-          $("#login").submit();
-        });
-      });
-  </script>
-  -->

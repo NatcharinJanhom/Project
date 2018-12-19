@@ -220,16 +220,21 @@
     {
       padding-right:1.75rem;
     }
-    .pt-4, .py-4 {
-    padding-top: 0.01rem !important;
-}
+    .pt
+    {
+      padding-top:0.1rem;
+      padding-bottom:0.2rem;
+    }
+    .mt-5, .my-5 {
+    margin-top: 2rem !important;
+    }
 </style>
 
 <body class="sidebar-icon-only">
   <div class="container-scroller">
-    <?php include('navbar.php'); ?>
+    <?php include('navbar2.php'); ?>
     <div class="container-fluid page-body-wrapper">
-      <?php include('sidebar.php'); ?>
+      <?php include('sidebar2.php'); ?>
       <div class="main-panel">
         <div class="content-wrapper">
           <!-- หน้าเว็บ -->
@@ -242,7 +247,7 @@
               </div>
             </div>
           </div>
-          <form action="search_results.php" method="post">
+          <form id="physical_search" action="search_results.php" method="post">
           <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
@@ -289,23 +294,16 @@
 
 
                               <div class="col-md-6">
-                              <div class="mt-5 pt-4 w-75 mx-auto pt-5">
-                                    <div id="soft-limit-3" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" value='0-100'>
+                              <div class="mt-5 pt w-75 mx-auto soft-limit-3">
+                                <input type="hidden" name="fruit_weight_g">
+                                    <div id="soft-limit-3" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
                                     </div>
-                                </div>
-
-      <!-- main-panel ends<input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='< 30'>
-                              <label>< 30</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='30-50'>
-                              <label>30-50</label>
-                              <input type='checkbox' class='form-check-inline' name="fruit_weight_g[]" value='> 50'>
-                              <label>> 50</label> 
-                             -->
+                                </div>                        
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit size <span><a class='static' href="#" data-cha="Fruit size" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit size <span><a class='static' id="#fruit_size" href="#fruit_size" data-cha="Fruit size" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="fruit_size[]" value='medium'>
@@ -318,113 +316,113 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Exterior color of mature fruit <span><a class='static' href="#" data-cha="Exterior colour of mature fruit" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Exterior color of mature fruit <span><a class='static' id="#exterior_color_of_mature_fruit" href="#exterior_color_of_mature_fruit" data-cha="Exterior colour of mature fruit" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="red">
                               <label>red</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="orange red">
                               <label>orange red</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="exterior_colour_of_mature_fruit[]" value="pink">
                               <label>pink</label>                             
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Predominant fruit shape <span><a class='static' href="#" data-cha="Predominant fruit shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Predominant fruit shape <span><a class='static' id="#predominant_fruit_shape" href="#predominant_fruit_shape" data-cha="Predominant fruit shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="cylindrical">
                               <label>cylindrical</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="flattened">
                               <label>flattened</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="heart-shaped">
                               <label>heart-shaped</label>  <br/>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="high-round">
                               <label>high-round</label>   
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="lengthened cylindrical">
                               <label>lengthened cylindrical</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="pearshaped">
                               <label>pear-shaped</label>    <br/>
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="predominant_fruit_shape[]" value="plum-shaped">
                               <label>plum-shaped</label>                                
                               </div>
                             </div><br/>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Intensity of greenback <span><a class='static' href="#" data-cha="Intensity of greenback" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Intensity of greenback <span><a class='static' id="#intensity_of_greenback" href="#intensity_of_greenback" data-cha="Intensity of greenback" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="intensity_of_greenback[]" value="intermediate">
                               <label>intermediate</label>   
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="intensity_of_greenback[]" value="none">
                               <label>none</label>   
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="intensity_of_greenback[]" value="slight">
                               <label>slight</label>   
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="intensity_of_greenback[]" value="strong">
                               <label>strong</label>                                 
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit shoulder shape <span><a class='static' href="#" data-cha="Fruit shoulder shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit shoulder shape <span><a class='static' id="#fruit_shoulder_shape" href="#fruit_shoulder_shape" data-cha="Fruit shoulder shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">                           
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_shoulder_shape[]" value="flat">
                               <label>flat</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_shoulder_shape[]" value="moderately depressed">
                               <label>moderately depressed</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_shoulder_shape[]" value="slightly depressed">
                               <label>slightly depressed</label>                                 
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Easiness of fruit to detach from the pedicel <span><a class='static' href="#" data-cha="Easiness of fruit to detach from pedicel" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Easiness of fruit to detach from the pedicel <span><a class='static' id="easiness_of_fruit_to_detach_from_pedicel" href="#easiness_of_fruit_to_detach_from_pedicel" data-cha="Easiness of fruit to detach from pedicel" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline'  name="easiness_of_fruit_to_detach_from_pedicel[]" value="easy">
                               <label>easy</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline'  name="easiness_of_fruit_to_detach_from_pedicel[]" value="intermediate">
                               <label>intermediate</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline'  name="easiness_of_fruit_to_detach_from_pedicel[]" value="difficult">
                               <label>difficult</label>                              
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Easiness of fruit wall to be peeled <span><a class='static' href="#" data-cha="Easiness of fruit wall (skin) to be peeled" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Easiness of fruit wall to be peeled <span><a class='static' id="#easiness_of_fruit_wall_skin_to_be_peeled" href="#easiness_of_fruit_wall_skin_to_be_peeled" data-cha="Easiness of fruit wall (skin) to be peeled" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="easiness_of_fruit_wall_skin_to_be_peeled[]" value="easy">
                               <label>easy</label>    
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="easiness_of_fruit_wall_skin_to_be_peeled[]" value="intermediate">
                               <label>intermediate</label>    
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="easiness_of_fruit_wall_skin_to_be_peeled[]" value="difficult">
                               <label>difficult</label>                                                              
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Fruit blossom end shape <span><a class='static' href="#" data-cha="Fruit blossom end shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Fruit blossom end shape <span><a class='static' id="#fruit_blossom_end_shape" href="#fruit_blossom_end_shape" data-cha="Fruit blossom end shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_blossom_end_shape[]" value="flat">
                               <label>flat</label>        
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_blossom_end_shape[]" value="indented">
                               <label>indented</label>        
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="fruit_blossom_end_shape[]" value="pointed">
                               <label>pointed</label>                             
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Shape of pistil scar <span><a class='static' href="#" data-cha="Shape of pistil scar" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Shape of pistil scar <span><a class='static' id="#shape_of_pistil_scar" href="#shape_of_pistil_scar" data-cha="Shape of pistil scar" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="shape_of_pistil_scar[]" value="dot">
                               <label>dot</label> 
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="shape_of_pistil_scar[]" value="linear">
                               <label>linear</label>                              
                               </div>
                             </div>
@@ -456,10 +454,10 @@
                             </div>
                             -->
                             <div class="row">
-                              <div class="col-md-4">
-                                <p>Stem pubescence density<span><a class='static' href="#" data-cha="Stem pubescence density" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                              <div class="col-md-6">
+                                <p>Stem pubescence density<span><a class='static' id="stem_pubescence_density" href="#stem_pubescence_density" data-cha="Stem pubescence density" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
-                              <div class="col-md-8">
+                              <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='dense'>
                               <label>dense</label>
                               <input type='checkbox' class='form-check-inline' name="stem_pubescence_density[]" value='intermediate'>
@@ -467,16 +465,16 @@
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-4">
+                              <div class="col-md-6">
                                 <p>Stem internode length (cm)</p>
                               </div>
-                              <div class="col-md-8">
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='short'>
-                              <label>short ( < 7 )</label>
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='intermediate'>
-                              <label>intermediate ( 7-8 )</label>
-                              <input type='checkbox' class='form-check-inline' name="stem_internode_length[]" value='long'>
-                              <label>long ( > 8 )</label>
+                              <div class="col-md-6">
+                              <div class="mt-5 pt w-75 mx-auto">
+                              <input type="hidden" name="stem_internode_length">
+                                    <div id="soft-limit-4"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>                        
+                              
                               </div>
                             </div>                           
                           </div>
@@ -493,7 +491,7 @@
                           <div class="card-body">
                            <div class="row">
                               <div class="col-md-6">
-                                <p>Number of leaves under 1st inflorescence <span><a class='static' href="#" data-cha="Number of leaves under 1st inflorescence" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Number of leaves under 1st inflorescence <span><a class='static' id="number_of_leaves_under_1st_inflorescence" href="#number_of_leaves_under_1st_inflorescence" data-cha="Number of leaves under 1st inflorescence" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="number_of_leaves_under_1st_inflorescence[]" value='2'>
@@ -504,18 +502,16 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Leaf attitude <span><a class='static' href="#" data-cha="Leaf attitude" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Leaf attitude <span><a class='static' id="leaf_attitude" href="#leaf_attitude" data-cha="Leaf attitude" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="leaf_attitude[]" value='1'>
-                              <label>semi-erect</label>
-                              <input type='checkbox' class='form-check-inline' name="leaf_attitude[]" value='2'>
-                              <label>horizontal</label>                                              
+                              <label>semi-erect</label>                                                               
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Leaf type <span><a class='static' href="#" data-cha="Leaf type" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
+                                <p>Leaf type <span><a class='static' id="leaf_type" href="#leaf_type" data-cha="Leaf type" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="leaf_type[]" value='1'>
@@ -546,10 +542,11 @@
                                 <p>Number of days to flowering</p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='< 35'>
-                              <label>< 35 Day</label>
-                              <input type='checkbox' class='form-check-inline' name="number_of_days_to_flowering[]" value='>= 35'>
-                              <label>>= 35 Day</label>                              
+                              <div class="mt-5 pt w-75 mx-auto">
+                                    <input type="hidden" name="number_of_days_to_flowering">
+                                    <div id="soft-limit-5"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>                          
                               </div>
                             </div>
                             <div class="row">
@@ -557,17 +554,16 @@
                                 <p>Number of flowers</p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='5'>
-                              <label>5</label>  
-                              <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='6'>
-                              <label>6</label>  
-                              <input type='checkbox' class='form-check-inline' name="number_of_flowers[]" value='>=7'>
-                              <label>>= 7</label>  
+                              <div class="mt-5 pt w-75 mx-auto">
+                                    <input type="hidden" name="number_of_flowers_per">
+                                    <div id="soft-limit-6"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                                    </div>
+                                </div>    
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Corolla colour</p>
+                                <p>Corolla colour<span><a class='static' id="corolla_colour" href="#corolla_colour" data-cha="Corolla colour" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="corolla_colour[]" value='yellow'>
@@ -576,7 +572,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Style position</p>
+                                <p>Style position<span><a class='static' id="style_position" href="#style_position" data-cha="Style position" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
                               <input type='checkbox' class='form-check-inline' name="style_position[]" value='inserted'>
@@ -605,26 +601,26 @@
                           <div class="card-body">
                           <div class="row">
                               <div class="col-md-6">
-                                <p>Seed shape</p>
+                                <p>Seed shape <span><a class='static' id="seed_shape" href="#seed_shape" data-cha="Seed shape" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="seed_shape[]" value='globular'>
                               <label>globular</label>    
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="seed_shape[]" value='ovate'>
                               <label>ovate</label>                                  
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Seed colour</p>
+                                <p>Seed colour<span><a class='static' id="seed_colour" href="#seed_colour" data-cha="Seed colour" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="seed_colour[]" value='brown'>
                               <label>brown</label>     
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="seed_colour[]" value='dark yellow'>
                               <label>dark yellow</label>     
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>light yellow</label>                               
+                              <input type='checkbox' class='form-check-inline' name="seed_colour[]" value='light yellow'>
+                              <label>light yellow</label>                                                           
                               </div>
                             </div>
                           </div>
@@ -641,54 +637,54 @@
                           <div class="card-body">
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Hypocotyl color</p>
+                                <p>Hypocotyl colour <span><a class='static' id="hypocotyl_colour" href="#hypocotyl_colour" data-cha="Hypocotyl colour" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour[]" value='1/2 purple from the base'>
                               <label>1/2 purple from the base</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour[]" value='1/4 purple from the base'>
                               <label>1/4 purple from the base</label>  <br/>
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour[]" value='green'>
                               <label>green</label>  
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour[]" value='purple'>
                               <label>purple</label>  
-                              <input type='checkbox' class='form-check-inline' >
-                              <label>bluesky</label>                                
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour[]" value='blue'>
+                              <label>blue</label>                                
                               </div>
                             </div>
                             <br/>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Hypocotyl colour intensity</p>
+                                <p>Hypocotyl colour intensity<span><a class='static' id="hypocotyl_colour_intensity" href="#hypocotyl_colour_intensity" data-cha="Hypocotyl colour intensity" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour_intensity[]" value="intermediate">
                               <label>intermediate</label>      
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_colour_intensity[]" value="low">
                               <label>low</label>                                    
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Hypocotyl pubescence</p>
+                                <p>Hypocotyl pubescence<span><a class='static' id="hypocotyl_pubescence" href="#hypocotyl_pubescence" data-cha="Hypocotyl pubescence" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="hypocotyl_pubescence[]" value="low">
                               <label>present</label>                                
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <p>Plant growth type</p>
+                                <p>Plant growth type<span><a class='static' id="plant_growth_type" href="#plant_growth_type" data-cha="Plant growth type" ><i  class='fa fa-bar-chart-o'></i></a></span></p>
                               </div>
                               <div class="col-md-6">
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="plant_growth_type[]" value="indeterminate">
                               <label>indeterminate</label>           
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="plant_growth_type[]" value="determinate">
                               <label>determinate</label>           
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="plant_growth_type[]" value="semi-determinate">
                               <label>semi-determinate</label>   <br/>         
-                              <input type='checkbox' class='form-check-inline' >
+                              <input type='checkbox' class='form-check-inline' name="plant_growth_type[]" value="intermediate">
                               <label>intermediate</label>                             
                               </div>
                             </div>
@@ -700,7 +696,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn-fix btn1 btn-round btn-search">Search</button>
+          <button type="button" class="btn-fix btn1 btn-round btn-search">Search</button>
           <button type="button" class="btn-fix btn2 btn-round btn-clear">Clear</button>
           </form>
         </div>
@@ -720,6 +716,7 @@
         <div class="chart-data"> 
         <canvas id="myChart1"></canvas><br/>
         <canvas id="myChart2"></canvas><br/>
+        <canvas id="myChart3"></canvas><br/>
         <div id="table-data">
         </div>
         </div>
@@ -748,9 +745,11 @@
         $(".static").click(function() {
             $("#myChart1").remove();
             $("#myChart2").remove();
+            $("#myChart3").remove();
             $("#head").empty();
             $('.chart-data').append('<canvas id="myChart1"><canvas>');
             $('#myChart1').after('<canvas id="myChart2"><canvas>');
+            $('#myChart2').after('<canvas id="myChart3"><canvas>');
             var input_cha = $(this).attr('data-cha');  
             $("#head").append(input_cha);
             if (input_cha != '') {
@@ -779,7 +778,7 @@
                         var chartdata = {
                             labels: name,
                             datasets: [{
-                                label: 'จำนวน',
+                                label: 'จำนวนสายพันธุ์',
                                 backgroundColor: 'rgba(247,100,88)',
                                 borderColor: 'rgba(247,100,88)',
                                 hoverBackgroundColor: 'rgba(255,98,88)',
@@ -813,7 +812,7 @@
                         var chartdata = {
                             labels: name,
                             datasets: [{
-                                label: 'จำนวน',
+                                label: 'จำนวนสายพันธุ์',
                                 backgroundColor:[
                                     'rgba(30,136,229)',
                                     'rgba(67,160,71)',
@@ -838,6 +837,23 @@
                         ctx2.height = 80;
                         var barGraph = new Chart(ctx2, {
                             type: 'pie',
+                            data: chartdata
+                        });
+                        var chartdata = {
+                            labels: name,
+                            datasets: [{
+                                label: 'จำนวนสายพันธุ์',
+                                backgroundColor: 'rgba(247,100,88,0.5)',
+                                borderColor: 'rgba(247,100,88)',
+                                pointBorderColor: "rgba(247,100,88,1)",
+                                pointBackgroundColor: "rgba(247,100,88,1)",
+                                data: count
+                            }]
+                        };
+                        var ctx3 = document.getElementById("myChart3");
+                        ctx3.height = 100;
+                        var barGraph = new Chart(ctx3, {
+                            type: 'radar',
                             data: chartdata
                         });
                         var tabledetail=$("#table-data");
@@ -873,10 +889,154 @@
         });
     });
     </script>
-     <script>   
-                           slider.noUiSlider.on('update', function(values,handle,unencoded){
-                            console.log(handle);
-});
-    </script>
-    <script src="theme/assets/js/shared/no-ui-slider.js"></script>
-    <script src="theme/assets/js/shared/ion-range-slider.js"></script>
+     <script>
+     (function($) {
+      'use strict';
+          var softSlider = document.getElementById('soft-limit-3');
+          var softSlider1 = document.getElementById('soft-limit-4');
+          var softSlider2 = document.getElementById('soft-limit-5');
+          var softSlider3 = document.getElementById('soft-limit-6');
+
+        noUiSlider.create(softSlider, {
+          start: [0, 60],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+            min: 0,
+            max: 60
+          },
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+        noUiSlider.create(softSlider1, {
+          start: [0, 60],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+            min: 0,
+            max: 60
+          },
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+        noUiSlider.create(softSlider2, {
+          start: [0, 60],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+        'min': 0,
+        '17%': 10,
+        '34%': 20,
+        '51%': 30,
+        '68%': 40,
+        '85%': 50,
+        'max': 60
+      },
+      snap: true,
+          pips: {
+            mode: 'values',
+            values: [0, 10, 20, 30, 40, 50, 60],
+            density: 10
+          }
+        });
+        noUiSlider.create(softSlider3, {
+          start: [5, 11],
+          tooltips: [true, true],
+          connect: true,
+          range: {
+        'min': 5,
+        '17%': 6,
+        '34%': 7,
+        '51%': 8,
+        '68%': 9,
+        '85%': 10,
+        'max': 11
+      },
+      snap: true,
+          pips: {
+            mode: 'values',
+            values: [5, 6, 7,8,9,10,11],
+            density: 5
+          }
+        });
+    })(jQuery);
+     </script>
+       <script>   
+       
+     
+    $(".btn-search").click(function(){ 
+      var s = $("#soft-limit-3")[0].innerText;
+      var fruit_weight_g=s.split("\n"); 
+      if(fruit_weight_g[0]=='0.00' && fruit_weight_g[1]=='60.00')
+      {
+        $("input[name='fruit_weight_g']").remove();
+      }
+      else if(fruit_weight_g.length < 3)
+      {
+        $("input[name='fruit_weight_g']").remove();
+      }
+      else
+      {
+        $("input[name='fruit_weight_g']").val(fruit_weight_g);
+      }
+      var s = $("#soft-limit-4")[0].innerText;
+      var stem_internode_length=s.split("\n"); 
+      if(stem_internode_length[0]=='0.00' && stem_internode_length[1]=='60.00')
+      {
+        $("input[name='stem_internode_length']").remove();
+      }
+      else if(stem_internode_length.length < 3)
+      {
+        $("input[name='stem_internode_length']").remove();
+      }
+      else
+      {
+        $("input[name='stem_internode_length']").val(stem_internode_length);
+      }
+      var s = $("#soft-limit-5")[0].innerText;
+      var number_of_days_to_flowering=s.split("\n"); 
+      if(number_of_days_to_flowering[0]=='0.00' && number_of_days_to_flowering[1]=='60.00')
+      {
+        $("input[name='number_of_days_to_flowering']").remove();
+      }
+      else if(number_of_days_to_flowering.length < 3)
+      {
+        $("input[name='number_of_days_to_flowering']").remove();
+      }
+      else
+      {
+        $("input[name='number_of_days_to_flowering']").val(number_of_days_to_flowering);
+      }
+      var s = $("#soft-limit-6")[0].innerText;
+      var number_of_flowers_per=s.split("\n"); 
+      if(number_of_flowers_per[0]=='5.00' && number_of_flowers_per[1]=='11.00')
+      {
+        $("input[name='number_of_flowers_per']").remove();
+      }
+      else if(number_of_flowers_per.length < 3)
+      {
+        $("input[name='number_of_flowers_per']").remove();
+      }
+      else
+      {
+        $("input[name='number_of_flowers_per']").val(number_of_flowers_per);
+      }
+      $("#physical_search").submit();
+    });  
+    $(".btn-clear").click(function(){ 
+     var check_box = $("input[type='checkbox']").prop("checked",false);
+    //  var s=$(".noUi-base .noUi-origin")[1];
+    //  $(s).css("left","100%");
+    //  $(".noUi-base .noUi-connect").attr("style"," left: 0%; right: 0%;");
+    
+    //  $(".noUi-base .noUi-handle-upper").attr("aria-valuetext",60.00);
+    //  $(".noUi-base .noUi-handle-upper .noUi-tooltip").empty();
+    //  $(".noUi-base .noUi-handle-upper .noUi-tooltip").append("60.00");
+    });  
+      </script>

@@ -29,6 +29,6 @@ if($qr->rowCount()){
 }
 else
 {
-	header( "location: index.php" );
+	header( "location: login.php" );
 }
  ?>
