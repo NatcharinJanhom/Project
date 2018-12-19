@@ -312,7 +312,105 @@ table tr td.imge
                                                                 }
                                                             ?>
                                                             </tr>
-                                                       
+                                                            <tr>
+                                                                <td bgcolor='#ff6258' class="text-white">Fruit</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td bgcolor='#ff6258'></td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fruit weight</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['fruit_weight_g']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fruit size</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['fruit_size']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Exterior colour of mature fruit</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['exterior_colour_of_mature_fruit']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Predominant fruit shape</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['predominant_fruit_shape']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Intensity of greenback</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['intensity_of_greenback']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fruit shoulder shape</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['fruit_shoulder_shape']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Easiness of fruit to detach from pedicel</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['easiness_of_fruit_to_detach_from_pedicel']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Easiness of fruit to detach from pedicel</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['easiness_of_fruit_wall_skin_to_be_peeled']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Fruit blossom end shape</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['fruit_blossom_end_shape']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Shape of pistil scar</td>
+                                                                <?php
+                    foreach($tomato[0] as $key=>$value)
+                    {
+                        echo "<td>".$value['shape_of_pistil_scar']??'-'."</td>";
+                    }
+                    ?>
+                                                            </tr>
                                                             <tr>
                                                                 <td bgcolor='#ff6258' class="text-white">Plant</td>
                                                                 <?php
@@ -433,105 +531,7 @@ table tr td.imge
                     }
                     ?>
                                                             </tr>
-                                                            <tr>
-                                                                <td bgcolor='#ff6258' class="text-white">Fruit</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td bgcolor='#ff6258'></td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Fruit weight</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['fruit_weight_g']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Fruit size</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['fruit_size']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Exterior colour of mature fruit</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['exterior_colour_of_mature_fruit']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Predominant fruit shape</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['predominant_fruit_shape']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Intensity of greenback</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['intensity_of_greenback']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Fruit shoulder shape</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['fruit_shoulder_shape']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Easiness of fruit to detach from pedicel</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['easiness_of_fruit_to_detach_from_pedicel']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Easiness of fruit to detach from pedicel</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['easiness_of_fruit_wall_skin_to_be_peeled']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Fruit blossom end shape</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['fruit_blossom_end_shape']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Shape of pistil scar</td>
-                                                                <?php
-                    foreach($tomato[0] as $key=>$value)
-                    {
-                        echo "<td>".$value['shape_of_pistil_scar']??'-'."</td>";
-                    }
-                    ?>
-                                                            </tr>
+                                                            
                                                             <tr>
                                                                 <td bgcolor='#ff6258' class="text-white">Seed</td>
                                                                 <?php
@@ -670,15 +670,15 @@ table tr td.imge
             }
             $search_list['stem_pubescence_density']= $stem_pubescence_density;
         }
-        if(isset($_POST['stem_internode_length']))
-        {
-            $stem_internode_length=array();
-            foreach($_POST['stem_internode_length'] as $value)
-            {
-                $stem_internode_length[]=$value;
-            }   
-            $search_list['stem_internode_length']= $stem_internode_length;            
-        }
+        // if(isset($_POST['stem_internode_length']))
+        // {
+        //     $stem_internode_length=array();
+        //     foreach($_POST['stem_internode_length'] as $value)
+        //     {
+        //         $stem_internode_length[]=$value;
+        //     }   
+        //     $search_list['stem_internode_length']= $stem_internode_length;            
+        // }
         if(isset($_POST['number_of_leaves_under_1st_inflorescence']))
         {
             $number_of_leaves_under_1st_inflorescence=array();
@@ -728,6 +728,36 @@ table tr td.imge
             $fruit_weight_g[]=$val[1];
             
             $search_list['fruit_weight_g']= $fruit_weight_g;     
+        }
+        if(isset($_POST['stem_internode_length']))
+        {
+            $stem_internode_length=array();
+            $tmp =$_POST['stem_internode_length'];
+            $val =explode(",",$tmp); 
+            $stem_internode_length[]=$val[0];
+            $stem_internode_length[]=$val[1];
+            
+            $search_list['stem_internode_length']= $stem_internode_length;     
+        }
+        if(isset($_POST['number_of_days_to_flowering']))
+        {
+            $number_of_days_to_flowering=array();
+            $tmp =$_POST['number_of_days_to_flowering'];
+            $val =explode(",",$tmp); 
+            $number_of_days_to_flowering[]=$val[0];
+            $number_of_days_to_flowering[]=$val[1];
+            
+            $search_list['number_of_days_to_flowering']= $number_of_days_to_flowering;     
+        }
+        if(isset($_POST['number_of_flowers_per']))
+        {
+            $number_of_flowers_per=array();
+            $tmp =$_POST['number_of_flowers_per'];
+            $val =explode(",",$tmp); 
+            $number_of_flowers_per[]=$val[0];
+            $number_of_flowers_per[]=$val[1];
+            
+            $search_list['number_of_flowers_per']= $number_of_flowers_per;     
         }
         if(isset($_POST['fruit_size']))
         {
@@ -926,20 +956,20 @@ if(search_list['stem_pubescence_density'])
     }
     item++;
 }
-if(search_list['stem_internode_length'])
-{
-    $('#search_by').append(' Stem internode length : ');
-    for(i =0 ;i<search_list['stem_internode_length'].length;i++)
-    {
-        if(i>0)
-        {
-            $('#search_by').append(', ');
-        }
-        $('#search_by').append('<span class="red"> '+search_list['stem_internode_length'][i]+' </span>');
-    }
+// if(search_list['stem_internode_length'])
+// {
+//     $('#search_by').append(' Stem internode length : ');
+//     for(i =0 ;i<search_list['stem_internode_length'].length;i++)
+//     {
+//         if(i>0)
+//         {
+//             $('#search_by').append(', ');
+//         }
+//         $('#search_by').append('<span class="red"> '+search_list['stem_internode_length'][i]+' </span>');
+//     }
   
-    item++;
-}
+//     item++;
+// }
 if(search_list['number_of_leaves_under_1st_inflorescence'])
 {
     $('#search_by').append(' Number of leaves under 1st inflorescence : ');
@@ -984,7 +1014,7 @@ if(search_list['leaf_type'])
 }
 if(search_list['fruit_weight_g'])
 {
-    $('#search_by').append(' Fruit Weight : ');
+    $('#search_by').append(' Fruit Weight (g): ');
     for(i =0 ;i<search_list['fruit_weight_g'].length;i++)
     {
         if(i>0)
@@ -992,6 +1022,48 @@ if(search_list['fruit_weight_g'])
             $('#search_by').append(' - ');
         }
         $('#search_by').append('<span class="red"> '+search_list['fruit_weight_g'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['stem_internode_length'])
+{
+    $('#search_by').append(' Stem internode length (cm) : ');
+    for(i =0 ;i<search_list['stem_internode_length'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(' - ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['stem_internode_length'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['number_of_days_to_flowering'])
+{
+    $('#search_by').append(' Number of days to flowering : ');
+    for(i =0 ;i<search_list['number_of_days_to_flowering'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(' - ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['number_of_days_to_flowering'][i]+' </span>');
+    }
+  
+    item++;
+}
+if(search_list['number_of_flowers_per'])
+{
+    $('#search_by').append(' Number of flowers : ');
+    for(i =0 ;i<search_list['number_of_flowers_per'].length;i++)
+    {
+        if(i>0)
+        {
+            $('#search_by').append(' - ');
+        }
+        $('#search_by').append('<span class="red"> '+search_list['number_of_flowers_per'][i]+' </span>');
     }
   
     item++;
@@ -1313,32 +1385,32 @@ function search()
                 $i=0;
                 $where .= ' AND ';
             }
-            if(isset($_POST['stem_internode_length']))
-            {
-                foreach($_POST['stem_internode_length'] as $value)
-                {
-                    if($i != 0)
-                    {
-                        $where .= " || ";
-                    }
-                    if($value == 'short')
-                    {
-                        $where .= "cha_data_tomato.stem_internode_length < '7'";
-                    }
-                    if($value == 'intermediate')
-                    {   
-                        $where .= "cha_data_tomato.stem_internode_length >='7' AND cha_data_tomato.stem_internode_length <='8'";
-                    }
-                    if($value == 'long')
-                    {
-                        $where .= "cha_data_tomato.stem_internode_length > '8'";
-                    }
-                    $i++;
-                }   
+            // if(isset($_POST['stem_internode_length']))
+            // {
+            //     foreach($_POST['stem_internode_length'] as $value)
+            //     {
+            //         if($i != 0)
+            //         {
+            //             $where .= " || ";
+            //         }
+            //         if($value == 'short')
+            //         {
+            //             $where .= "cha_data_tomato.stem_internode_length < '7'";
+            //         }
+            //         if($value == 'intermediate')
+            //         {   
+            //             $where .= "cha_data_tomato.stem_internode_length >='7' AND cha_data_tomato.stem_internode_length <='8'";
+            //         }
+            //         if($value == 'long')
+            //         {
+            //             $where .= "cha_data_tomato.stem_internode_length > '8'";
+            //         }
+            //         $i++;
+            //     }   
 
-                $i=0;
-                $where .= ' AND ';
-            }
+            //     $i=0;
+            //     $where .= ' AND ';
+            // }
             if(isset($_POST['number_of_leaves_under_1st_inflorescence']))
             {
                 foreach($_POST['number_of_leaves_under_1st_inflorescence'] as $value)
@@ -1387,6 +1459,27 @@ function search()
                 $tmp =$_POST['fruit_weight_g'];
                 $val =explode(",",$tmp);
                 $where .= "cha_data_tomato.fruit_weight_g BETWEEN ".$val[0]." AND ".$val[1];
+                $where .= ' AND ';
+            }
+            if(isset($_POST['stem_internode_length']))
+            {
+                $tmp =$_POST['stem_internode_length'];
+                $val =explode(",",$tmp);
+                $where .= "cha_data_tomato.stem_internode_length BETWEEN ".$val[0]." AND ".$val[1];
+                $where .= ' AND ';
+            }
+            // if(isset($_POST['number_of_days_to_flowering']))
+            // {
+            //     $tmp =$_POST['number_of_days_to_flowering'];
+            //     $val =explode(",",$tmp);
+            //     $where .= "cha_data_tomato.number_of_days_to_flowering BETWEEN ".$val[0]." AND ".$val[1];
+            //     $where .= ' AND ';
+            // }
+            if(isset($_POST['number_of_flowers_per']))
+            {
+                $tmp =$_POST['number_of_flowers_per'];
+                $val =explode(",",$tmp);
+                $where .= "cha_data_tomato.number_of_flowers_per BETWEEN ".$val[0]." AND ".$val[1];
                 $where .= ' AND ';
             }
             if(isset($_POST['fruit_size']))

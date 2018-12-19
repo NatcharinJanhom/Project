@@ -470,7 +470,8 @@
                               </div>
                               <div class="col-md-6">
                               <div class="mt-5 pt w-75 mx-auto">
-                                    <div id="soft-limit-4" name="fruit_weight_g[]" class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
+                              <input type="hidden" name="stem_internode_length">
+                                    <div id="soft-limit-4"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
                                     </div>
                                 </div>                        
                               
@@ -542,6 +543,7 @@
                               </div>
                               <div class="col-md-6">
                               <div class="mt-5 pt w-75 mx-auto">
+                                    <input type="hidden" name="number_of_days_to_flowering">
                                     <div id="soft-limit-5"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
                                     </div>
                                 </div>                          
@@ -553,6 +555,7 @@
                               </div>
                               <div class="col-md-6">
                               <div class="mt-5 pt w-75 mx-auto">
+                                    <input type="hidden" name="number_of_flowers_per">
                                     <div id="soft-limit-6"  class="ul-slider slider-danger mb-5 mt-5 noUi-target noUi-ltr noUi-horizontal" >
                                     </div>
                                 </div>    
@@ -927,9 +930,15 @@
           tooltips: [true, true],
           connect: true,
           range: {
-            min: 0,
-            max: 60
-          },
+        'min': 0,
+        '17%': 10,
+        '34%': 20,
+        '51%': 30,
+        '68%': 40,
+        '85%': 50,
+        'max': 60
+      },
+      snap: true,
           pips: {
             mode: 'values',
             values: [0, 10, 20, 30, 40, 50, 60],
@@ -941,13 +950,19 @@
           tooltips: [true, true],
           connect: true,
           range: {
-            min: 5,
-            max: 11
-          },
+        'min': 5,
+        '17%': 6,
+        '34%': 7,
+        '51%': 8,
+        '68%': 9,
+        '85%': 10,
+        'max': 11
+      },
+      snap: true,
           pips: {
             mode: 'values',
             values: [5, 6, 7,8,9,10,11],
-            density: 10
+            density: 5
           }
         });
     })(jQuery);
@@ -957,16 +972,71 @@
      
     $(".btn-search").click(function(){ 
       var s = $("#soft-limit-3")[0].innerText;
-      var st=s.split("\n"); 
-      if(st[0]=='0.00' && st[1]=='60.00')
+      var fruit_weight_g=s.split("\n"); 
+      if(fruit_weight_g[0]=='0.00' && fruit_weight_g[1]=='60.00')
+      {
+        $("input[name='fruit_weight_g']").remove();
+      }
+      else if(fruit_weight_g.length < 3)
       {
         $("input[name='fruit_weight_g']").remove();
       }
       else
       {
-        $("input[name='fruit_weight_g']").val(st);
+        $("input[name='fruit_weight_g']").val(fruit_weight_g);
       }
-     
+      var s = $("#soft-limit-4")[0].innerText;
+      var stem_internode_length=s.split("\n"); 
+      if(stem_internode_length[0]=='0.00' && stem_internode_length[1]=='60.00')
+      {
+        $("input[name='stem_internode_length']").remove();
+      }
+      else if(stem_internode_length.length < 3)
+      {
+        $("input[name='stem_internode_length']").remove();
+      }
+      else
+      {
+        $("input[name='stem_internode_length']").val(stem_internode_length);
+      }
+      var s = $("#soft-limit-5")[0].innerText;
+      var number_of_days_to_flowering=s.split("\n"); 
+      if(number_of_days_to_flowering[0]=='0.00' && number_of_days_to_flowering[1]=='60.00')
+      {
+        $("input[name='number_of_days_to_flowering']").remove();
+      }
+      else if(number_of_days_to_flowering.length < 3)
+      {
+        $("input[name='number_of_days_to_flowering']").remove();
+      }
+      else
+      {
+        $("input[name='number_of_days_to_flowering']").val(number_of_days_to_flowering);
+      }
+      var s = $("#soft-limit-6")[0].innerText;
+      var number_of_flowers_per=s.split("\n"); 
+      if(number_of_flowers_per[0]=='5.00' && number_of_flowers_per[1]=='11.00')
+      {
+        $("input[name='number_of_flowers_per']").remove();
+      }
+      else if(number_of_flowers_per.length < 3)
+      {
+        $("input[name='number_of_flowers_per']").remove();
+      }
+      else
+      {
+        $("input[name='number_of_flowers_per']").val(number_of_flowers_per);
+      }
       $("#physical_search").submit();
+    });  
+    $(".btn-clear").click(function(){ 
+     var check_box = $("input[type='checkbox']").prop("checked",false);
+    //  var s=$(".noUi-base .noUi-origin")[1];
+    //  $(s).css("left","100%");
+    //  $(".noUi-base .noUi-connect").attr("style"," left: 0%; right: 0%;");
+    
+    //  $(".noUi-base .noUi-handle-upper").attr("aria-valuetext",60.00);
+    //  $(".noUi-base .noUi-handle-upper .noUi-tooltip").empty();
+    //  $(".noUi-base .noUi-handle-upper .noUi-tooltip").append("60.00");
     });  
       </script>
