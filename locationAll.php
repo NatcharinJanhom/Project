@@ -619,7 +619,6 @@ function locationAll()
     <!-- <script src="theme/assets/js/shared/ion-range-slider.js"></script>
     <script src="theme/assets/js/shared/no-ui-slider.js"></script> -->
     <script >
-    
     (function($) {
   'use strict';
   // Range Slider

@@ -21,7 +21,7 @@ class conDb {
         return self::$instance;
         }
     }
-    $sql = "UPDATE member SET firstname=?, lastname=?,email=?, permission=?, status=? WHERE id_member=?";
+    $sql = "UPDATE member SET firstname=?, lastname=?,email=?, permission=?, status_mb=? WHERE id_member=?";
             $con = ConDb::getInstance();
             $stmt = $con->prepare($sql);
             try {

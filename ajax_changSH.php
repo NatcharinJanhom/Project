@@ -1,11 +1,11 @@
 <?php
-$id_f = $_GET['id_fa'];
-$id_ow = $_GET['id_m_o'];
-$id_sh = $_GET['id_m_s'];
-$ass_n = $_GET['LE'];
-$date_sh = $_GET['dat_sh'];
+$id_f = $_GET['aj_f'];
+$id_ow = $_GET['aj_o'];
+$id_sh = $_GET['aj_s'];
+$ass_n = $_GET['aj_l'];
+$date_sh = $_GET['aj_d'];
 $sta  = "shared";
-$id_f = "1";
+
 
 
            // header('Content-type: application/json');  

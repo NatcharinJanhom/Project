@@ -1,14 +1,7 @@
 <?php
-$id_f = $_GET['aj_f'];
-$id_ow = $_GET['aj_o'];
-$id_sh = $_GET['aj_s'];
-$ass_n = $_GET['aj_l'];
-$date_sh = $_GET['aj_d'];
-$sta  = "Unshared";
-//$id_f = "1";
-
-
-           // header('Content-type: application/json');  
+$cha = $_GET['aj_l'];
+$user_n = $_GET['aj_o'];
+            header('Content-type: application/json');     
             class conDb {
                 private static $instance = NULL;
                 private static $dsn = "mysql:dbname=tomatoes;host=localhost";
@@ -24,11 +17,11 @@ $sta  = "Unshared";
                     return self::$instance;
                     }
                 }
-                $sql = "INSERT INTO `data_shared`(`id_fact_tomato`, `id_member_owner`, `id_member_shared`, `accession_number`, `date_shared`, `status_sh`) VALUES ('".$id_f."','".$id_ow."','".$id_sh."','".$ass_n."','".$date_sh."','".$sta."')";
+                $sql = "UPDATE `data_owner` SET `status_ow`= 'public' WHERE data_owner.id_member = '$user_n' AND data_owner.accession_number = '$cha'";
             $con = ConDb::getInstance();
             $stmt = $con->prepare($sql);
             $stmt->execute();
-            $stmt->close();
-            $conn->close();
-
+            $data = true;
+            print json_encode($data);
+            
 ?>

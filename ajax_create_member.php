@@ -22,13 +22,13 @@ class conDb {
         return self::$instance;
         }
     }
-    $sql = "INSERT INTO member VALUES('',:username,:password,:firstname,:lastname,:email,:permission,:status,:login_fail,:login_date,:pictrue)";
+    $sql = "INSERT INTO member VALUES('',:username,:password,:firstname,:lastname,:email,:permission,:status_mb,:login_fail,:login_date,:pictrue)";
             $con = ConDb::getInstance();
             $stmt = $con->prepare($sql);
             try {
             $check =$stmt->execute(['username'=>$username,'password'=>md5($password),
             'firstname'=>$firstname,'lastname'=>$lastname,'email'=>$email,'permission'=>$permission,
-            'status'=>$status,'login_fail'=>'0','login_date'=>NULL,'pictrue'=>NULL]);
+            'status_mb'=>$status,'login_fail'=>'0','login_date'=>NULL,'pictrue'=>NULL]);
                 if($check)
                 {
                 $last_id=$con->lastInsertId();
